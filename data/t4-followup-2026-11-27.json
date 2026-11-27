@@ -1,0 +1,490 @@
+{
+  "audit_date": "2026-11-27",
+  "scope": "2026-11-27对五条旧T4记录的定向补核，已整合入当前网页数据；旧精确实时快照与历史分钟对照分别记录。",
+  "summary": {
+    "official_request": "F-002-b可升T1（仅发信程序事实）",
+    "precise_market_snapshots": "F-081/F-088/F-099/F-136原精确实时快照均仍T4；历史1m响应已经取得，待核理由已细化。",
+    "optional_t2_records": [
+      "F-099：13:41 UTC历史1m Close160.40，勿写为原13:42实时响应。",
+      "F-136：11-24 19:59 EST盘后1m Close151.9531，较当日常规收盘−2.21%。"
+    ]
+  },
+  "methodology": {
+    "api": "Yahoo公开chart接口，固定period1/period2、interval=1m、includePrePost=true；未用日线替代分钟。",
+    "time_basis": "Unix timestamp按UTC解析，以America/New_York转换；返回timezone=EST、gmtoffset=-18000；实际使用历史tradingPeriods而非当前currentTradingPeriod。",
+    "delay": "Yahoo官方覆盖说明列Nasdaq为实时；原响应未提供exchangeDataDelayedBy，无法反推原采样延迟，不擅自平移15分钟。",
+    "price_semantics": "只比较明确timestamp的OHLC字段；不将区间包含关系当作精确tick确认。",
+    "volume_boundary": "原始1m volume存在异常大值/可能混杂累计量；不做无依据修复，不据简单相加升级旧累计量。",
+    "metadata_boundary": "响应meta含最新行情信息，与请求历史日可能不同；历史前收仅沿用已核日线记录作算术分母。"
+  },
+  "entries": [
+    {
+      "id": "F-002-b",
+      "findings": [
+        "已取得 Reuters 原站全文及 Cotton 官方新闻稿、两页信函 PDF；此历史记录无需继续依赖 Google News 入口。",
+        "官方新闻稿发表于 2025-10-14，信函署日 2025-10-13；对象为商务部长 Howard Lutnick。可直接确认 Tom Cotton 要求调查 Megaspeed 及其所有权、关联关系和与美国芯片企业的联系。"
+      ],
+      "correct_statement": "2025 年 10 月 14 日，参议员 Tom Cotton 办公室公布其于 10 月 13 日致商务部长 Howard Lutnick 的信函，要求调查 Megaspeed 的所有权、关联关系及与美国芯片企业的联系。Reuters 于 10 月 14 日报道此事。信函支持调查请求已经提出，不证明所引芯片转移指控已经查实。",
+      "correct_statement_html": "<p>2025 年 10 月 14 日，参议员 Tom Cotton 办公室公布其于 <strong>10 月 13 日</strong>致商务部长 Howard Lutnick 的信函，要求调查 Megaspeed 的所有权、关联关系及与美国芯片企业的联系。Reuters 于 10 月 14 日报道此事。</p>",
+      "recommended_title": "Cotton 公布致商务部长信函，要求调查 Megaspeed",
+      "recommended_grade": "T1",
+      "grade_scope": "仅“发信要求调查”这一程序事实为 T1；信中转引的新闻指控不随之升级。",
+      "event_date": "2025-10-13",
+      "publication_date": "2025-10-14",
+      "date_display_recommendation": "可保留 2025-10-14 行并明确是公开/报道日期；若以发信日排序，则改为 2025-10-13。",
+      "source_urls": [
+        "https://www.cotton.senate.gov/news/press-releases/cotton-to-lutnick-investigate-chinese-government-spin-off-megaspeed-for-skirting-us-export-laws/",
+        "https://www.cotton.senate.gov/wp-content/uploads/media/doc/101325lutnickletter.pdf",
+        "https://www.reuters.com/world/asia-pacific/us-senator-seeks-commerce-department-investigation-into-megaspeed-2025-10-14/"
+      ],
+      "evidence_refs": [
+        {
+          "ref": "turn362307652view0",
+          "access": "官方HTML全文已读；L20、L28、L35、L50支持发表日、信函日期及请求内容。"
+        },
+        {
+          "ref": "turn287763468view3",
+          "access": "官方PDF两页文本已读；第一页日期/收件人/请求，第二页签名。"
+        },
+        {
+          "ref": "turn362307652view1",
+          "access": "Reuters原站正文已读；作者Max A. Cherney；页面显示2025-10-14 17:51 UTC更新。"
+        }
+      ],
+      "limitations": [
+        "只确认参议员发信和请求内容。议员引用新闻、使用涉嫌违法表述，不等于商务部已经作出违法认定。",
+        "G042 的 Google RSS 跳转仍返回访问错误；原发替换由已读 Reuters 题名、日期、作者和正文定位，不声称已成功解析该 RSS 的最终跳转链。"
+      ]
+    },
+    {
+      "id": "F-081",
+      "findings": [
+        "已找到 2026-11-16 14:54 UTC（09:54 EST）的历史 1 分钟记录；Close 为 160.30999755859375，按原前收 162.85 计算约 −1.56%，未精确复现旧报 160.64/−1.36%。",
+        "旧价 160.64 位于该分钟 Low 160.28500366210938 至 High 160.86500549316406 内，因此可能是分钟内其他成交，但当前 OHLC 无法证明。",
+        "开盘至该分钟的分钟 High 最大 163.00、Low 最小约 158.11，与旧高低值一致；这只能验证该历史序列的区间边界。",
+        "分钟 volume 存在异常大值，不能直接当作每分钟增量相加确认旧累计 7,420 万股。到 14:54 含该分钟直接合计为 184,559,397 股；全日常规 390 根合计 2,620,662,976 股，而既有同日第三方日线仅 333,822,062 股。未擅自修复疑似混入累计值的栏位。"
+      ],
+      "correct_statement": "原页记载 11 月 16 日 14:54 UTC 报价约 160.64 美元，累计成交约 7,420 万股。此次已取得 Yahoo 历史 1 分钟数据：该 timestamp 的 Close 约 160.31 美元；160.64 位于该分钟高低价之间，但尚未恢复当时实时响应，累计量也不能由异常分钟 volume 验证。原快照仍待核。",
+      "recommended_grade": "T4",
+      "grade_scope": "原精确时点报价及累计量仍 T4；历史1分钟字段仅作为具名数据对照，不替代原实时快照。",
+      "source_urls": [
+        "https://query1.finance.yahoo.com/v8/finance/chart/NVDA?period1=1794819600&period2=1794877260&interval=1m&includePrePost=true",
+        "https://help.yahoo.com/kb/account/SLN2310.html"
+      ],
+      "evidence_refs": [
+        {
+          "kind": "locally_saved_http_response",
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart/NVDA?period1=1794819600&period2=1794877260&interval=1m&includePrePost=true",
+          "raw_file": "data/nvda-minute-raw-responses-2026-11-27.json",
+          "raw_response_bundle_key": "nvda-2026-11-16-1m",
+          "request_metadata_bundle": "data/nvda-minute-raw-responses-2026-11-27.json",
+          "request_metadata_bundle_key": "nvda-2026-11-16-1m",
+          "sha256": "43c7f1ee1e538e1e0eb2e1adeca39056153004879e0219fdb10e53173ad771be",
+          "http_status": 200,
+          "retrieved_at_utc": "2026-11-27T14:19:53.152148+00:00"
+        },
+        {
+          "ref": "turn657429539search0",
+          "access": "Yahoo官方说明检索正文：Nasdaq为Real-time；直接open返回429，不代表已恢复该日实际延迟。"
+        }
+      ],
+      "historical_bar": {
+        "timestamp": 1794840840,
+        "utc": "2026-11-16T14:54:00+00:00",
+        "america_new_york": "2026-11-16T09:54:00-05:00",
+        "open": 160.71499633789062,
+        "close": 160.30999755859375,
+        "low": 160.28500366210938,
+        "high": 160.86500549316406,
+        "volume": 723446
+      },
+      "regular_session_aggregate_through_bar": {
+        "bar_count": 25,
+        "high": 163.0,
+        "low": 158.11000061035156,
+        "volume_sum_not_validated_as_cumulative": 184559397
+      },
+      "old_percentage_arithmetic": "-1.36%",
+      "limitations": [
+        "此次取得的是 2026-11-27 查询返回的历史 1 分钟 OHLCV，不是原网页采集时保存的实时 quote 响应；无法恢复原采集秒数、当时数据修订状态及传输延迟。",
+        "timestamp 对应的 1 分钟 OHLC 只给区间统计，不给该分钟每笔成交顺序。旧报价位于高低价之间不等于证明该时刻最后成交价，亦不能据 Close 不同断言旧报价必假。",
+        "响应 meta.previousClose / regularMarketPrice / regularMarketTime 是最新行情字段，11-16 与 11-18 查询均仍给 previousClose=155.38、regularMarketPrice=149.30、regularMarketTime=1795640401，不能用作历史日的前收或当时实时报价。涨跌计算沿用已核历史日线前收。",
+        "响应未提供 exchangeDataDelayedBy。Yahoo 官方说明列 Nasdaq 为实时，但无法据一般说明恢复原快照实际延迟；未擅自将时间平移 15 分钟。",
+        "高低价吻合并不同时证明快照报价与累计量；历史分钟与日线的全日OHLC也有细微差异，不能视为完整逐笔市场记录。"
+      ]
+    },
+    {
+      "id": "F-088",
+      "findings": [
+        "已找到 2026-11-16 19:31 UTC（14:31 EST）的历史 1 分钟记录；Close 为 156.03500366210938，按 162.85 前收约 −4.18%，未精确复现旧报 156.12/−4.13%。",
+        "156.12 位于该分钟 Low 156.03500366210938 至 High 156.2209930419922 内，无法用OHLC确认它是否是原采集秒数的最后成交价。",
+        "开盘至此分钟的 Low 已为约 155.01，与旧快照155.02存在1美分差异；同序列 High 仍163.00。",
+        "直接相加的分钟 volume 至19:31达2,081,271,383股，与旧2.37亿股不吻合；全日分钟汇总异常，不能据此重建可靠累计量。"
+      ],
+      "correct_statement": "原页记载 11 月 16 日 19:31 UTC 报价约 156.12 美元、累计成交约 2.37 亿股。Yahoo 历史 1 分钟记录在该 timestamp 的 Close 为 156.0350 美元；旧价在该分钟范围内，但无法确认原采集时点。历史序列此前最低约 155.01 美元，与旧记155.02略有差异；分钟 volume 亦不能可靠复算旧累计量，保留 T4。",
+      "recommended_grade": "T4",
+      "grade_scope": "原分钟报价、当时累计量及高低价组合未完整复现。",
+      "source_urls": [
+        "https://query1.finance.yahoo.com/v8/finance/chart/NVDA?period1=1794819600&period2=1794877260&interval=1m&includePrePost=true",
+        "https://help.yahoo.com/kb/account/SLN2310.html"
+      ],
+      "evidence_refs": [
+        {
+          "kind": "locally_saved_http_response",
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart/NVDA?period1=1794819600&period2=1794877260&interval=1m&includePrePost=true",
+          "raw_file": "data/nvda-minute-raw-responses-2026-11-27.json",
+          "raw_response_bundle_key": "nvda-2026-11-16-1m",
+          "request_metadata_bundle": "data/nvda-minute-raw-responses-2026-11-27.json",
+          "request_metadata_bundle_key": "nvda-2026-11-16-1m",
+          "sha256": "43c7f1ee1e538e1e0eb2e1adeca39056153004879e0219fdb10e53173ad771be",
+          "http_status": 200,
+          "retrieved_at_utc": "2026-11-27T14:19:53.152148+00:00"
+        },
+        {
+          "ref": "turn657429539search0",
+          "access": "Yahoo官方数据延迟说明的检索正文。"
+        }
+      ],
+      "historical_bar": {
+        "timestamp": 1794857460,
+        "utc": "2026-11-16T19:31:00+00:00",
+        "america_new_york": "2026-11-16T14:31:00-05:00",
+        "open": 156.2209930419922,
+        "close": 156.03500366210938,
+        "low": 156.03500366210938,
+        "high": 156.2209930419922,
+        "volume": 424854
+      },
+      "regular_session_aggregate_through_bar": {
+        "bar_count": 302,
+        "high": 163.0,
+        "low": 155.00999450683594,
+        "volume_sum_not_validated_as_cumulative": 2081271383
+      },
+      "old_percentage_arithmetic": "-4.13%",
+      "limitations": [
+        "此次取得的是 2026-11-27 查询返回的历史 1 分钟 OHLCV，不是原网页采集时保存的实时 quote 响应；无法恢复原采集秒数、当时数据修订状态及传输延迟。",
+        "timestamp 对应的 1 分钟 OHLC 只给区间统计，不给该分钟每笔成交顺序。旧报价位于高低价之间不等于证明该时刻最后成交价，亦不能据 Close 不同断言旧报价必假。",
+        "响应 meta.previousClose / regularMarketPrice / regularMarketTime 是最新行情字段，11-16 与 11-18 查询均仍给 previousClose=155.38、regularMarketPrice=149.30、regularMarketTime=1795640401，不能用作历史日的前收或当时实时报价。涨跌计算沿用已核历史日线前收。",
+        "响应未提供 exchangeDataDelayedBy。Yahoo 官方说明列 Nasdaq 为实时，但无法据一般说明恢复原快照实际延迟；未擅自将时间平移 15 分钟。",
+        "未把1美分差异扩大为旧记录造假结论；原实时供应商口径、修订或采集秒数不明。"
+      ]
+    },
+    {
+      "id": "F-099",
+      "findings": [
+        "已找到 11-18 13:42 UTC（08:42 EST）盘前记录；该分钟 Close 为160.2423，约较11-17前收155.46上涨3.08%。",
+        "160.40恰好出现在前一分钟13:41 UTC的Close，计算涨幅3.18%与旧百分比一致。13:42分钟High为160.41，旧160.40亦在范围内。",
+        "“13:42采样引用13:41已完成分钟”是可能解释，不是已经核实的原采样方式；没有原响应或秒级成交，不能把它当作确定纠错。"
+      ],
+      "correct_statement": "原页记载 11 月 18 日 13:42 UTC 盘前报价约160.40美元。此次取得的 Yahoo 历史1分钟数据中，160.40美元为13:41 UTC（08:41 EST）记录的Close；13:42 UTC记录的Close为160.2423美元。二者不能混作同一精确时点，原13:42快照仍待核。",
+      "recommended_grade": "T4",
+      "grade_scope": "保留原13:42实时快照时为T4；若明确改写为13:41历史1m Close，可单独标T2。",
+      "verified_alternative": {
+        "grade": "T2",
+        "timestamp_utc": "2026-11-18T13:41:00+00:00",
+        "statement": "Yahoo历史1分钟数据中，11月18日13:41 UTC（08:41 EST）盘前记录的Close为160.40美元，较11月17日收盘155.46美元高3.18%。此为历史分钟字段，不是原13:42实时采样响应。",
+        "bar": {
+          "timestamp": 1795009260,
+          "utc": "2026-11-18T13:41:00+00:00",
+          "america_new_york": "2026-11-18T08:41:00-05:00",
+          "low": 160.19,
+          "close": 160.4,
+          "high": 160.4,
+          "volume": 0,
+          "open": 160.21
+        }
+      },
+      "source_urls": [
+        "https://query1.finance.yahoo.com/v8/finance/chart/NVDA?period1=1794992400&period2=1795050060&interval=1m&includePrePost=true",
+        "https://help.yahoo.com/kb/account/SLN2310.html",
+        "https://finance.yahoo.com/markets/stocks/article/3-numbers-explain-why-nvidia-stock-is-rising-despite-no-jensen-huang-on-the-earnings-call-115224556.html"
+      ],
+      "evidence_refs": [
+        {
+          "kind": "locally_saved_http_response",
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart/NVDA?period1=1794992400&period2=1795050060&interval=1m&includePrePost=true",
+          "raw_file": "data/nvda-minute-raw-responses-2026-11-27.json",
+          "raw_response_bundle_key": "nvda-2026-11-18-1m",
+          "request_metadata_bundle": "data/nvda-minute-raw-responses-2026-11-27.json",
+          "request_metadata_bundle_key": "nvda-2026-11-18-1m",
+          "sha256": "2dac0e20ff7137ec21e348fb9e2ec9210d695b500c9cc6e083aec75c991f958e",
+          "http_status": 200,
+          "retrieved_at_utc": "2026-11-27T14:19:53.152991+00:00"
+        },
+        {
+          "ref": "turn657429539search5",
+          "access": "Yahoo署名原文检索正文称当日盘前约+3.5%；具体时点不同，不能验证13:42的160.40。直接open返回429。"
+        },
+        {
+          "ref": "turn657429539search0",
+          "access": "Yahoo官方数据延迟说明的检索正文。"
+        }
+      ],
+      "historical_bar": {
+        "timestamp": 1795009320,
+        "utc": "2026-11-18T13:42:00+00:00",
+        "america_new_york": "2026-11-18T08:42:00-05:00",
+        "low": 160.2,
+        "close": 160.2423,
+        "high": 160.41,
+        "volume": 0,
+        "open": 160.3899
+      },
+      "previous_minute_bar": {
+        "timestamp": 1795009260,
+        "utc": "2026-11-18T13:41:00+00:00",
+        "america_new_york": "2026-11-18T08:41:00-05:00",
+        "low": 160.19,
+        "close": 160.4,
+        "high": 160.4,
+        "volume": 0,
+        "open": 160.21
+      },
+      "old_percentage_arithmetic": "3.18%",
+      "limitations": [
+        "此次取得的是 2026-11-27 查询返回的历史 1 分钟 OHLCV，不是原网页采集时保存的实时 quote 响应；无法恢复原采集秒数、当时数据修订状态及传输延迟。",
+        "timestamp 对应的 1 分钟 OHLC 只给区间统计，不给该分钟每笔成交顺序。旧报价位于高低价之间不等于证明该时刻最后成交价，亦不能据 Close 不同断言旧报价必假。",
+        "响应 meta.previousClose / regularMarketPrice / regularMarketTime 是最新行情字段，11-16 与 11-18 查询均仍给 previousClose=155.38、regularMarketPrice=149.30、regularMarketTime=1795640401，不能用作历史日的前收或当时实时报价。涨跌计算沿用已核历史日线前收。",
+        "响应未提供 exchangeDataDelayedBy。Yahoo 官方说明列 Nasdaq 为实时，但无法据一般说明恢复原快照实际延迟；未擅自将时间平移 15 分钟。",
+        "盘前分钟volume为0；这不应被解读为没有盘前交易，也不用于复算盘前累计量。",
+        "Yahoo当日盘前报道只能提供行情背景，不能替代精确分钟数据。"
+      ]
+    },
+    {
+      "id": "F-136",
+      "findings": [
+        "11-25 12:41 UTC（07:41 EST）处于盘前；历史1分钟Close为147.2395，较前收155.38约−5.24%。旧147.21/−5.26%的算术正确，但147.21仅位于该分钟147.10至147.32区间，未在该分钟OHLC字段中精确出现。",
+        "原句“此前11-24盘后跌约2.21%”可另作有时点的历史分钟陈述：11-24 19:59 EST（11-25 00:59 UTC）Close151.9531，除以11-24常规收盘155.38减1为−2.2055%，四舍五入−2.21%。",
+        "已定位Yahoo 11-25盘前署名报道，但其8:52 EST称跌逾6.3%，是较晚行情，不证明07:41的精确报价。"
+      ],
+      "correct_statement": "原页记载11月25日12:41 UTC盘前147.21美元（−5.26%），此次历史1分钟Close为147.2395美元，不能直接复现原实时报价，原快照仍待核。另可明确记录：11月24日19:59 EST（11月25日00:59 UTC）的盘后分钟Close为151.9531美元，较当日常规收盘155.38美元低2.21%（Yahoo历史1分钟数据，T2）。",
+      "recommended_grade": "T4",
+      "grade_scope": "12:41精确实时快照仍T4；盘后19:59历史分钟字段建议拆为T2，勿以盘后部分核实将整条升档。",
+      "verified_alternative": {
+        "grade": "T2",
+        "timestamp_utc": "2026-11-25T00:59:00+00:00",
+        "timestamp_est": "2026-11-24T19:59:00-05:00",
+        "statement": "Yahoo历史1分钟数据中，11月24日19:59 EST（11月25日00:59 UTC）的盘后记录Close为151.9531美元，较当日常规收盘155.38美元下跌2.21%。",
+        "bar": {
+          "timestamp": 1795568340,
+          "utc": "2026-11-25T00:59:00+00:00",
+          "america_new_york": "2026-11-24T19:59:00-05:00",
+          "high": 151.9839,
+          "volume": 0,
+          "open": 151.8393,
+          "low": 151.8004,
+          "close": 151.9531
+        },
+        "computed_change_percent": "-2.21%",
+        "boundary": "仅称最后一个已提供盘后分钟的Close；不升级为交易所正式盘后收盘价或原网页采样响应。"
+      },
+      "source_urls": [
+        "https://query1.finance.yahoo.com/v8/finance/chart/NVDA?period1=1795564800&period2=1795651200&interval=1m&includePrePost=true",
+        "https://query1.finance.yahoo.com/v8/finance/chart/NVDA?period1=1795510800&period2=1795568460&interval=1m&includePrePost=true",
+        "https://help.yahoo.com/kb/account/SLN2310.html",
+        "https://finance.yahoo.com/markets/stocks/article/nvidia-stock-stumbles-again-after-jensen-huangs-spectacular-comeback-rally-094741665.html"
+      ],
+      "evidence_refs": [
+        {
+          "kind": "locally_saved_http_response",
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart/NVDA?period1=1795564800&period2=1795651200&interval=1m&includePrePost=true",
+          "raw_file": "data/nvda-minute-raw-responses-2026-11-27.json",
+          "raw_response_bundle_key": "nvda-2026-11-25-1m",
+          "request_metadata_bundle": "data/nvda-minute-raw-responses-2026-11-27.json",
+          "request_metadata_bundle_key": "nvda-2026-11-25-1m",
+          "sha256": "d61b77b0d3d014a9679e342f7646a1930d6ee2c4917af6a909c2de204a5efb57",
+          "http_status": 200,
+          "retrieved_at_utc": "2026-11-27T14:19:22.071564+00:00"
+        },
+        {
+          "kind": "locally_saved_http_response",
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart/NVDA?period1=1795510800&period2=1795568460&interval=1m&includePrePost=true",
+          "raw_file": "data/nvda-minute-raw-responses-2026-11-27.json",
+          "raw_response_bundle_key": "nvda-2026-11-24-1m",
+          "request_metadata_bundle": "data/nvda-minute-raw-responses-2026-11-27.json",
+          "request_metadata_bundle_key": "nvda-2026-11-24-1m",
+          "sha256": "32a58f2c0d1f939b13a1c047d22a75e5950ca850ef3c5de6087dde9cba277ef9",
+          "http_status": 200,
+          "retrieved_at_utc": "2026-11-27T14:19:53.153692+00:00"
+        },
+        {
+          "ref": "turn657429539search3",
+          "access": "Yahoo署名原文检索正文：11-25 08:52 EST盘前跌逾6.3%；直接open返回429，且时点不同。"
+        },
+        {
+          "ref": "turn657429539search0",
+          "access": "Yahoo官方数据延迟说明的检索正文。"
+        }
+      ],
+      "historical_bar": {
+        "timestamp": 1795610460,
+        "utc": "2026-11-25T12:41:00+00:00",
+        "america_new_york": "2026-11-25T07:41:00-05:00",
+        "low": 147.1,
+        "open": 147.3,
+        "high": 147.32,
+        "close": 147.2395,
+        "volume": 0
+      },
+      "old_percentage_arithmetic": "-5.26%",
+      "limitations": [
+        "此次取得的是 2026-11-27 查询返回的历史 1 分钟 OHLCV，不是原网页采集时保存的实时 quote 响应；无法恢复原采集秒数、当时数据修订状态及传输延迟。",
+        "timestamp 对应的 1 分钟 OHLC 只给区间统计，不给该分钟每笔成交顺序。旧报价位于高低价之间不等于证明该时刻最后成交价，亦不能据 Close 不同断言旧报价必假。",
+        "响应 meta.previousClose / regularMarketPrice / regularMarketTime 是最新行情字段，11-16 与 11-18 查询均仍给 previousClose=155.38、regularMarketPrice=149.30、regularMarketTime=1795640401，不能用作历史日的前收或当时实时报价。涨跌计算沿用已核历史日线前收。",
+        "响应未提供 exchangeDataDelayedBy。Yahoo 官方说明列 Nasdaq 为实时，但无法据一般说明恢复原快照实际延迟；未擅自将时间平移 15 分钟。",
+        "11-25请求使用UTC日界，包含11-24盘后最后一小时，不能把全部返回timestamp都视为11-25交易日；核对时按America/New_York和tradingPeriods选取。",
+        "盘后2.21%与盘前5.26%是不同日期和时段，不能串成同一实时快照。"
+      ]
+    }
+  ],
+  "google_replacements": [
+    {
+      "id": "G041",
+      "old_url": "https://news.google.com/rss/search?q=US+senator+seeks+Commerce+Department+investigation+into+Singapore-based+Megaspeed",
+      "replacement_url": "https://www.reuters.com/world/asia-pacific/us-senator-seeks-commerce-department-investigation-into-megaspeed-2025-10-14/",
+      "replacement_label": "Reuters 2025-10-14 原文（Max A. Cherney）",
+      "additional_primary_urls": [
+        "https://www.cotton.senate.gov/news/press-releases/cotton-to-lutnick-investigate-chinese-government-spin-off-megaspeed-for-skirting-us-export-laws/",
+        "https://www.cotton.senate.gov/wp-content/uploads/media/doc/101325lutnickletter.pdf"
+      ],
+      "status": "原发正文与官方信函均已取得",
+      "match_basis": "原发题名、报道日期和Tom Cotton要求商务部调查Megaspeed的正文与原索引一致。",
+      "evidence_refs": [
+        "turn362307652view1",
+        "turn362307652view0",
+        "turn287763468view3"
+      ],
+      "limitations": "搜索入口替换为原发报道，同时可增补官方信；搜索结果不作为独立证据。"
+    },
+    {
+      "id": "G042",
+      "old_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNVEtkaWhqcUE3OXZxNnIzT2pvWGRBN2RWZzhGaEhZbHJxUlZiOWxzUXo4ZURoUXdNUWZqWVRVTTZLN2w1NkpfeXNxV3gwdGhOeExGVENxZlUyWXBpNEtlNFNpQ3hIZ0FTZW5HVHFsak5NQUJPMzRWS2tma2FndVJrNjluVk9GRVBwRHN6dTF6Q1pHOEFRc1I3RDdkeWlUOGtsRmdwX2Vta0JnZ1RyZXhFeW9vQjU3bGcyR1F4YQ?oc=5",
+      "replacement_url": "https://www.reuters.com/world/asia-pacific/us-senator-seeks-commerce-department-investigation-into-megaspeed-2025-10-14/",
+      "replacement_label": "Reuters 2025-10-14 原文（Max A. Cherney）",
+      "additional_primary_urls": [
+        "https://www.cotton.senate.gov/news/press-releases/cotton-to-lutnick-investigate-chinese-government-spin-off-megaspeed-for-skirting-us-export-laws/",
+        "https://www.cotton.senate.gov/wp-content/uploads/media/doc/101325lutnickletter.pdf"
+      ],
+      "status": "原发正文与官方信函均已取得",
+      "match_basis": "原发题名、报道日期和Tom Cotton要求商务部调查Megaspeed的正文与原索引一致。",
+      "evidence_refs": [
+        "turn362307652view1",
+        "turn362307652view0",
+        "turn287763468view3"
+      ],
+      "limitations": "Google RSS跳转本身未恢复：web open失败，本地HTTPS请求G042为503。替换是准确原发定位，不宣称解码跳转链。"
+    }
+  ],
+  "retrievals": [
+    {
+      "kind": "locally_saved_http_response",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/NVDA?period1=1794819600&period2=1794877260&interval=1m&includePrePost=true",
+      "raw_file": "data/nvda-minute-raw-responses-2026-11-27.json",
+      "raw_response_bundle_key": "nvda-2026-11-16-1m",
+      "request_metadata_bundle": "data/nvda-minute-raw-responses-2026-11-27.json",
+      "request_metadata_bundle_key": "nvda-2026-11-16-1m",
+      "sha256": "43c7f1ee1e538e1e0eb2e1adeca39056153004879e0219fdb10e53173ad771be",
+      "http_status": 200,
+      "retrieved_at_utc": "2026-11-27T14:19:53.152148+00:00"
+    },
+    {
+      "kind": "locally_saved_http_response",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/NVDA?period1=1794992400&period2=1795050060&interval=1m&includePrePost=true",
+      "raw_file": "data/nvda-minute-raw-responses-2026-11-27.json",
+      "raw_response_bundle_key": "nvda-2026-11-18-1m",
+      "request_metadata_bundle": "data/nvda-minute-raw-responses-2026-11-27.json",
+      "request_metadata_bundle_key": "nvda-2026-11-18-1m",
+      "sha256": "2dac0e20ff7137ec21e348fb9e2ec9210d695b500c9cc6e083aec75c991f958e",
+      "http_status": 200,
+      "retrieved_at_utc": "2026-11-27T14:19:53.152991+00:00"
+    },
+    {
+      "kind": "locally_saved_http_response",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/NVDA?period1=1795510800&period2=1795568460&interval=1m&includePrePost=true",
+      "raw_file": "data/nvda-minute-raw-responses-2026-11-27.json",
+      "raw_response_bundle_key": "nvda-2026-11-24-1m",
+      "request_metadata_bundle": "data/nvda-minute-raw-responses-2026-11-27.json",
+      "request_metadata_bundle_key": "nvda-2026-11-24-1m",
+      "sha256": "32a58f2c0d1f939b13a1c047d22a75e5950ca850ef3c5de6087dde9cba277ef9",
+      "http_status": 200,
+      "retrieved_at_utc": "2026-11-27T14:19:53.153692+00:00"
+    },
+    {
+      "kind": "locally_saved_http_response",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/NVDA?period1=1795564800&period2=1795651200&interval=1m&includePrePost=true",
+      "raw_file": "data/nvda-minute-raw-responses-2026-11-27.json",
+      "raw_response_bundle_key": "nvda-2026-11-25-1m",
+      "request_metadata_bundle": "data/nvda-minute-raw-responses-2026-11-27.json",
+      "request_metadata_bundle_key": "nvda-2026-11-25-1m",
+      "sha256": "d61b77b0d3d014a9679e342f7646a1930d6ee2c4917af6a909c2de204a5efb57",
+      "http_status": 200,
+      "retrieved_at_utc": "2026-11-27T14:19:22.071564+00:00"
+    }
+  ],
+  "attempt_log": [
+    {
+      "operation": "web.open Yahoo固定日期1m接口",
+      "result": "三次均返回工具不可访问；改用公开HTTPS正常200取得JSON，未用认证或访问绕过。",
+      "evidence_refs": [
+        "turn287763468view0",
+        "turn287763468view1",
+        "turn287763468view2"
+      ]
+    },
+    {
+      "operation": "Yahoo官方延迟说明",
+      "result": "官方检索正文可读，direct open 429；未宣称直接抓取成功。",
+      "evidence_refs": [
+        "turn657429539search0",
+        "turn657429539search1",
+        "turn983222198view2"
+      ]
+    },
+    {
+      "operation": "原文搜索：NVDA精确价+日期 / Yahoo盘前报道",
+      "result": "找到11-18及11-25署名盘前报道，但时点/幅度不同，不作为原分钟快照证明。",
+      "evidence_refs": [
+        "turn657429539search3",
+        "turn657429539search5"
+      ]
+    },
+    {
+      "operation": "G042 Google RSS",
+      "result": "web.open不可访问；本地HTTPS503。Reuters原文和官方信另已定位。",
+      "evidence_refs": [
+        "turn362307652view2"
+      ]
+    }
+  ],
+  "compact_comparison_files": {
+    "csv": "data/nvda-minute-audit-comparison.csv",
+    "provenance": "data/nvda-minute-audit-provenance.json",
+    "row_count": 6,
+    "csv_sha256": "27dbeb916f11d94ee481db3c53981e12ee3a00f43982542481747fab3476f990",
+    "raw_responses": "data/nvda-minute-raw-responses-2026-11-27.json"
+  },
+  "implementation": {
+    "records_updated": [
+      "F-002-b",
+      "F-081",
+      "F-088",
+      "F-099",
+      "F-136"
+    ],
+    "main_grade_changes": {
+      "F-002-b": "T4 → T1（仅发信程序）"
+    },
+    "main_grade_retained": [
+      "F-081",
+      "F-088",
+      "F-099",
+      "F-136"
+    ],
+    "separate_historical_claims": {
+      "F-099": "T2：13:41 UTC分钟Close；不替代13:42旧实时快照",
+      "F-136": "T2：11-24 19:59 EST分钟Close；不替代次日盘前快照"
+    },
+    "raw_responses": "data/nvda-minute-raw-responses-2026-11-27.json"
+  }
+}

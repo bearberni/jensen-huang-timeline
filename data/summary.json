@@ -179,5 +179,29 @@
         }
       ]
     }
-  ]
+  ],
+  "updated": "2026-11-27",
+  "audit_update": {
+    "date": "2026-11-27",
+    "google_news_urls_replaced": 73,
+    "old_t4_records": 5,
+    "upgraded_procedural_records": 1,
+    "precise_snapshots_still_t4": 4,
+    "headline": "调查请求补齐官方文件；4条旧实时报价已有分钟对照，仍保留T4",
+    "body": "Cotton发信程序升T1。分钟Close不能还原原实时快照，volume异常未消除。G056分析与G066混合记录明确重新编目；换链不自动提升匿名报道等级。",
+    "links": [
+      {
+        "label": "逐链接换链与修订理由",
+        "url": "data/link-audit-2026-11-27.json"
+      },
+      {
+        "label": "五条待核记录补核详情",
+        "url": "data/t4-followup-2026-11-27.json"
+      },
+      {
+        "label": "分钟数据对照",
+        "url": "data/nvda-minute-audit-comparison.csv"
+      }
+    ]
+  }
 }

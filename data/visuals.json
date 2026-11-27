@@ -1,0 +1,143 @@
+{
+  "updated": "2026-11-27",
+  "periods": [
+    "10/29—11/12",
+    "11/16—11/18",
+    "11/23",
+    "11/24—11/26"
+  ],
+  "lanes": [
+    {
+      "id": "governance",
+      "number": "01",
+      "label": "公司治理",
+      "scope": "董事会与管理安排",
+      "cells": [
+        [
+          {
+            "date": "11-08",
+            "title": "宣布独立调查",
+            "grade": "T1",
+            "body": "董事会宣布启动独立调查；启动程序不等于公布最终结论。",
+            "source_label": "NVIDIA 董事会声明 2026-11-08",
+            "url": "https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors"
+          },
+          {
+            "date": "11-12",
+            "title": "辞任与临时接班",
+            "grade": "T1",
+            "body": "NVIDIA宣布黄辞任，Kress出任临时CEO，Jones出任董事长。",
+            "source_label": "NVIDIA《NVIDIA Announces CEO Transition》",
+            "url": "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition"
+          }
+        ],
+        [
+          {
+            "date": "11-17",
+            "title": "设立监督委员会",
+            "grade": "T1",
+            "body": "公司设立国家安全与出口管制监督委员会；这是制度安排。",
+            "source_label": "NVIDIA：成立国家安全与出口管制监督委员会",
+            "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Board-of-Directors-Establishes-National-Security-and-Export-Control-Oversight-Committee/default.aspx"
+          }
+        ],
+        [
+          {
+            "date": "11-23",
+            "title": "恢复职务",
+            "grade": "T1",
+            "body": "董事会一致恢复黄的职务，同时明确独立调查继续。",
+            "source_label": "NVIDIA · 复职公告",
+            "url": "https://nvidianews.nvidia.com/news/nvidia-board-reinstates-jensen-huang-as-president-ceo-and-board-director"
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "id": "regulation",
+      "number": "02",
+      "label": "出口监管",
+      "scope": "官方动作与程序",
+      "cells": [
+        [],
+        [
+          {
+            "date": "11-17 发布",
+            "title": "调查分工公开",
+            "grade": "T1",
+            "body": "联合声明署日11-16，网页11-17发布；司法部牵头刑事调查，BIS协作。",
+            "source_label": "DOJ / Commerce · 联合声明",
+            "url": "https://www.justice.gov/opa/pr/joint-statement-department-commerce-and-department-justice-megaspeed-investigation"
+          },
+          {
+            "date": "11-18",
+            "title": "国会要求简报",
+            "grade": "T1",
+            "body": "众院能源商务委员会要求NVIDIA及商务部不晚于12-02提供简报。",
+            "source_label": "众院能源商务委员会：要求Nvidia及商务部提供简报",
+            "url": "https://energycommerce.house.gov/posts/chairman-guthrie-requests-briefings-from-nvidia-and-department-of-commerce-over-megaspeed-and-national-security-concerns"
+          }
+        ],
+        [
+          {
+            "date": "11-23 生效",
+            "title": "实体清单规则生效",
+            "grade": "T1",
+            "body": "将Megaspeed等七家实体列入清单；行政动作不等于刑事定罪。",
+            "source_label": "BIS · 最终列单规则",
+            "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-25/html/2026-23999.htm"
+          }
+        ],
+        [
+          {
+            "date": "11-25 刊登",
+            "title": "最终规则登载公报",
+            "grade": "T1",
+            "body": "与11-23生效的是同一规则。此处单列正式出版日期，避免混淆。",
+            "source_label": "BIS · 最终列单规则",
+            "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-25/html/2026-23999.htm"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "intelligence",
+      "number": "03",
+      "label": "情报说法",
+      "scope": "未公开情报的转述",
+      "cells": [
+        [
+          {
+            "date": "11-06",
+            "title": "FT 报道情报指控",
+            "grade": "T3",
+            "body": "原发书目已定位，付费正文受限；相关情报判断未见公开原始材料。",
+            "source_label": "FT · 11-06原报",
+            "url": "https://www.ft.com/content/a55a2a22-4479-4f93-a445-6147a5c6d790"
+          }
+        ],
+        [],
+        [],
+        [
+          {
+            "date": "11-24 简报",
+            "title": "媒体转述简报评估",
+            "grade": "T3",
+            "body": "WSJ于11-25报道前一天闭门简报：未见中方策划关系的证据。原始情报未公开。",
+            "source_label": "WSJ · 闭门简报报道",
+            "url": "https://www.wsj.com/politics/national-security/no-evidence-china-orchestrated-jensen-huangs-affair-officials-brief-congress-00228bb7"
+          },
+          {
+            "date": "11-26",
+            "title": "官员解释存在分歧",
+            "grade": "T3",
+            "body": "Reuters援引匿名来源描述评估分歧；不是统一公开的机构结论。",
+            "source_label": "Reuters · 情报评估分歧",
+            "url": "https://www.reuters.com/world/us/us-officials-divided-over-chinese-spying-allegations-following-jensen-huangs-2026-11-26/"
+          }
+        ]
+      ]
+    }
+  ]
+}

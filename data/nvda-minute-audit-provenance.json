@@ -1,0 +1,273 @@
+{
+  "dataset": "NVDA minute audit comparison",
+  "version": "2026-11-27",
+  "symbol": "NVDA",
+  "currency": "USD",
+  "rows": 6,
+  "csv_filename": "data/nvda-minute-audit-comparison.csv",
+  "csv_sha256": "27dbeb916f11d94ee481db3c53981e12ee3a00f43982542481747fab3476f990",
+  "scope": "Six historical 1-minute OHLC records for comparing four archived intraday/premarket snapshots and one separately timed after-hours statement.",
+  "confidence": {
+    "historical_bar_fields": "T2: named third-party historical fields, with source limitations below.",
+    "four_original_realtime_snapshots": "T4: exact original quote, capture seconds and where applicable cumulative volume remain unverified.",
+    "after_hours_row": "T2 only for the 2026-11-24 19:59 EST historical Close and calculated change; not an exchange-certified after-hours closing price."
+  },
+  "columns": {
+    "bar_timestamp_unix": "Timestamp returned by Yahoo; seconds since Unix epoch. It identifies the historical 1m record; it does not establish the original realtime capture second.",
+    "bar_utc": "Explicit UTC time.",
+    "bar_new_york": "America/New_York time, EST UTC−05:00 for these dates.",
+    "session": "pre / regular / post, classified against historical tradingPeriods, not currentTradingPeriod.",
+    "open/high/low/close": "Raw JSON numeric values preserved, including floating-point representation; do not conflate Close with a quote at an unspecified second within the minute.",
+    "baseline_close": "Previously audited regular-session daily Close used only as the percentage denominator; not used to replace the historical minute price.",
+    "close_change_percent": "(historical bar Close / baseline Close − 1) × 100, rounded to 6 decimals.",
+    "original_price_within_minute_range": "A range-membership check only. true is not verification of the original quote.",
+    "exact_match_to_bar_close": "Exact decimal match to the returned field. false does not establish that no trade occurred at the original price within the minute."
+  },
+  "baseline_source": {
+    "url": "https://stockanalysis.com/stocks/nvda/history/?period=daily",
+    "dataset": "data/nvda-daily-2026-10-06_to_2026-11-25.csv",
+    "dates": {
+      "2026-11-13": "162.85",
+      "2026-11-17": "155.46",
+      "2026-11-24": "155.38"
+    }
+  },
+  "known_limitations": [
+    "All API responses were retrieved on 2026-11-27, after the claimed snapshots. They do not recover the contemporaneous response or its latency/revision state.",
+    "No exchangeDataDelayedBy field was returned. Yahoo official coverage lists Nasdaq as real-time, but that generic statement does not establish the latency of the old capture. No 15-minute shift was assumed.",
+    "meta.previousClose, regularMarketPrice and regularMarketTime describe the latest quote and do not necessarily refer to the requested historical date. Historical denominators come from the separately audited daily data.",
+    "volume is deliberately excluded from this compact comparison: the 1m response contains anomalously large individual values. For 2026-11-16 the direct regular-session sum is 2,620,662,976 shares, versus 333,822,062 in the audited daily dataset. No undocumented repair or cumulative-volume reconstruction was performed.",
+    "Premarket and postmarket volume fields are zero in these responses; this was not interpreted as absence of trading.",
+    "The 2026-11-25 request uses UTC day boundaries and also includes the last hour of 2026-11-24 postmarket. Each comparison row was selected by exact timestamp and historical session, not merely the response filename.",
+    "F-099 160.40 matches the 13:41 UTC Close, one minute before the archived 13:42 label. This is a useful comparison, not proof of how the old snapshot was sampled."
+  ],
+  "source_urls_for_delay_context": [
+    "https://help.yahoo.com/kb/account/SLN2310.html",
+    "https://help.yahoo.com/kb/SLN2321.html"
+  ],
+  "sources": [
+    {
+      "source_key": "yahoo-2026-11-16",
+      "provider": "Yahoo Finance public chart endpoint",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/NVDA?period1=1794819600&period2=1794877260&interval=1m&includePrePost=true",
+      "http_status": 200,
+      "retrieved_at_utc": "2026-11-27T14:19:53.152148+00:00",
+      "raw_response_filename": "data/nvda-minute-raw-responses-2026-11-27.json",
+      "raw_response_bytes": 60966,
+      "raw_response_sha256": "43c7f1ee1e538e1e0eb2e1adeca39056153004879e0219fdb10e53173ad771be",
+      "dataGranularity": "1m",
+      "timezone": "EST",
+      "gmtoffset": -18000,
+      "exchangeTimezoneName": "America/New_York",
+      "historic_trading_periods": {
+        "pre": [
+          [
+            {
+              "timezone": "EST",
+              "end": 1794839400,
+              "start": 1794819600,
+              "gmtoffset": -18000
+            }
+          ]
+        ],
+        "post": [
+          [
+            {
+              "timezone": "EST",
+              "end": 1794877200,
+              "start": 1794862800,
+              "gmtoffset": -18000
+            }
+          ]
+        ],
+        "regular": [
+          [
+            {
+              "timezone": "EST",
+              "end": 1794862800,
+              "start": 1794839400,
+              "gmtoffset": -18000
+            }
+          ]
+        ]
+      },
+      "exchangeDataDelayedBy": null,
+      "original_response_filename": "nvda-2026-11-16-1m.json",
+      "raw_response_bundle_key": "nvda-2026-11-16-1m"
+    },
+    {
+      "source_key": "yahoo-2026-11-18",
+      "provider": "Yahoo Finance public chart endpoint",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/NVDA?period1=1794992400&period2=1795050060&interval=1m&includePrePost=true",
+      "http_status": 200,
+      "retrieved_at_utc": "2026-11-27T14:19:53.152991+00:00",
+      "raw_response_filename": "data/nvda-minute-raw-responses-2026-11-27.json",
+      "raw_response_bytes": 60972,
+      "raw_response_sha256": "2dac0e20ff7137ec21e348fb9e2ec9210d695b500c9cc6e083aec75c991f958e",
+      "dataGranularity": "1m",
+      "timezone": "EST",
+      "gmtoffset": -18000,
+      "exchangeTimezoneName": "America/New_York",
+      "historic_trading_periods": {
+        "pre": [
+          [
+            {
+              "timezone": "EST",
+              "start": 1794992400,
+              "end": 1795012200,
+              "gmtoffset": -18000
+            }
+          ]
+        ],
+        "post": [
+          [
+            {
+              "timezone": "EST",
+              "start": 1795035600,
+              "end": 1795050000,
+              "gmtoffset": -18000
+            }
+          ]
+        ],
+        "regular": [
+          [
+            {
+              "timezone": "EST",
+              "start": 1795012200,
+              "end": 1795035600,
+              "gmtoffset": -18000
+            }
+          ]
+        ]
+      },
+      "exchangeDataDelayedBy": null,
+      "original_response_filename": "nvda-2026-11-18-1m.json",
+      "raw_response_bundle_key": "nvda-2026-11-18-1m"
+    },
+    {
+      "source_key": "yahoo-2026-11-24",
+      "provider": "Yahoo Finance public chart endpoint",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/NVDA?period1=1795510800&period2=1795568460&interval=1m&includePrePost=true",
+      "http_status": 200,
+      "retrieved_at_utc": "2026-11-27T14:19:53.153692+00:00",
+      "raw_response_filename": "data/nvda-minute-raw-responses-2026-11-27.json",
+      "raw_response_bytes": 60996,
+      "raw_response_sha256": "32a58f2c0d1f939b13a1c047d22a75e5950ca850ef3c5de6087dde9cba277ef9",
+      "dataGranularity": "1m",
+      "timezone": "EST",
+      "gmtoffset": -18000,
+      "exchangeTimezoneName": "America/New_York",
+      "historic_trading_periods": {
+        "pre": [
+          [
+            {
+              "timezone": "EST",
+              "start": 1795510800,
+              "end": 1795530600,
+              "gmtoffset": -18000
+            }
+          ]
+        ],
+        "post": [
+          [
+            {
+              "timezone": "EST",
+              "start": 1795554000,
+              "end": 1795568400,
+              "gmtoffset": -18000
+            }
+          ]
+        ],
+        "regular": [
+          [
+            {
+              "timezone": "EST",
+              "start": 1795530600,
+              "end": 1795554000,
+              "gmtoffset": -18000
+            }
+          ]
+        ]
+      },
+      "exchangeDataDelayedBy": null,
+      "original_response_filename": "nvda-2026-11-24-1m.json",
+      "raw_response_bundle_key": "nvda-2026-11-24-1m"
+    },
+    {
+      "source_key": "yahoo-2026-11-25",
+      "provider": "Yahoo Finance public chart endpoint",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/NVDA?period1=1795564800&period2=1795651200&interval=1m&includePrePost=true",
+      "http_status": 200,
+      "retrieved_at_utc": "2026-11-27T14:19:22.071564+00:00",
+      "raw_response_filename": "data/nvda-minute-raw-responses-2026-11-27.json",
+      "raw_response_bytes": 61043,
+      "raw_response_sha256": "d61b77b0d3d014a9679e342f7646a1930d6ee2c4917af6a909c2de204a5efb57",
+      "dataGranularity": "1m",
+      "timezone": "EST",
+      "gmtoffset": -18000,
+      "exchangeTimezoneName": "America/New_York",
+      "historic_trading_periods": {
+        "pre": [
+          [
+            {
+              "timezone": "EST",
+              "start": 1795510800,
+              "end": 1795530600,
+              "gmtoffset": -18000
+            }
+          ],
+          [
+            {
+              "timezone": "EST",
+              "start": 1795597200,
+              "end": 1795617000,
+              "gmtoffset": -18000
+            }
+          ]
+        ],
+        "post": [
+          [
+            {
+              "timezone": "EST",
+              "start": 1795554000,
+              "end": 1795568400,
+              "gmtoffset": -18000
+            }
+          ],
+          [
+            {
+              "timezone": "EST",
+              "start": 1795640400,
+              "end": 1795654800,
+              "gmtoffset": -18000
+            }
+          ]
+        ],
+        "regular": [
+          [
+            {
+              "timezone": "EST",
+              "start": 1795530600,
+              "end": 1795554000,
+              "gmtoffset": -18000
+            }
+          ],
+          [
+            {
+              "timezone": "EST",
+              "start": 1795617000,
+              "end": 1795640400,
+              "gmtoffset": -18000
+            }
+          ]
+        ]
+      },
+      "exchangeDataDelayedBy": null,
+      "original_response_filename": "nvda-2026-11-25-1m.json",
+      "raw_response_bundle_key": "nvda-2026-11-25-1m"
+    }
+  ],
+  "raw_response_bundle": "data/nvda-minute-raw-responses-2026-11-27.json",
+  "raw_response_bundle_sha256": "ff4b6c2393ef22ebfccf90f65e4e90775676f273aab0af9501a06addf565734b",
+  "raw_response_bundle_format": "Each responses[].response_text_utf8 preserves the exact UTF-8 HTTP body. Re-encode the string to reproduce the individual raw_response_sha256 and byte count."
+}

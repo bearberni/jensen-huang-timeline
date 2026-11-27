@@ -1,0 +1,632 @@
+{
+  "updated": "2026-11-27",
+  "method": "分级针对关系的具体命题；位置与线长不编码强度。沿用已核材料，新增Cotton官方信函。",
+  "nodes": [
+    {
+      "id": "board",
+      "label": "NVIDIA 董事会",
+      "role": "公司治理机构",
+      "kind": "institution"
+    },
+    {
+      "id": "huang",
+      "label": "黄仁勋",
+      "role": "NVIDIA 创始人",
+      "kind": "person"
+    },
+    {
+      "id": "alice",
+      "label": "黄乐 / Alice Huang",
+      "role": "Megaspeed 历史任职",
+      "kind": "person"
+    },
+    {
+      "id": "kress",
+      "label": "Colette Kress",
+      "role": "11/12–23 临时 CEO",
+      "kind": "person"
+    },
+    {
+      "id": "jones",
+      "label": "Harvey C. Jones",
+      "role": "11/12 获任董事长",
+      "kind": "person"
+    },
+    {
+      "id": "trump",
+      "label": "Donald Trump",
+      "role": "美国总统",
+      "kind": "person"
+    },
+    {
+      "id": "mega",
+      "label": "Megaspeed",
+      "role": "芯片相关企业",
+      "kind": "institution"
+    },
+    {
+      "id": "cotton",
+      "label": "Tom Cotton",
+      "role": "美国参议员",
+      "kind": "person"
+    },
+    {
+      "id": "bis",
+      "label": "商务部 / BIS",
+      "role": "出口管制行政机构",
+      "kind": "institution"
+    },
+    {
+      "id": "doj",
+      "label": "美国司法部",
+      "role": "刑事调查机构",
+      "kind": "institution"
+    },
+    {
+      "id": "mha",
+      "label": "新加坡内政部",
+      "role": "本国调查程序说明",
+      "kind": "institution"
+    },
+    {
+      "id": "nvidia",
+      "label": "NVIDIA",
+      "role": "芯片企业",
+      "kind": "institution"
+    },
+    {
+      "id": "congress",
+      "label": "美国国会委员会",
+      "role": "监督与问询",
+      "kind": "institution"
+    },
+    {
+      "id": "intelligence",
+      "label": "中方情报机构",
+      "role": "媒体匿名指控所涉",
+      "kind": "institution"
+    }
+  ],
+  "relations": [
+    {
+      "id": "board-huang",
+      "short": "11/23 恢复职务",
+      "title": "董事会恢复黄仁勋总裁、CEO及董事职务",
+      "grade": "T1",
+      "date": "2026-11-08 → 11-12 → 11-23",
+      "body": "董事会先宣布独立调查，随后宣布黄仁勋辞任，并于11月23日一致决定恢复其职务。",
+      "boundary": "这是公司的人事与治理决定。复职公告同时说明独立调查继续，不能据此认定所有问题已经排除。",
+      "sources": [
+        {
+          "label": "NVIDIA 董事会声明 2026-11-08",
+          "url": "https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors"
+        },
+        {
+          "label": "NVIDIA《NVIDIA Announces CEO Transition》",
+          "url": "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition"
+        },
+        {
+          "label": "NVIDIA · 复职公告",
+          "url": "https://nvidianews.nvidia.com/news/nvidia-board-reinstates-jensen-huang-as-president-ceo-and-board-director"
+        }
+      ]
+    },
+    {
+      "id": "board-kress",
+      "short": "任命临时 CEO",
+      "title": "Colette Kress 在过渡期出任临时 CEO",
+      "grade": "T1",
+      "date": "2026-11-12；黄于11-23复职",
+      "body": "NVIDIA交接公告任命Kress为临时CEO，并继续兼任CFO。",
+      "boundary": "图中标注的是11月12日至黄仁勋复职前的管理安排，不将历史临时职位显示为当前职位。",
+      "sources": [
+        {
+          "label": "NVIDIA 官方新闻稿",
+          "url": "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition"
+        },
+        {
+          "label": "NVIDIA · 复职公告",
+          "url": "https://nvidianews.nvidia.com/news/nvidia-board-reinstates-jensen-huang-as-president-ceo-and-board-director"
+        }
+      ]
+    },
+    {
+      "id": "board-jones",
+      "short": "任命董事长",
+      "title": "Harvey C. Jones 获任董事长",
+      "grade": "T1",
+      "date": "2026-11-12",
+      "body": "NVIDIA交接公告任命Harvey C. Jones为公司首任董事长。",
+      "boundary": "职务任命本身有官方公告；不能由此推断个人对董事会各项决策的私下意见。",
+      "sources": [
+        {
+          "label": "NVIDIA 官方新闻稿",
+          "url": "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition"
+        }
+      ]
+    },
+    {
+      "id": "trump-huang",
+      "short": "公开支持回归",
+      "title": "特朗普公开表示不介意黄仁勋回归",
+      "grade": "T2",
+      "date": "2026-11-16",
+      "body": "AFP记录特朗普向记者表示不介意黄仁勋回归NVIDIA。",
+      "boundary": "公开表态与匿名报道中的幕后施压、具体电话内容是不同命题；本连线只表达这一公开表态。",
+      "sources": [
+        {
+          "label": "AFP/RTL 2026-11-16",
+          "url": "https://today.rtl.lu/news/world/trump-says-would-not-mind-huang-being-reinstated-at-nvidia-786835918"
+        }
+      ]
+    },
+    {
+      "id": "huang-alice",
+      "short": "媒体报道的关系",
+      "title": "报道将黄仁勋的关系对象指向 Alice Huang",
+      "grade": "T3",
+      "date": "2026-10-29起的报道；11-08本人声明",
+      "body": "NYT等媒体报道黄仁勋与Alice Huang的关系。黄仁勋11月8日的公司公开信承认婚外情并道歉。",
+      "boundary": "本人公开信确认婚外情，但未在该信中点名对象；不能把信中的T1确认范围扩展为媒体全部细节，更不能从关系推定情报指使。",
+      "sources": [
+        {
+          "label": "NYT · 10-29原报",
+          "url": "https://www.nytimes.com/2026/10/29/us/politics/nvidia-china-jensen-huang-trump.html"
+        },
+        {
+          "label": "NVIDIA《A Message to Our Company》",
+          "url": "https://nvidianews.nvidia.com/news/a-message-to-our-company"
+        }
+      ]
+    },
+    {
+      "id": "alice-mega",
+      "short": "2025/06 核查身份",
+      "title": "联合声明回溯：2025年6月核查时称 Alice Huang 为 CEO",
+      "grade": "T1",
+      "date": "2025-06核查；2026-11-16声明回溯",
+      "body": "商务部与司法部联合声明在回溯2025年6月现场核查时，将Alice Huang称为Megaspeed CEO，并描述BIS与她面谈。",
+      "boundary": "T1对应官方文件对当时身份与核查程序的记载，不表示当前仍任职。公司另称她于2025年8月30日离职；不同时间与材料分别归属，不自行推定具体交接过程。",
+      "sources": [
+        {
+          "label": "DOJ / Commerce · 联合声明",
+          "url": "https://www.justice.gov/opa/pr/joint-statement-department-commerce-and-department-justice-megaspeed-investigation"
+        },
+        {
+          "label": "联合声明原始 PDF",
+          "url": "https://www.justice.gov/opa/media/1472536/dl?inline"
+        },
+        {
+          "label": "公司关于离职日期的表态（媒体报道）",
+          "url": "https://www.infobae.com/america/agencias/2026/11/15/megaspeed-dice-que-alice-huang-dejo-la-empresa-en-agosto-de-2025/"
+        }
+      ]
+    },
+    {
+      "id": "cotton-bis",
+      "short": "发信要求调查",
+      "title": "Cotton 致商务部长信函要求调查 Megaspeed",
+      "grade": "T1",
+      "date": "2025-10-13 发信；10-14 公开",
+      "body": "Cotton要求商务部长Howard Lutnick调查Megaspeed的所有权、关联关系以及与美国芯片企业的联系。",
+      "boundary": "官方信函确认调查请求已提出；信中引用的新闻指控不因此成为官方查实的违法结论。",
+      "sources": [
+        {
+          "label": "Cotton 办公室 · 10-13 信函／10-14 发布",
+          "url": "https://www.cotton.senate.gov/news/press-releases/cotton-to-lutnick-investigate-chinese-government-spin-off-megaspeed-for-skirting-us-export-laws/"
+        }
+      ]
+    },
+    {
+      "id": "bis-mega",
+      "short": "实体清单列入",
+      "title": "BIS 将 Megaspeed 等七家实体列入实体清单",
+      "grade": "T1",
+      "date": "2026-11-23 生效；11-25 刊登",
+      "body": "最终规则发表于《联邦公报》91 FR 76148–76150，文件号2026-23999。",
+      "boundary": "行政列单、许可证要求与刑事定罪不同；图中连线仅表达已经生效的行政动作。",
+      "sources": [
+        {
+          "label": "BIS · 最终列单规则",
+          "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-25/html/2026-23999.htm"
+        }
+      ]
+    },
+    {
+      "id": "doj-mega",
+      "short": "刑事调查牵头",
+      "title": "司法部牵头 Megaspeed 刑事调查，BIS 协作",
+      "grade": "T1",
+      "date": "声明署日2026-11-16；网页11-17发布",
+      "body": "两部门的联合声明明确调查分工，司法部主导刑事调查，BIS继续协作。",
+      "boundary": "有调查不等于已起诉或罪名成立；转交牵头机构不等于调查终止。",
+      "sources": [
+        {
+          "label": "DOJ / Commerce · 联合声明",
+          "url": "https://www.justice.gov/opa/pr/joint-statement-department-commerce-and-department-justice-megaspeed-investigation"
+        }
+      ]
+    },
+    {
+      "id": "mha-mega",
+      "short": "本地调查继续",
+      "title": "新加坡对 Megaspeed 及其他相关人员的调查继续",
+      "grade": "T1",
+      "date": "新加坡内政部2026-11-12声明",
+      "body": "新加坡内政部说明本国调查程序，并表示对Megaspeed及另外六人的调查仍在进行。",
+      "boundary": "新加坡本地程序与美国调查不是同一个案件；不同管辖范围的处理结果不可互相替代。",
+      "sources": [
+        {
+          "label": "新加坡内政部 2026-11-12 声明",
+          "url": "https://www.mha.gov.sg/media-room/newsroom/singapore-investigations-into-alice-huang-huang-le-and-megaspeed-international-pte-ltd"
+        }
+      ]
+    },
+    {
+      "id": "nvidia-mega",
+      "short": "列入不销售名单",
+      "title": "联合声明记载 NVIDIA 已将 Megaspeed 列入不销售名单",
+      "grade": "T1",
+      "date": "联合声明回溯2025-06",
+      "body": "美方联合声明记载，NVIDIA于2025年6月将Megaspeed纳入不销售名单。",
+      "boundary": "这确认官方文件对相关合规动作的记载；不能由此推断所有此前或此后的设备流向，也不能证明任何个人的知情程度。",
+      "sources": [
+        {
+          "label": "DOJ / Commerce · 联合声明",
+          "url": "https://www.justice.gov/opa/pr/joint-statement-department-commerce-and-department-justice-megaspeed-investigation"
+        }
+      ]
+    },
+    {
+      "id": "congress-nvidia",
+      "short": "要求简报与证词",
+      "title": "国会委员会要求材料、访谈及公开证词",
+      "grade": "T1",
+      "date": "2026-11-18、11-23发布；12月安排",
+      "body": "众院能源商务委员会要求不晚于12月2日提供简报；其他委员会与参院银行委员会分别公布访谈及听证安排。",
+      "boundary": "不同委员会、文件和日期分别记录。要求答复或安排作证不等于认定违法，也不表示尚未来临的听证已经举行。",
+      "sources": [
+        {
+          "label": "众院能源商务委员会：要求Nvidia及商务部提供简报",
+          "url": "https://energycommerce.house.gov/posts/chairman-guthrie-requests-briefings-from-nvidia-and-department-of-commerce-over-megaspeed-and-national-security-concerns"
+        },
+        {
+          "label": "众院三委员会复职后联合声明",
+          "url": "https://chinaselectcommittee.house.gov/media/press-releases/statement-on-jensen-huang-s-reinstatement-at-nvidia"
+        },
+        {
+          "label": "参院银行委员会公开听证日程",
+          "url": "https://www.banking.senate.gov/hearings/protecting-americas-ai-advantage-oversight-of-us-export-controls"
+        }
+      ]
+    },
+    {
+      "id": "alice-intelligence",
+      "short": "匿名情报指控",
+      "title": "Alice Huang 的情报联系仍是媒体转述的未公开判断",
+      "grade": "T3",
+      "date": "早期报道至2026-11-26后续报道",
+      "body": "NYT、FT等报道援引未公开情报判断；Reuters后续报道描述官员对情报解释存在分歧。",
+      "boundary": "未取得公开原始情报。身份、联系、遭监视与受指使是不同命题；不能把报道画成已确认的雇佣或隶属关系。",
+      "sources": [
+        {
+          "label": "NYT · 10-29原报",
+          "url": "https://www.nytimes.com/2026/10/29/us/politics/nvidia-china-jensen-huang-trump.html"
+        },
+        {
+          "label": "FT · 11-06原报",
+          "url": "https://www.ft.com/content/a55a2a22-4479-4f93-a445-6147a5c6d790"
+        },
+        {
+          "label": "Reuters · 情报评估分歧",
+          "url": "https://www.reuters.com/world/us/us-officials-divided-over-chinese-spying-allegations-following-jensen-huangs-2026-11-26/"
+        }
+      ]
+    },
+    {
+      "id": "mha-alice",
+      "short": "本地调查范围",
+      "title": "新加坡声明：Alice Huang 未因间谍事项被调查",
+      "grade": "T1",
+      "date": "2026-11-12",
+      "body": "新加坡内政部公开说明Alice Huang所涉本国调查程序，并表示她未因间谍事项被调查。",
+      "boundary": "这只是该国调查范围的说明；未被调查不等于调查后获免责，也不能单独证实或否定情报身份。",
+      "sources": [
+        {
+          "label": "新加坡内政部 2026-11-12 声明",
+          "url": "https://www.mha.gov.sg/media-room/newsroom/singapore-investigations-into-alice-huang-huang-le-and-megaspeed-international-pte-ltd"
+        }
+      ]
+    }
+  ],
+  "views": [
+    {
+      "id": "people",
+      "label": "公司与人物",
+      "context": "保留核心人物与公司治理关系；所有任命、表态和被报道的私人关系均注明日期与不同的证据范围。",
+      "nodes": [
+        {
+          "id": "board",
+          "xy": [
+            150,
+            225
+          ]
+        },
+        {
+          "id": "huang",
+          "xy": [
+            450,
+            225
+          ]
+        },
+        {
+          "id": "alice",
+          "xy": [
+            750,
+            225
+          ]
+        },
+        {
+          "id": "kress",
+          "xy": [
+            150,
+            410
+          ]
+        },
+        {
+          "id": "jones",
+          "xy": [
+            150,
+            60
+          ]
+        },
+        {
+          "id": "trump",
+          "xy": [
+            450,
+            60
+          ]
+        },
+        {
+          "id": "mega",
+          "xy": [
+            750,
+            410
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "id": "board-huang",
+          "path": "M242 225H358",
+          "label_xy": [
+            300,
+            172
+          ]
+        },
+        {
+          "id": "board-kress",
+          "path": "M150 262V373",
+          "label_xy": [
+            237,
+            317
+          ]
+        },
+        {
+          "id": "board-jones",
+          "path": "M150 188V97",
+          "label_xy": [
+            237,
+            141
+          ]
+        },
+        {
+          "id": "trump-huang",
+          "path": "M450 97V188",
+          "label_xy": [
+            540,
+            141
+          ]
+        },
+        {
+          "id": "huang-alice",
+          "path": "M542 225H658",
+          "label_xy": [
+            600,
+            172
+          ]
+        },
+        {
+          "id": "alice-mega",
+          "path": "M750 262V373",
+          "label_xy": [
+            655,
+            317
+          ]
+        }
+      ]
+    },
+    {
+      "id": "oversight",
+      "label": "监管与调查",
+      "context": "行政列单、刑事调查和国会监督各有职责。实线表示已找到支持该程序动作的官方材料，不代表责任已经认定。",
+      "nodes": [
+        {
+          "id": "cotton",
+          "xy": [
+            150,
+            60
+          ]
+        },
+        {
+          "id": "alice",
+          "xy": [
+            450,
+            60
+          ]
+        },
+        {
+          "id": "mha",
+          "xy": [
+            750,
+            60
+          ]
+        },
+        {
+          "id": "bis",
+          "xy": [
+            150,
+            245
+          ]
+        },
+        {
+          "id": "mega",
+          "xy": [
+            450,
+            245
+          ]
+        },
+        {
+          "id": "doj",
+          "xy": [
+            750,
+            245
+          ]
+        },
+        {
+          "id": "nvidia",
+          "xy": [
+            450,
+            425
+          ]
+        },
+        {
+          "id": "congress",
+          "xy": [
+            750,
+            425
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "id": "cotton-bis",
+          "path": "M150 97V208",
+          "label_xy": [
+            240,
+            152
+          ]
+        },
+        {
+          "id": "alice-mega",
+          "path": "M450 97V208",
+          "label_xy": [
+            450,
+            151
+          ]
+        },
+        {
+          "id": "mha-mega",
+          "path": "M710 97L492 208",
+          "label_xy": [
+            641,
+            160
+          ]
+        },
+        {
+          "id": "bis-mega",
+          "path": "M242 245H358",
+          "label_xy": [
+            300,
+            190
+          ]
+        },
+        {
+          "id": "doj-mega",
+          "path": "M658 245H542",
+          "label_xy": [
+            600,
+            300
+          ]
+        },
+        {
+          "id": "nvidia-mega",
+          "path": "M450 388V282",
+          "label_xy": [
+            355,
+            335
+          ]
+        },
+        {
+          "id": "congress-nvidia",
+          "path": "M658 425H542",
+          "label_xy": [
+            600,
+            365
+          ]
+        }
+      ]
+    },
+    {
+      "id": "intelligence",
+      "label": "情报说法",
+      "context": "此层刻意保留虚线与限定词。私人关系、情报联系、是否由情报机关策划，以及某国是否调查，是四个不同问题。",
+      "nodes": [
+        {
+          "id": "huang",
+          "xy": [
+            150,
+            180
+          ]
+        },
+        {
+          "id": "alice",
+          "xy": [
+            450,
+            180
+          ]
+        },
+        {
+          "id": "intelligence",
+          "xy": [
+            750,
+            180
+          ]
+        },
+        {
+          "id": "mha",
+          "xy": [
+            450,
+            375
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "id": "huang-alice",
+          "path": "M242 180H358",
+          "label_xy": [
+            300,
+            125
+          ]
+        },
+        {
+          "id": "alice-intelligence",
+          "path": "M542 180H658",
+          "label_xy": [
+            600,
+            125
+          ]
+        },
+        {
+          "id": "mha-alice",
+          "path": "M450 338V217",
+          "label_xy": [
+            550,
+            277
+          ]
+        }
+      ]
+    }
+  ]
+}
