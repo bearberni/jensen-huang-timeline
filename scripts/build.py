@@ -4,6 +4,7 @@ from pathlib import Path
 from html import escape
 import json,re
 from collections import Counter
+from visuals import render_portrait, render_progress, render_grade_bar, render_network, render_t4_followup, render_doc_previews
 
 ROOT=Path(__file__).resolve().parents[1]
 read=lambda name: json.loads((ROOT/'data'/name).read_text(encoding='utf-8'))
@@ -36,17 +37,14 @@ def render_summary(short=False):
     return out+'</section>'
 
 def render_milestones():
-    out=heading('overview','关键进展','日期对应公开文件或报道的发生时点；后续评估变化单独记录。','THE RECORD')+'<div class="milestone-grid">'
-    for m in summary['milestones']:
-        out+=f'<article class="milestone"><time>{E(m["date"])}</time><h3>{E(m["title"])}</h3><p>{E(m.get("body",m.get("description","")))}</p>{source_links(m.get("links",[]))}</article>'
-    return out+'</div></section>'
+    return render_progress()
 
 def render_confidence():
     rules={'T1':('直接核对材料','官方文件、原始声明或原始数据。只证明该材料实际支持的命题。'),'T2':('明确归属的报道','公开发言的报道、具名数据及口径清楚的估算。'),'T3':('仍需独立证据','匿名消息、内部动因、未公开情报或未独立核实的调查结论。'),'T4':('证据尚不充分','缺少历史快照，或数据冲突未解决。待核不等于已证伪。')}
-    out=heading('confidence','证据分级','分级针对具体命题，不是媒体排行榜，也不是概率评分。','HOW TO READ',f'共 {len(events)} 条事件与报道；按每条主等级计数。')+'<div class="confidence-grid">'
+    out=heading('confidence','证据分级','分级针对具体命题，不是媒体排行榜，也不是概率评分。','HOW TO READ',f'共 {len(events)} 条事件与报道；按每条主等级计数。')+render_grade_bar(counts,len(events))+'<div class="confidence-grid">'
     for g,(title,desc) in rules.items():
         out+=f'<article class="confidence-cell">{badge(g,False)}<p class="confidence-count">{counts[g]} <small>条</small></p><h3>{title}</h3><p>{desc}</p><button class="js-only" data-show-grade="{g}">查看{g}记录</button></article>'
-    return out+'</div><details class="method-details"><summary>分级、原文访问状态和“独立来源”怎样区分？</summary><p>一条记录可能包含不同等级的命题，条内说明会保留这些区别；这里的数量只按主等级归类。来源标为“全文、部分正文、仅索引、访问受限”等，与 T 级分别记录。找回原文链接不自动提升匿名指控的等级。</p><p>转载同一报道不计为多次独立确认。政府信函引用新闻报道，只能直接确认发信行为与信函内容；其中的指控需要独立证据。搜索入口及 RSS 跳转保留为检索辅助，不能代替原文。</p></details></section>'
+    return out+'</div>'+render_t4_followup(data)+'<details class="method-details"><summary>分级、原文访问状态和“独立来源”怎样区分？</summary><p>一条记录可能包含不同等级的命题，条内说明会保留这些区别；这里的数量只按主等级归类。来源标为“全文、部分正文、仅索引、访问受限”等，与 T 级分别记录。找回原文链接不自动提升匿名指控的等级。</p><p>转载同一报道不计为多次独立确认。政府信函引用新闻报道，只能直接确认发信行为与信函内容；其中的指控需要独立证据。本轮已将页面的 Google News 入口改为具体原发或官方材料；无法唯一恢复的旧索引单独说明重新编目依据，不把补入文章称作原 RSS 的已确认落地页。</p></details></section>'
 
 def render_timeline():
     out=heading('timeline','完整时间线','默认按最新日期排列。可以按关键词和证据等级筛选，每条保留出处与证据边界。','CHRONOLOGY')
@@ -75,7 +73,7 @@ def render_timeline():
     return out
 
 def render_evidence():
-    out=heading('network','四个问题，分别看证据','关系、情报身份、出口合规与个人责任分别判断；一项结论不能代替另一项。','EVIDENCE MAP')+'<div class="evidence-grid">'
+    out=heading('evidence-questions','四个问题，分别看证据','关系、情报身份、出口合规与个人责任分别判断；一项结论不能代替另一项。','EVIDENCE MAP')+'<div class="evidence-grid">'
     rows=[('关系是否由情报机构指使？','T3','媒体转述闭门简报称未见策划关系的证据；后续报道仍描述官员对情报解释存在分歧。','没有公开原始情报，不能写成机构一致确认或正式全面排除。',['S12','S15']),('是否具有情报身份或联系？','T3','早期 NYT／FT 报道和后续媒体转述都涉及匿名情报判断。新加坡官方声明则说明其本地调查程序。','身份、联系、被监视与被指使是不同命题；不同机构与时段的说法需分别记录。',['S09','S11','S15']),('出口管制已确认哪些动作？','T1','BIS 已发布实体清单最终规则；DOJ 与商务部公开由司法部牵头的调查安排。','T1 只对应行政动作和程序，违规责任仍待调查。融资登记、列单和开展调查都不直接等于刑事定罪。',['S01','S03','S08']),('黄本人是否知情或承担责任？','T3','公司复职公告确认恢复职务，同时明确独立调查将继续；媒体另有关于未受调查及决策过程的报道。','复职、未被调查与调查后获免责分别记录。个人知情程度和法律责任需要各自证据。',['S40','S54'])]
     for i,(title,g,body,boundary,ids) in enumerate(rows):
         out+=f'<article class="evidence-card"><div class="evidence-heading"><span class="evidence-icon" aria-hidden="true">{["关","情","贸","责"][i]}</span><h3>{title}</h3></div>{badge(g)}<p>{body}</p>{sl(*ids)}<p class="boundary">{boundary}</p></article>'
@@ -90,10 +88,10 @@ def render_watch():
     return out
 
 def render_docs():
-    out=heading('docs','官方文件与原始出处','优先读能够直接支持关键命题的文件。以下为内容摘要，完整文本以链接原文为准。','PRIMARY DOCUMENTS')+'<div class="doc-grid">'
+    out=heading('docs','官方文件与原始出处','优先读能够直接支持关键命题的文件。以下为内容摘要，完整文本以链接原文为准。','PRIMARY DOCUMENTS')+render_doc_previews()+f'<details class="archive-details"><summary>展开全部 {len(data["documents"])} 份官方材料索引</summary><div class="doc-grid">'
     for d in data['documents']:
         out+=f'<article class="doc-card"><p class="doc-type">{E(d["date"])} · {E(d["kind"])}</p><h3>{E(d["title"])}</h3><p>{E(d["body"])}</p>{source_links(d["links"])}</article>'
-    return out+'</div></section>'
+    return out+'</div></details></section>'
 
 def render_archive():
     out=heading('reactions','公开回应与传播记录','保留历史表态与原帖入口；传播热度、支持态度和本人签署是不同证据。','PUBLIC RECORD')
@@ -105,24 +103,25 @@ def render_sources():
     n=data['source_row_count']
     out=heading('sources-chapter','来源索引','按具体文章和文件保留出处。尚未核对正文的历史入口明确标记，避免把链接可点击当作已核实。','SOURCE INDEX',f'{n} 条来源记录；转载与原稿不作为独立重复证据。')
     out+='<div class="sources-controls js-only"><label for="sourceSearch" class="sr-only">搜索来源</label><input type="search" class="search-input" id="sourceSearch" placeholder="搜索来源、日期、主题或访问状态"></div><div class="table-scroll source-index" id="sourceTable" tabindex="0" aria-label="来源表，可横向滚动">'+data['sources_html']+'</div>'
-    out+=f'<p id="sourceResult" class="source-index-count" role="status">显示 {n} / {n} 条来源记录</p><div class="correction-note"><b>2026-11-27 信源修订：</b>补齐 Megaspeed 最终列单规则与 DOJ 调查文件，区分匿名判断与官方程序；校正融资金额含义、评级观察、市场比较基准及错配原链。既有基础官宣与本人签署原帖沿用。搜索入口及尚未还原的 RSS 仍保留访问说明，未声称全量正文已核。<p>审计存档：<a href="AUDIT-2026-11-27.md" download>下载修订说明</a> · <a href="data/source-audit-2026-11-27.json" download>下载机器可读清单</a>。这两份文件记录较早的139条审计快照；当前{len(events)}条记录及分级以<a href="data/content.json">当前数据</a>为准。</p><p><a href="https://github.com/bearberni/jensen-huang-timeline">查看仓库与版本记录</a></p></div></section>'
+    out+=f'<p id="sourceResult" class="source-index-count" role="status">显示 {n} / {n} 条来源记录</p><div class="correction-note"><b>2026-11-27 追加核验：</b>页面 Google News 搜索与 RSS 入口已替换为具体原发或官方材料，实际访问状态逐项保留。Cotton 调查请求补齐官方信函；四条精确行情快照取得分钟对照，仍保留未解决的差异。原文发现的时间、金额口径、匿名归因与转载关系同步修订。<p><a href="data/link-audit-2026-11-27.json" download>下载本轮逐链接替换清单与理由</a> · <a href="data/t4-followup-2026-11-27.json" download>下载五条待核记录的补核详情</a></p><p>较早审计存档：<a href="AUDIT-2026-11-27.md" download>修订说明</a> · <a href="data/source-audit-2026-11-27.json" download>机器可读清单</a>（139条快照）。当前{len(events)}条记录及分级以<a href="data/content.json">当前数据</a>为准。</p><p><a href="https://github.com/bearberni/jensen-huang-timeline">查看仓库与版本记录</a></p></div></section>'
     return out
 
 def render(short=False):
     title='黄仁勋事件档案 · 速读版' if short else '黄仁勋事件档案 · 完整时间线与信源'
     h1='黄仁勋事件档案<em>速读版</em>' if short else '黄仁勋事件档案<em>事实、报道与未定问题</em>'
-    nav=[('summary','30 秒速读'),('overview','关键进展'),('market-details','市场数据'),('verdict','后续观察')] if short else [('summary','速读'),('overview','进展'),('timeline','时间线'),('network','证据边界'),('confidence','分级'),('market','市场'),('verdict','观察'),('docs','原始文件'),('sources-chapter','来源')]
-    body=render_summary(short)+render_milestones()
-    if not short:body+=render_confidence()+render_timeline()
+    nav=[('summary','30 秒速读'),('overview','进展图'),('network','关系图'),('market-details','市场数据'),('docs','原始文件'),('verdict','后续观察')] if short else [('summary','速读'),('overview','进展图'),('network','关系图'),('confidence','分级'),('timeline','时间线'),('market','市场'),('verdict','观察'),('docs','原始文件'),('sources-chapter','来源')]
+    body=render_summary(short)+render_milestones()+render_network(short)
+    if not short:body+='<details class="archive-details evidence-expansion"><summary>展开四项核心问题的证据边界</summary>'+render_evidence()+'</details>'+render_confidence()+render_timeline()
+    else:body+=render_t4_followup(data,True)
     market=(ROOT/'templates/market.html').read_text(encoding='utf-8')
     if short:
-        body+='<details class="archive-details" id="market-details"><summary>展开市场图表与计算口径</summary>'+market+'</details>'+render_watch()
-    else:body+=render_evidence()+market+render_watch()
+        body+='<details class="archive-details" id="market-details"><summary>展开市场图表与计算口径</summary>'+market+'</details>'+heading('docs','三份关键文件','从原始材料检查已经确认的程序动作。','PRIMARY DOCUMENTS')+render_doc_previews()+'</section>'+render_watch()
+    else:body+=market+render_watch()
     if not short:body+=render_docs()+render_archive()+render_sources()
     else:body+='<section class="section"><h2>继续查看完整记录</h2><p class="section-intro">完整页面保留逐条时间线、证据分级、官方文件和来源访问状态。速读版与完整页面使用同一份内容生成。</p><div class="short-cta"><a class="primary-button" href="index.html#timeline">打开完整时间线</a><p><a href="index.html#sources-chapter">查看来源索引</a></p></div></section>'
     html='''<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark">'''
-    html+=f'<title>{title}</title><meta name="description" content="黄仁勋事件的公开记录与信源审计：区分官方文件、媒体报道与待核判断。2026-11-27更新；完整时间线与TLDR同源。"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 fill=%27%2314675c%27/%3E%3Ctext x=%2732%27 y=%2745%27 text-anchor=%27middle%27 fill=%27white%27 font-size=%2740%27 font-family=%27Georgia%27%3EN%3C/text%3E%3C/svg%3E"><link rel="stylesheet" href="assets/site.css"><link rel="stylesheet" href="assets/market.css"><script defer src="assets/site.js"></script><script defer src="assets/market.js"></script></head>'
-    html+=f'<body class="{"short" if short else "full"}"><a class="skip" href="#main">跳到正文</a><header class="frame"><div class="topbar"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">N</span><span>事件档案<br>PUBLIC RECORD</span></a><nav class="edition-tabs" aria-label="阅读版本"><a href="index.html" {"aria-current=page" if not short else ""}>完整版</a><a href="tldr.html" {"aria-current=page" if short else ""}>TL;DR 速读</a></nav></div><div class="hero"><div><p class="eyebrow">NVIDIA · GOVERNANCE · EVIDENCE</p><h1>{h1}</h1><p class="hero-dek">从公开报道到董事会去留，再到出口管制与国会问询。把已经发生的动作，与仍待证实的判断分开读。</p></div><aside class="hero-aside"><h2>当前状态</h2><p><strong>已复职，调查仍继续。</strong><br>行政列单已有官方文件；匿名情报判断仍需公开证据。每项结论都保留自己的来源与边界。</p></aside></div><div class="audit-stamp"><span>信源更新 <b>2026-11-27 · 北京时间</b></span><span>价格截至 <b>2026-11-25 美股收盘</b></span><span>资料日期按原文标注</span></div></header><div class="nav-shell"><nav class="frame section-nav" aria-label="章节导航">'+''.join(f'<a href="#{id}">{label}</a>' for id,label in nav)+'</nav></div>'
+    html+=f'<title>{title}</title><meta name="description" content="黄仁勋事件的公开记录与信源审计：区分官方文件、媒体报道与待核判断。2026-11-27更新；完整时间线与TLDR同源。"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 fill=%27%2314675c%27/%3E%3Ctext x=%2732%27 y=%2745%27 text-anchor=%27middle%27 fill=%27white%27 font-size=%2740%27 font-family=%27Georgia%27%3EN%3C/text%3E%3C/svg%3E"><link rel="stylesheet" href="assets/site.css"><link rel="stylesheet" href="assets/market.css"><link rel="stylesheet" href="assets/visuals.css"><script defer src="assets/site.js"></script><script defer src="assets/visuals.js"></script><script defer src="assets/market.js"></script></head>'
+    html+=f'<body class="{"short" if short else "full"}"><a class="skip" href="#main">跳到正文</a><header class="frame"><div class="topbar"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">N</span><span>事件档案<br>PUBLIC RECORD</span></a><nav class="edition-tabs" aria-label="阅读版本"><a href="index.html" {"aria-current=page" if not short else ""}>完整版</a><a href="tldr.html" {"aria-current=page" if short else ""}>TL;DR 速读</a></nav></div><div class="hero"><div><p class="eyebrow">NVIDIA · GOVERNANCE · EVIDENCE</p><h1>{h1}</h1><p class="hero-dek">从公开报道到董事会去留，再到出口管制与国会问询。把已经发生的动作，与仍待证实的判断分开读。</p></div>{render_portrait()}</div><div class="audit-stamp"><span>信源更新 <b>2026-11-27 · 北京时间</b></span><span>价格截至 <b>2026-11-25 美股收盘</b></span><span>资料日期按原文标注</span></div></header><div class="nav-shell"><nav class="frame section-nav" aria-label="章节导航">'+''.join(f'<a href="#{id}">{label}</a>' for id,label in nav)+'</nav></div>'
     html+='<main class="frame" id="main">'+body+'</main><footer class="frame page-footer"><p>黄仁勋事件档案 · 2026-11-27 修订<br>等级反映命题的证据状态。官方声明、媒体转述及独立核实程度分别呈现；来源受限与待核内容不作确定结论。</p><div class="footer-links"><a href="index.html">完整版</a><a href="tldr.html">速读版</a><a href="https://github.com/bearberni/jensen-huang-timeline" target="_blank" rel="noopener noreferrer">GitHub</a></div></footer><button id="backTop" class="back-top js-only" hidden aria-label="返回页面顶部">顶部</button></body></html>'
     return html
 
