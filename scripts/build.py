@@ -4,6 +4,7 @@ from pathlib import Path
 from html import escape
 import json,re
 from collections import Counter
+from social import render_social
 from visuals import render_portrait, render_progress, render_grade_bar, render_network, render_t4_followup, render_doc_previews
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -93,12 +94,6 @@ def render_docs():
         out+=f'<article class="doc-card"><p class="doc-type">{E(d["date"])} · {E(d["kind"])}</p><h3>{E(d["title"])}</h3><p>{E(d["body"])}</p>{source_links(d["links"])}</article>'
     return out+'</div></details></section>'
 
-def render_archive():
-    out=heading('reactions','公开回应与传播记录','保留历史表态与原帖入口；传播热度、支持态度和本人签署是不同证据。','PUBLIC RECORD')
-    out+='<details class="archive-details"><summary>公开回应与历史表态</summary><p class="archive-intro">按当时身份和日期阅读。部分内容为媒体转述或中文译述；不同来源的公开程度见链接及条内说明。</p>'+data['reactions_html']+'</details>'
-    out+='<details class="archive-details" id="gossip"><summary>历史传播快照与原帖索引 <span class="badge t4">数据快照待核</span></summary><p class="archive-intro">以下保留 11 月 26 日版本的传播记录。当前公开仓库未附采集明细，部分时间标签不一致；数量及互动指标暂不能独立复算，也不能代表总体舆论或验证签署身份。支持发言不等于签署，署名核验仍以本人原帖为准。</p>'+data['gossip_html']+'</details></section>'
-    return out
-
 def render_sources():
     n=data['source_row_count']
     out=heading('sources-chapter','来源索引','按具体文章和文件保留出处。尚未核对正文的历史入口明确标记，避免把链接可点击当作已核实。','SOURCE INDEX',f'{n} 条来源记录；转载与原稿不作为独立重复证据。')
@@ -109,18 +104,18 @@ def render_sources():
 def render(short=False):
     title='黄仁勋事件档案 · 速读版' if short else '黄仁勋事件档案 · 完整时间线与信源'
     h1='黄仁勋事件档案<em>速读版</em>' if short else '黄仁勋事件档案<em>事实、报道与未定问题</em>'
-    nav=[('summary','30 秒速读'),('overview','进展图'),('network','关系图'),('market-details','市场数据'),('docs','原始文件'),('verdict','后续观察')] if short else [('summary','速读'),('overview','进展图'),('network','关系图'),('confidence','分级'),('timeline','时间线'),('market','市场'),('verdict','观察'),('docs','原始文件'),('sources-chapter','来源')]
-    body=render_summary(short)+render_milestones()+render_network(short)
+    nav=[('summary','30 秒速读'),('overview','进展图'),('network','人物关系'),('reactions','社交与回应'),('market-details','市场数据'),('docs','原始文件'),('verdict','后续观察')] if short else [('summary','速读'),('overview','进展图'),('network','人物关系'),('reactions','社交与回应'),('confidence','分级'),('timeline','时间线'),('market','市场'),('verdict','观察'),('docs','原始文件'),('sources-chapter','来源')]
+    body=render_summary(short)+render_milestones()+render_network(short)+render_social(short)
     if not short:body+='<details class="archive-details evidence-expansion"><summary>展开四项核心问题的证据边界</summary>'+render_evidence()+'</details>'+render_confidence()+render_timeline()
     else:body+=render_t4_followup(data,True)
     market=(ROOT/'templates/market.html').read_text(encoding='utf-8')
     if short:
         body+='<details class="archive-details" id="market-details"><summary>展开市场图表与计算口径</summary>'+market+'</details>'+heading('docs','三份关键文件','从原始材料检查已经确认的程序动作。','PRIMARY DOCUMENTS')+render_doc_previews()+'</section>'+render_watch()
     else:body+=market+render_watch()
-    if not short:body+=render_docs()+render_archive()+render_sources()
-    else:body+='<section class="section"><h2>继续查看完整记录</h2><p class="section-intro">完整页面保留逐条时间线、证据分级、官方文件和来源访问状态。速读版与完整页面使用同一份内容生成。</p><div class="short-cta"><a class="primary-button" href="index.html#timeline">打开完整时间线</a><p><a href="index.html#sources-chapter">查看来源索引</a></p></div></section>'
+    if not short:body+=render_docs()+render_sources()
+    else:body+='<section class="section"><h2>继续查看完整记录</h2><p class="section-intro">完整页面保留逐条时间线、完整社交档案、证据分级、官方文件和来源访问状态。速读版与完整页面使用同一份内容生成。</p><div class="short-cta"><a class="primary-button" href="index.html#timeline">打开完整时间线</a><p><a href="index.html#sources-chapter">查看来源索引</a></p></div></section>'
     html='''<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark">'''
-    html+=f'<title>{title}</title><meta name="description" content="黄仁勋事件的公开记录与信源审计：区分官方文件、媒体报道与待核判断。2026-11-27更新；完整时间线与TLDR同源。"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 fill=%27%2314675c%27/%3E%3Ctext x=%2732%27 y=%2745%27 text-anchor=%27middle%27 fill=%27white%27 font-size=%2740%27 font-family=%27Georgia%27%3EN%3C/text%3E%3C/svg%3E"><link rel="stylesheet" href="assets/site.css"><link rel="stylesheet" href="assets/market.css"><link rel="stylesheet" href="assets/visuals.css"><script defer src="assets/site.js"></script><script defer src="assets/visuals.js"></script><script defer src="assets/market.js"></script></head>'
+    html+=f'<title>{title}</title><meta name="description" content="黄仁勋事件的公开记录与信源审计：区分官方文件、媒体报道与待核判断。2026-11-27更新；完整时间线与TLDR同源。"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 fill=%27%2314675c%27/%3E%3Ctext x=%2732%27 y=%2745%27 text-anchor=%27middle%27 fill=%27white%27 font-size=%2740%27 font-family=%27Georgia%27%3EN%3C/text%3E%3C/svg%3E"><link rel="stylesheet" href="assets/site.css"><link rel="stylesheet" href="assets/market.css"><link rel="stylesheet" href="assets/visuals.css"><link rel="stylesheet" href="assets/social.css"><script defer src="assets/site.js"></script><script defer src="assets/visuals.js"></script><script defer src="assets/market.js"></script></head>'
     html+=f'<body class="{"short" if short else "full"}"><a class="skip" href="#main">跳到正文</a><header class="frame"><div class="topbar"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">N</span><span>事件档案<br>PUBLIC RECORD</span></a><nav class="edition-tabs" aria-label="阅读版本"><a href="index.html" {"aria-current=page" if not short else ""}>完整版</a><a href="tldr.html" {"aria-current=page" if short else ""}>TL;DR 速读</a></nav></div><div class="hero"><div><p class="eyebrow">NVIDIA · GOVERNANCE · EVIDENCE</p><h1>{h1}</h1><p class="hero-dek">从公开报道到董事会去留，再到出口管制与国会问询。把已经发生的动作，与仍待证实的判断分开读。</p></div>{render_portrait()}</div><div class="audit-stamp"><span>信源更新 <b>2026-11-27 · 北京时间</b></span><span>价格截至 <b>2026-11-25 美股收盘</b></span><span>资料日期按原文标注</span></div></header><div class="nav-shell"><nav class="frame section-nav" aria-label="章节导航">'+''.join(f'<a href="#{id}">{label}</a>' for id,label in nav)+'</nav></div>'
     html+='<main class="frame" id="main">'+body+'</main><footer class="frame page-footer"><p>黄仁勋事件档案 · 2026-11-27 修订<br>等级反映命题的证据状态。官方声明、媒体转述及独立核实程度分别呈现；来源受限与待核内容不作确定结论。</p><div class="footer-links"><a href="index.html">完整版</a><a href="tldr.html">速读版</a><a href="https://github.com/bearberni/jensen-huang-timeline" target="_blank" rel="noopener noreferrer">GitHub</a></div></footer><button id="backTop" class="back-top js-only" hidden aria-label="返回页面顶部">顶部</button></body></html>'
     return html
