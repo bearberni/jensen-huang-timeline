@@ -75,6 +75,21 @@
     update();
   }
   const nav = $$('.section-nav a[href^="#"]');
+  // A deep link must reveal the evidence even when it lives inside a disclosure.
+  function revealDisclosureAnchor() {
+    let id;
+    try { id = decodeURIComponent(location.hash.slice(1)); } catch (_) { return; }
+    const target = id && document.getElementById(id);
+    if (!target) return;
+    let node = target, opened = false;
+    while (node) {
+      if (node.tagName === 'DETAILS' && !node.open) { node.open = true; opened = true; }
+      node = node.parentElement;
+    }
+    if (opened) requestAnimationFrame(() => target.scrollIntoView());
+  }
+  addEventListener('hashchange', revealDisclosureAnchor);
+  revealDisclosureAnchor();
   const sections = nav.map(a => ({a, node:document.getElementById(a.hash.slice(1))})).filter(s => s.node);
   let navFrame = false;
   const updateNav = () => {
