@@ -1,0 +1,20 @@
+{
+  "symbol": "NVDA",
+  "exchange": "NASDAQ",
+  "currency": "USD",
+  "date_basis": "US trading date",
+  "price_basis": "Daily regular-session Open/High/Low/Close as shown by the source; source says historical prices are adjusted for stock splits. Close column is used, not Adj. Close.",
+  "volume_unit": "shares",
+  "source": "Stock Analysis — NVIDIA Stock Price History",
+  "upstream_data_source_as_disclosed": "S&P Global Market Intelligence",
+  "url": "https://stockanalysis.com/stocks/nvda/history/?period=daily",
+  "read_date": "2026-11-27",
+  "read_date_timezone": "Asia/Shanghai",
+  "source_last_updated": "2026-11-25",
+  "access_status": "Original webpage daily table read via web tool, not only search snippet",
+  "range_start": "2026-10-06",
+  "range_end": "2026-11-25",
+  "row_count": 37,
+  "confidence": "T2 — third-party market-data table; not exchange-level raw trades",
+  "extraction_note": "Transcribed exactly from the already-read web-tool table. No dates or values imputed; volume consistently taken from this source."
+}
