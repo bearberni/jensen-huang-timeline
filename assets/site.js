@@ -74,6 +74,16 @@
     backTop.addEventListener('click', () => scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'}));
     update();
   }
+  // Print the source details and complete restored social archive; restore reading state.
+  const printableDetails = $$('.relationship-evidence, #reactions details');
+  let printedDetailState = [];
+  addEventListener('beforeprint', () => {
+    printedDetailState = printableDetails.map(node => node.open);
+    printableDetails.forEach(node => { node.open = true; });
+  });
+  addEventListener('afterprint', () => {
+    printableDetails.forEach((node, index) => { node.open = printedDetailState[index] || false; });
+  });
   const nav = $$('.section-nav a[href^="#"]');
   // A deep link must reveal the evidence even when it lives inside a disclosure.
   function revealDisclosureAnchor() {

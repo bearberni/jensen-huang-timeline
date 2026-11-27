@@ -2,31 +2,60 @@
   'use strict';
   const root = document.querySelector('#network');
   if (!root) return;
-  const views = [...root.querySelectorAll('.network-view')];
-  const tabs = [...root.querySelectorAll('[data-network-view]')];
-  const panels = [...root.querySelectorAll('[data-relation-detail]')];
-  let currentView = views[0];
-  function selectRelation(id) {
-    panels.forEach(p => { p.hidden = p.dataset.relationDetail !== id; });
-    root.querySelectorAll('[data-select-relation]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.selectRelation === id)));
-    root.querySelectorAll('[data-relation]').forEach(e => e.classList.toggle('selected', e.dataset.relation === id));
+  const cards = [...root.querySelectorAll('[data-relationship]')];
+  const choices = [...root.querySelectorAll('[data-actor]')];
+  const select = root.querySelector('#actorSelect');
+  const actorName = root.querySelector('#actorName');
+  const actorRole = root.querySelector('#actorRole');
+  const status = root.querySelector('#actorResult');
+  const focus = root.querySelector('.actor-focus');
+  let activeActor = 'huang';
+
+  function showActor(id, updateHash = false) {
+    const option = [...select.options].find(o => o.value === id);
+    if (!option) return;
+    activeActor = id;
+    let count = 0;
+    cards.forEach(card => {
+      card.hidden = id !== 'all' && card.dataset.subject !== id && card.dataset.object !== id;
+      if (!card.hidden) count++;
+    });
+    choices.forEach(button => {
+      const selected = button.dataset.actor === id;
+      if (button.classList.contains('actor-choice')) button.setAttribute('aria-pressed', String(selected));
+      else button.hidden = selected;
+    });
+    select.value = id;
+    actorName.textContent = id === 'all' ? '全部直接关系' : option.dataset.label;
+    actorRole.textContent = id === 'all' ? '按记录逐段查看；保留各自的来源与限定' : option.dataset.role;
+    focus.classList.toggle('unverified', option.dataset.kind === 'unverified');
+    status.textContent = `${actorName.textContent} · ${count} 段关系`;
+    if (updateHash) history.replaceState(null, '', '#actor-' + id);
   }
-  function selectView(id, relation) {
-    currentView = views.find(v => v.dataset.view === id) || views[0];
-    views.forEach(v => { v.hidden = v !== currentView; });
-    tabs.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.networkView === currentView.dataset.view)));
-    selectRelation(relation || currentView.querySelector('[data-select-relation]').dataset.selectRelation);
-  }
-  tabs.forEach(b => b.addEventListener('click', () => selectView(b.dataset.networkView)));
-  root.querySelectorAll('[data-select-relation]').forEach(b => b.addEventListener('click', () => selectRelation(b.dataset.selectRelation)));
-  root.querySelectorAll('[data-relation]').forEach(a => a.addEventListener('click', e => { e.preventDefault(); selectRelation(a.dataset.relation); }));
+  choices.forEach(button => button.addEventListener('click', () => {
+    showActor(button.dataset.actor, true);
+    if (!button.classList.contains('actor-choice')) {
+      actorName.setAttribute('tabindex', '-1');
+      actorName.focus({preventScroll:true});
+      focus.scrollIntoView({block:'start', behavior:matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'});
+    }
+  }));
+  select.addEventListener('change', () => showActor(select.value, true));
   function openAnchor() {
-    const id = location.hash.replace('#relation-', '');
-    if (!location.hash.startsWith('#relation-')) return;
-    const view = views.find(v => [...v.querySelectorAll('[data-select-relation]')].some(b => b.dataset.selectRelation === id));
-    if (view) { selectView(view.dataset.view, id); requestAnimationFrame(() => document.getElementById('relation-' + id).scrollIntoView()); }
+    let hash;
+    try { hash = decodeURIComponent(location.hash.slice(1)); } catch (_) { return; }
+    if (hash.startsWith('actor-')) {
+      showActor(hash.slice(6));
+      requestAnimationFrame(() => root.scrollIntoView({block:'start'}));
+    } else if (hash.startsWith('relation-')) {
+      const card = cards.find(c => c.id === hash);
+      if (!card) return;
+      if (activeActor !== 'all' && ![card.dataset.subject, card.dataset.object].includes(activeActor)) showActor(card.dataset.subject);
+      card.querySelector('details').open = true;
+      requestAnimationFrame(() => card.scrollIntoView({block:'start'}));
+    }
   }
-  selectView(currentView.dataset.view);
+  showActor(activeActor);
   addEventListener('hashchange', openAnchor);
   openAnchor();
 })();

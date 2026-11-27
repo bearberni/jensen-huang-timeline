@@ -1,10 +1,10 @@
 # 共享页面资源
 
-完整版与 TLDR 共用 site.css、site.js、market.css、market.js、visuals.css 和 visuals.js。
+完整版与 TLDR 共用 site.css、site.js、market.css、market.js、visuals.css、visuals.js 和 social.css。
 
 site.js 提供事件和来源筛选、历史锚点兼容与章节导航；market.js 提供收盘价格比较。所有页面内容及静态数据表在禁用 JavaScript 时仍可阅读。
 
-visuals.js 提供关系图主题切换与逐关系证据面板。图、文字按钮和静态详情由同一份 `data/relationships.json` 构建；线型与文字同时表达证据等级，关系图位置不编码强度或因果。
+visuals.js 提供人物／机构筛选、直接关系浏览及深链接恢复。卡片由 `data/relationships.json` 构建，保持真实动作方向和常显的证据限定；数量仅表示收录条目。social.css 为可见的社交档案、回应卡片及历史统计表提供响应式样式。
 
 ## 照片授权
 
