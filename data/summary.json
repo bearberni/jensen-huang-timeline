@@ -1,0 +1,183 @@
+{
+  "eyebrow": "TL;DR · 截至2026年11月26日",
+  "title": "黄仁勋事件 · 速读",
+  "lead": "黄仁勋已复职，独立调查继续；贸易限制已有正式文件，情报指控仍存分歧。股价比较统一采用常规交易收盘价。",
+  "cards": [
+    {
+      "label": "公司治理",
+      "title": "复职已确认，独立调查继续",
+      "body": "NVIDIA董事会11月23日一致同意恢复黄仁勋总裁、CEO及董事职务；公司称独立调查继续进行。复职本身不代表调查已有结论。",
+      "grade": "T1",
+      "links": [
+        {
+          "label": "NVIDIA · 11月23日复职公告",
+          "url": "https://nvidianews.nvidia.com/news/nvidia-board-reinstates-jensen-huang-as-president-ceo-and-board-director"
+        }
+      ]
+    },
+    {
+      "label": "出口管制",
+      "title": "Megaspeed实体列单已生效",
+      "body": "BIS将Megaspeed等七家实体列入实体清单：11月23日生效、25日刊登公报。相关EAR物项须申请许可，原则为推定拒绝；列单不等于刑事定罪。",
+      "grade": "T1",
+      "links": [
+        {
+          "label": "《联邦公报》· 最终规则2026-23999",
+          "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-25/html/2026-23999.htm"
+        }
+      ]
+    },
+    {
+      "label": "情报评估",
+      "title": "匿名情报评估仍有分歧",
+      "body": "Reuters于11月26日援引匿名知情人士称，美方官员对情报的解释存在分歧。这是媒体对匿名评估的报道，尚无公开机构一致结论。",
+      "grade": "T3",
+      "links": [
+        {
+          "label": "Reuters · 11月26日情报评估分歧报道",
+          "url": "https://www.reuters.com/world/us/us-officials-divided-over-chinese-spying-allegations-following-jensen-huangs-2026-11-26/"
+        },
+        {
+          "label": "WSJ · 闭门简报相关报道",
+          "url": "https://www.wsj.com/politics/national-security/no-evidence-china-orchestrated-jensen-huangs-affair-officials-brief-congress-00228bb7"
+        }
+      ]
+    },
+    {
+      "label": "市场价格",
+      "title": "11月25日收盘149.30美元",
+      "body": "NVDA较10月6日收盘239.24美元下跌37.59%。两端均为常规交易收盘价；价格变化不能单独证明某一事件对股价的影响。",
+      "grade": "T2",
+      "links": [
+        {
+          "label": "Yahoo Finance · NVDA历史收盘价",
+          "url": "https://finance.yahoo.com/quote/NVDA/history/"
+        }
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "date": "2026-11-08",
+      "title": "董事会宣布独立调查",
+      "body": "NVIDIA董事会宣布启动独立调查。调查程序与最终结论应分别看待。",
+      "links": [
+        {
+          "label": "NVIDIA · 董事会声明",
+          "url": "https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-12",
+      "title": "黄仁勋辞任，临时管理安排生效",
+      "body": "NVIDIA宣布黄仁勋辞去总裁、CEO及董事职务，即刻生效；Colette Kress出任临时CEO。",
+      "links": [
+        {
+          "label": "NVIDIA · CEO交接公告",
+          "url": "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-17",
+      "title": "联合声明确认Megaspeed调查分工",
+      "body": "司法部与商务部发布联合声明：Megaspeed刑事调查由司法部主导，BIS继续协作。调查移交不等于调查终止。",
+      "links": [
+        {
+          "label": "美国司法部与商务部 · 联合声明",
+          "url": "https://www.justice.gov/opa/pr/joint-statement-department-commerce-and-department-justice-megaspeed-investigation"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-23",
+      "title": "董事会一致恢复黄仁勋职务",
+      "body": "NVIDIA董事会宣布恢复黄仁勋总裁、CEO及董事职务，即刻生效；独立调查继续。",
+      "links": [
+        {
+          "label": "NVIDIA · 董事会复职公告",
+          "url": "https://nvidianews.nvidia.com/news/nvidia-board-reinstates-jensen-huang-as-president-ceo-and-board-director"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "title": "实体清单规则刊登公报",
+      "body": "BIS最终规则正式刊登，将Megaspeed等七家实体列入实体清单；规则生效日为11月23日。",
+      "links": [
+        {
+          "label": "《联邦公报》· 91 FR 76148–76150",
+          "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-25/html/2026-23999.htm"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "title": "Reuters报道官员对情报解释不一",
+      "body": "报道援引匿名知情人士，反映不同官员的评估；不能把这些说法等同于已公开的机构正式结论。",
+      "links": [
+        {
+          "label": "Reuters · 情报评估分歧报道",
+          "url": "https://www.reuters.com/world/us/us-officials-divided-over-chinese-spying-allegations-following-jensen-huangs-2026-11-26/"
+        }
+      ]
+    }
+  ],
+  "watchlist": [
+    {
+      "title": "国会访谈与公开听证",
+      "body": "众院逐字记录访谈安排为12月1—2日；参院公开听证为12月3日10:00。关注是否如期举行、安排是否变更及证词是否公开。排期与实际出席分别记录。",
+      "links": [
+        {
+          "label": "参院公开日程",
+          "url": "https://www.banking.senate.gov/hearings/protecting-americas-ai-advantage-oversight-of-us-export-controls"
+        },
+        {
+          "label": "众院联合声明",
+          "url": "https://chinaselectcommittee.house.gov/media/press-releases/statement-on-jensen-huang-s-reinstatement-at-nvidia"
+        }
+      ]
+    },
+    {
+      "title": "董事会调查结论",
+      "body": "关注独立调查最终结论、董事会监督安排及后续披露。复职不代表对全部指控作出结论。",
+      "links": [
+        {
+          "label": "NVIDIA · 复职公告与调查状态",
+          "url": "https://nvidianews.nvidia.com/news/nvidia-board-reinstates-jensen-huang-as-president-ceo-and-board-director"
+        }
+      ]
+    },
+    {
+      "title": "贸易调查与执法进展",
+      "body": "关注司法部、BIS后续公开文件及许可措施。实体列单、刑事调查和个人责任属于不同事项。",
+      "links": [
+        {
+          "label": "美国司法部与商务部 · 联合声明",
+          "url": "https://www.justice.gov/opa/pr/joint-statement-department-commerce-and-department-justice-megaspeed-investigation"
+        }
+      ]
+    },
+    {
+      "title": "情报评估的公开依据",
+      "body": "关注是否出现可公开核验的机构文件。匿名消息中的不同解释，仍须与正式调查结论区分。",
+      "links": [
+        {
+          "label": "Reuters · 11月26日报道",
+          "url": "https://www.reuters.com/world/us/us-officials-divided-over-chinese-spying-allegations-following-jensen-huangs-2026-11-26/"
+        }
+      ]
+    },
+    {
+      "title": "信用评级后续决定",
+      "body": "Reuters报道S&P于11月25日将NVIDIA评级列入负面观察。关注后续评级行动；负面观察不等于已经降级。",
+      "links": [
+        {
+          "label": "Reuters · S&P负面评级观察报道",
+          "url": "https://www.reuters.com/business/sp-global-places-nvidia-rating-creditwatch-negative-rising-management-governance-2026-11-25/"
+        }
+      ]
+    }
+  ]
+}
