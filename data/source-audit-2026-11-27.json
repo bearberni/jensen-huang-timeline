@@ -1,0 +1,1925 @@
+{
+  "summary": {
+    "base_commit": "d728288d8bf661f1010b62b9902ab29a4d7943f4",
+    "audit_date": "2026-11-27",
+    "content_cutoff": "2026-11-26",
+    "revision_count": 34,
+    "timeline_records": 139,
+    "grade_counts": {
+      "T2": 65,
+      "T3": 46,
+      "T1": 25,
+      "T4": 3
+    },
+    "search_urls_remaining": 6,
+    "rss_urls_remaining": 71,
+    "merges": {
+      "F-138": "F-133",
+      "F-117": "F-106",
+      "F-097": "F-093",
+      "F-088": "F-081"
+    },
+    "scope": "复用既有审计，对核心官方/媒体缺口及全页一致性修订；未逐篇重新核验全部历史RSS。"
+  },
+  "sources": [
+    {
+      "id": "S01",
+      "title": "BIS 最终规则：Additions to the Entity List",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-25/html/2026-23999.htm",
+      "date": "2026-11-25",
+      "access": "官方正文已读",
+      "boundary": "91 FR 76148–76150；2026-23999；11-23生效、11-25出版；只支持行政列单及许可规则。"
+    },
+    {
+      "id": "S02",
+      "title": "BIS 最终规则 PDF",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-25/pdf/2026-23999.pdf",
+      "date": "2026-11-25",
+      "access": "最终PDF已定位；本次获取失败，内容以同文官方HTML为准",
+      "boundary": "同一规则的PDF，不另计独立来源。"
+    },
+    {
+      "id": "S03",
+      "title": "DOJ/Commerce 联合声明",
+      "url": "https://www.justice.gov/opa/pr/joint-statement-department-commerce-and-department-justice-megaspeed-investigation",
+      "date": "2026-11-17",
+      "access": "官方正文已读",
+      "boundary": "网页11-17发布、11-18更新；调查程序及政府陈述，不是定罪。"
+    },
+    {
+      "id": "S04",
+      "title": "DOJ/Commerce 联合声明原始PDF",
+      "url": "https://www.justice.gov/opa/media/1472536/dl?inline=",
+      "date": "2026-11-16",
+      "access": "官方正文已读",
+      "boundary": "文件署日11-16；司法部牵头、BIS协作。"
+    },
+    {
+      "id": "S05",
+      "title": "NYT：Commerce Dept. Chip Inquiry Was Halted After Nvidia Intervention",
+      "url": "https://www.nytimes.com/2026/11/09/business/economy/nvidia-megaspeed-investigation-huang.html",
+      "date": "2026-11-09",
+      "access": "原发书目定位；正文访问受限",
+      "boundary": "URL由国会正式信函脚注确认；信函转引不是独立核实干预。"
+    },
+    {
+      "id": "S06",
+      "title": "参院 Warren/Coons 11-11 正式信函",
+      "url": "https://www.banking.senate.gov/imo/media/doc/20261111_warren_coons_letter_to_wh_commerce_state_re_nvidia_record_retentionpdf.pdf",
+      "date": "2026-11-11",
+      "access": "官方正文已读",
+      "boundary": "脚注核对NYT 10-29/11-06/11-09的题名、作者及URL；不确认所引情报指控。"
+    },
+    {
+      "id": "S07",
+      "title": "众院能源商务委员会11-18致商务部信函",
+      "url": "https://d1dth6e84htgma.cloudfront.net/11_18_2026_E_and_C_Letter_to_U_S_Dept_of_Commerce_2a997e166a.pdf",
+      "date": "2026-11-18",
+      "access": "由官方页面链接；正文已读",
+      "boundary": "脚注8和10核对FT与NYT首报；不另计独立报道。"
+    },
+    {
+      "id": "S08",
+      "title": "Reuters：黄乐关联企业融资登记涉及AI服务器",
+      "url": "https://www.reuters.com/business/finance/alice-huang-linked-firms-listed-270-million-ai-servers-china-records-show-2026-11-25/",
+      "date": "2026-11-25",
+      "access": "原发正文已读",
+      "boundary": "金额为融资安排涵盖资产价值；不能证明禁运芯片、入境时间或方式；底层登记未独立取得。"
+    },
+    {
+      "id": "S09",
+      "title": "NYT 10-29 原报",
+      "url": "https://www.nytimes.com/2026/10/29/us/politics/nvidia-china-jensen-huang-trump.html",
+      "date": "2026-10-29",
+      "access": "沿用既有原链；本轮核书目、未重读付费全文",
+      "boundary": "仅调整匿名实质指控的归因和T级，不重复前次核验。"
+    },
+    {
+      "id": "S10",
+      "title": "NYT 11-06 原报",
+      "url": "https://www.nytimes.com/2026/11/06/us/politics/chinese-spy-agency-nvidia-jensen-huang.html",
+      "date": "2026-11-06",
+      "access": "沿用既有原链；本轮核书目、未重读付费全文",
+      "boundary": "匿名情报指控，未取得公开解密材料。"
+    },
+    {
+      "id": "S11",
+      "title": "FT：US believes Nvidia’s Huang had romantic relationship with alleged Chinese spy",
+      "url": "https://www.ft.com/content/a55a2a22-4479-4f93-a445-6147a5c6d790",
+      "date": "2026-11-06（美国当地）",
+      "access": "原发书目定位；正文访问受限",
+      "boundary": "替换误指11-08承认婚外情后续稿的旧FT链接。"
+    },
+    {
+      "id": "S12",
+      "title": "WSJ：No Evidence China Orchestrated Jensen Huang’s Affair, Officials Brief Congress",
+      "url": "https://www.wsj.com/politics/national-security/no-evidence-china-orchestrated-jensen-huangs-affair-officials-brief-congress-00228bb7",
+      "date": "2026-11-25",
+      "access": "原站开头正文已读；非完整全文",
+      "boundary": "11-24闭门简报的匿名转述；评估可能随新信息改变。"
+    },
+    {
+      "id": "S13",
+      "title": "CBS：关于黄乐与情报机构的后续报道",
+      "url": "https://www.cbsnews.com/news/chinese-intel-may-have-surveilled-alice-huang-after-affair-nvidia-ceo/",
+      "date": "2026-11-25",
+      "access": "原发已读",
+      "boundary": "修复现有错误slug；不将媒体转述称为解密官方结论。"
+    },
+    {
+      "id": "S14",
+      "title": "NYT：闭门情报简报首报",
+      "url": "https://www.nytimes.com/2026/11/24/us/politics/intelligence-nvidia-affair-congressional-briefing.html",
+      "date": "2026-11-24",
+      "access": "由CBS原发链接定位；正文访问受限",
+      "boundary": "原报日期11-24（美国当地）；不要把转载日等同简报日。"
+    },
+    {
+      "id": "S15",
+      "title": "Reuters：US officials divided over Chinese spying allegations",
+      "url": "https://www.reuters.com/world/us/us-officials-divided-over-chinese-spying-allegations-following-jensen-huangs-2026-11-26/",
+      "date": "2026-11-26 03:38 UTC",
+      "access": "原发正文已读",
+      "boundary": "五名匿名来源；官员对情报解释存在分歧，报道未取得情报细节。"
+    },
+    {
+      "id": "S16",
+      "title": "WIRED：Jensen Huang’s ‘Lying’ Alarmed Nvidia Board",
+      "url": "https://www.wired.com/story/jensen-huangs-lying-alarmed-nvidia-board-ahead-of-his-resignation/",
+      "date": "2026-11-20",
+      "access": "原发正文已读",
+      "boundary": "两名匿名来源解释董事会动因；另含记者审阅的内部讲话。"
+    },
+    {
+      "id": "S17",
+      "title": "NYT：Nvidia 管理文化调查",
+      "url": "https://www.nytimes.com/2026/11/20/technology/jensen-huang-nvidia-culture.html",
+      "date": "2026-11-20",
+      "access": "书目定位；正文访问受限",
+      "boundary": "不能据此连接成董事会正式认定管理风格导致辞任。"
+    },
+    {
+      "id": "S18",
+      "title": "NVIDIA：成立国家安全与出口管制监督委员会",
+      "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Board-of-Directors-Establishes-National-Security-and-Export-Control-Oversight-Committee/default.aspx",
+      "date": "2026-11-17",
+      "access": "官方正文已读",
+      "boundary": "成员、职权、至少每季开会一次；只确认制度安排。"
+    },
+    {
+      "id": "S19",
+      "title": "众院能源商务委员会：要求Nvidia及商务部提供简报",
+      "url": "https://energycommerce.house.gov/posts/chairman-guthrie-requests-briefings-from-nvidia-and-department-of-commerce-over-megaspeed-and-national-security-concerns",
+      "date": "2026-11-18",
+      "access": "官方正文已读",
+      "boundary": "Guthrie 11-18致函，要求不晚于12-02提供简报；不是12-03参院听证。"
+    },
+    {
+      "id": "S20",
+      "title": "众院四委员会民主党资深成员致特朗普信",
+      "url": "https://democrats-foreignaffairs.house.gov/2026/11/house-democrats-demand-answers-from-trump-on-nvidia/",
+      "date": "2026-11-24",
+      "access": "官方正文已读",
+      "boundary": "11-24；Meeks、Pallone、Raskin、Garcia；发信和问询可T1，指控不是判决。"
+    },
+    {
+      "id": "S21",
+      "title": "四委员会联名信PDF",
+      "url": "https://democrats-energycommerce.house.gov/sites/evo-subsites/democrats-energycommerce.house.gov/files/evo-media-document/2026.11.24-multi-committee-letter-to-president-trump-re-jensen-huang.pdf",
+      "date": "2026-11-24",
+      "access": "官方检索正文及文件已定位",
+      "boundary": "发信身份为Ranking Members；要求12-08前答复。"
+    },
+    {
+      "id": "S22",
+      "title": "CBS：Nvidia’s Jensen Huang still has security clearance, sources say",
+      "url": "https://www.cbsnews.com/news/nvidia-jensen-huang-security-clearance-todd-blanche/",
+      "date": "2026-11-24",
+      "access": "原发正文已读",
+      "boundary": "匿名消息称仍持安全许可，不能升级官方确认。"
+    },
+    {
+      "id": "S23",
+      "title": "Forbes：安全许可/特朗普赦免报道",
+      "url": "https://tollbit.forbes.com/sites/siladityaray/2026/11/25/trump-says-hes-open-to-pardoning-nvidia-ceo-jensen-huang-who-reportedly-still-holds-security-clearance",
+      "date": "2026-11-25",
+      "access": "原站检索正文可读",
+      "boundary": "安全许可部分转引CBS；不是第二个独立来源。"
+    },
+    {
+      "id": "S24",
+      "title": "WaPo：Pentagon officials floated using wartime law",
+      "url": "https://www.washingtonpost.com/technology/2026/11/25/hegseth-pentagon-officials-floated-using-wartime-law-reappoint-nvidia-ceo/",
+      "date": "2026-11-25 17:32 EST",
+      "access": "原发正文已读",
+      "boundary": "匿名来源报道且有否认；仅保留短句，不扩展为已实施命令。"
+    },
+    {
+      "id": "S25",
+      "title": "Reuters：S&P将Nvidia列负面评级观察",
+      "url": "https://www.reuters.com/business/sp-global-places-nvidia-rating-creditwatch-negative-rising-management-governance-2026-11-25/",
+      "date": "2026-11-25",
+      "access": "原发检索定位；授权联播正文已读",
+      "boundary": "评级行动转述；不得写已降级。"
+    },
+    {
+      "id": "S26",
+      "title": "Reuters / Investing.com：S&P报道授权全文",
+      "url": "https://www.investing.com/news/stock-market-news/sp-global-places-nvidia-rating-on-creditwatch-negative-on-rising-management-and-governance-risks-5051352",
+      "date": "2026-11-25",
+      "access": "授权联播正文已读",
+      "boundary": "同一Reuters报道，不另计独立来源。"
+    },
+    {
+      "id": "S27",
+      "title": "S&P官方评级更新，ID3667831",
+      "url": "https://www.spglobal.com/ratings/en/regulatory/article/-/view/type/HTML/id/3667831",
+      "date": "2026-11-25",
+      "access": "官方地址已定位；正文提取空白",
+      "boundary": "不可标为本轮已读官方全文；维持T2。"
+    },
+    {
+      "id": "S28",
+      "title": "台湾证交所：115年11月市场成交资讯",
+      "url": "https://www.twse.com.tw/exchangeReport/FMTQIK?date=20261124&response=html",
+      "date": "2026-11",
+      "access": "官方数据表已读",
+      "boundary": "11-24收40122.35，前收36811.89，+3310.46；按此计算8.99%。"
+    },
+    {
+      "id": "S29",
+      "title": "中央社11-24台股收盘原报",
+      "url": "https://www.cna.com.tw/news/afe/202611240129.aspx",
+      "date": "2026-11-24",
+      "access": "原发正文已读",
+      "boundary": "市场背景归因；不等于识别了单一事件的因果贡献。"
+    },
+    {
+      "id": "S30",
+      "title": "24/7 Wall St.：Jensen Huang’s Net Worth Plunges $27 Billion",
+      "url": "https://247wallst.com/investing/2026/11/16/jensen-huangs-net-worth-plunges-27-billion/",
+      "date": "2026-11-16",
+      "access": "原发正文已读",
+      "boundary": "270亿美元估算未清楚给基准，不能与Forbes六人数字合并。"
+    },
+    {
+      "id": "S31",
+      "title": "Forbes署名原报（澳洲官方版本）：七名富豪财富估算",
+      "url": "https://www.forbes.com.au/news/innovation/nvidia-billionaires-lose-a-third-of-their-wealth-amid-jensen-huang-affairs-scandal/",
+      "date": "2026-11-13",
+      "access": "同一作者官方授权版本正文已读",
+      "boundary": "截至11-12、比较10-06；是估值变化，不是已实现亏损。"
+    },
+    {
+      "id": "S32",
+      "title": "Reuters：Jensen Huang returns to Nvidia, vows to be a better CEO",
+      "url": "https://www.reuters.com/business/jensen-huang-steps-down-hands-on-kingmaker-behind-ai-boom-2026-11-12/",
+      "date": "2026-11-24更新",
+      "access": "原发索引已读；授权全文已读",
+      "boundary": "旧slug保留11-12但正文11-24更新；返岗发生于11-23美国当地。"
+    },
+    {
+      "id": "S33",
+      "title": "Reuters / Investing.com：返岗现场报道",
+      "url": "https://www.investing.com/news/stock-market-news/jensen-huangs-comeback-to-nvidia-underscores-his-outsized-grip-on-ai-5046711",
+      "date": "2026-11-23发布/24更新",
+      "access": "授权联播正文已读",
+      "boundary": "不代表全体员工态度或签署行为。"
+    },
+    {
+      "id": "S34",
+      "title": "Yahoo NVDA历史日线",
+      "url": "https://finance.yahoo.com/quote/NVDA/history/",
+      "date": "截至2026-11-25",
+      "access": "原站返回429；搜索索引完整相关数据行已读",
+      "boundary": "常规交易OHLC可复算；不验证某一分钟快照；成交量须明确供应商。"
+    },
+    {
+      "id": "S35",
+      "title": "Yahoo NVDA 10-06日线所在历史表",
+      "url": "https://finance.yahoo.com/quote/NVDA/history/?fr=yhssrp_catchall&period1=917015400&period2=1794497116",
+      "date": "2026-10-06",
+      "access": "搜索索引相关数据行已读",
+      "boundary": "10-06收239.24，盘中高243.37；本报告计算统一用Close。"
+    },
+    {
+      "id": "S36",
+      "title": "Yahoo NVDA固定日期筛选历史表",
+      "url": "https://finance.yahoo.com/quote/NVDA/history/?period1=1794787200&period2=1795046400",
+      "date": "2026-11-16",
+      "access": "搜索索引相关数据行已读",
+      "boundary": "11-16收156.14；固定日期筛选不等于已保存原始分钟快照。"
+    },
+    {
+      "id": "S37",
+      "title": "Stock Analysis NVDA历史日线",
+      "url": "https://stockanalysis.com/stocks/nvda/history/?period=daily",
+      "date": "截至2026-11-25",
+      "access": "原站完整日线表已读；2026-11-27复核",
+      "boundary": "同一供应商的常规交易日线；页面标注数据源为S&P Global Market Intelligence。已保存37个交易日，不证明盘中分钟快照或单一事件的因果贡献。"
+    },
+    {
+      "id": "S38",
+      "title": "参院银行委员会公开听证日程",
+      "url": "https://www.banking.senate.gov/hearings/protecting-americas-ai-advantage-oversight-of-us-export-controls",
+      "date": "页面日程2026-12-03",
+      "access": "官方正文已读；既有证据同步复用",
+      "boundary": "12-03 10:00，Dirksen106，当前证人仅黄；安排不等于已举行。"
+    },
+    {
+      "id": "S39",
+      "title": "众院三委员会复职后联合声明",
+      "url": "https://chinaselectcommittee.house.gov/media/press-releases/statement-on-jensen-huang-s-reinstatement-at-nvidia",
+      "date": "2026-11-23",
+      "access": "官方正文已读；既有证据同步复用",
+      "boundary": "黄与Teter确认12-01/02逐字记录访谈；该声明未逐人对应日期。"
+    },
+    {
+      "id": "S40",
+      "title": "NVIDIA复职公告",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-board-reinstates-jensen-huang-as-president-ceo-and-board-director",
+      "date": "2026-11-23",
+      "access": "沿用已核官方公告；IR官方对应稿已检索读到",
+      "boundary": "只复用到缺证的时间线；独立调查继续。"
+    },
+    {
+      "id": "S41",
+      "title": "NVIDIA FY2027 Q3业绩公告",
+      "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Third-Quarter-Fiscal-2027/default.aspx",
+      "date": "2026-11-17",
+      "access": "官方正文已读",
+      "boundary": "实际财务数据、Q4指引及未计中国数据中心计算收入；市场预期不属公司事实。"
+    },
+    {
+      "id": "S42",
+      "title": "The Information 11-10原始调查",
+      "url": "https://www.theinformation.com/articles/jensen-huangs-yearslong-ties-alice-huang-enabled-nvidia-chip-sales-china",
+      "date": "2026-11-10",
+      "access": "原题/索引已定位；付费全文未读",
+      "boundary": "仅原发链接；细节依据可读Reuters转述，仍T3。"
+    },
+    {
+      "id": "S43",
+      "title": "Reuters转述The Information",
+      "url": "https://www.reuters.com/world/china/nvidia-ceos-affair-aided-75-billion-chip-shipments-china-information-reports-2026-11-10/",
+      "date": "2026-11-10",
+      "access": "原发正文已读",
+      "boundary": "Reuters明确未独立核实；与原刊不构成两次独立证实。"
+    },
+    {
+      "id": "S44",
+      "title": "WSJ：SEC Is Probing Nvidia Amid Departure of CEO Jensen Huang",
+      "url": "https://www.wsj.com/business/sec-is-probing-nvidia-amid-departure-of-ceo-jensen-huang-ee7643f8",
+      "date": "2026-11-17",
+      "access": "原站搜索正文可读",
+      "boundary": "匿名来源，调查本身仍T3；不是SEC正式公告。"
+    },
+    {
+      "id": "S45",
+      "title": "WaPo：Key voices rushed to defend Jensen Huang online",
+      "url": "https://www.washingtonpost.com/technology/2026/11/12/elon-musk-bill-ackman-online-bots-defend-jensen-huang-online/",
+      "date": "2026-11-12",
+      "access": "原发正文已读",
+      "boundary": "仅简短勘误：虚假身份不等于机器人；勿新增幕后归因。"
+    },
+    {
+      "id": "S46",
+      "title": "Bloomberg：Alleged Chinese spy at center of Nvidia firestorm is in Beijing",
+      "url": "https://bloomberg.com/news/articles/2026-11-12/alleged-chinese-spy-at-center-of-nvidia-firestorm-is-in-beijing",
+      "date": "2026-11-12",
+      "access": "原站索引/摘要；正文受限",
+      "boundary": "只完成补链，不声称重新独立确认位置。"
+    },
+    {
+      "id": "S47",
+      "title": "WSJ：A Mystery Businessman Introduced Jensen Huang to His Paramour",
+      "url": "https://www.wsj.com/tech/ai/a-mystery-businessman-introduced-jensen-huang-to-his-paramourher-husband-1ec3b581",
+      "date": "2026-11-12",
+      "access": "原站标题及开头正文可读",
+      "boundary": "保留报道归因和T3；不展开非公众人物细节。"
+    },
+    {
+      "id": "S48",
+      "title": "Reuters：Nvidia PE falls to 14-year low",
+      "url": "https://www.reuters.com/business/nvidia-pe-falls-14-year-low-ceo-exit-ai-worries-cloud-bargain-2026-11-12/",
+      "date": "2026-11-12",
+      "access": "原发正文已读",
+      "boundary": "forward/expected PE，不能换成历史滚动市盈率。"
+    },
+    {
+      "id": "S49",
+      "title": "Fox Bessent官方访谈片段",
+      "url": "https://www.foxnews.com/video/6408419605112",
+      "date": "节目2026-11-15",
+      "access": "官方视频页元数据；未播放/未得官方逐字稿",
+      "boundary": "标题主打伊朗，简介包括Nvidia；仅补原节目入口。"
+    },
+    {
+      "id": "S50",
+      "title": "Fox 当期完整节目",
+      "url": "https://www.foxnews.com/video/6408420602112",
+      "date": "2026-11-15节目",
+      "access": "官方节目页元数据；未播放",
+      "boundary": "节目11-15、上传元数据11-16；不标已核完整采访。"
+    },
+    {
+      "id": "S51",
+      "title": "The Verge：Read Nvidia’s internal emails",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1032028/read-nvidias-internal-emails-jensen-huang",
+      "date": "2026-11-12",
+      "access": "原站索引正文已读；直接页面受限",
+      "boundary": "内部信由媒体刊出，不是NVIDIA公开公告；保留T2。"
+    },
+    {
+      "id": "S52",
+      "title": "CBS：Vance says Jensen Huang doesn’t need pardon",
+      "url": "https://www.cbsnews.com/news/vance-says-jensen-huang-doesnt-need-pardon/",
+      "date": "2026-11-25",
+      "access": "原发正文已读",
+      "boundary": "只证实Vance如此公开表态；不代替司法机关裁定。"
+    },
+    {
+      "id": "S53",
+      "title": "AP：Vance says Jensen Huang won’t need a pardon",
+      "url": "https://apnews.com/article/a8d3d781f182317cbff28863d56add5d",
+      "date": "2026-11-25",
+      "access": "原站检索正文可读",
+      "boundary": "记者现场报道；同一发言不等于另一次官方司法认定。"
+    },
+    {
+      "id": "S54",
+      "title": "Reuters：How Trump administration determined Huang is not a security threat",
+      "url": "https://www.reuters.com/business/us-justice-department-did-not-open-probe-into-jensen-huang-before-reinstatement-2026-11-25/",
+      "date": "2026-11-25",
+      "access": "原站检索正文已读；直接页面受限",
+      "boundary": "未正式调查与已洗清不同；匿名官员叙述仍T3。"
+    }
+  ],
+  "revisions": [
+    {
+      "id": "R01",
+      "title": "Megaspeed实体清单",
+      "reason": "已取得最终官方文件，原“待Federal Register核对”可关闭。11-24是媒体跟进日期，不是规则生效日期。",
+      "affected_original_facts": [
+        "F-118"
+      ],
+      "source_ids": [
+        "S01",
+        "S02"
+      ],
+      "replacement": "BIS将Megaspeed等七家实体列入实体清单，11-23生效 BIS最终规则将Megaspeed International Pte. Ltd.等七家实体列入实体清单。规则于2026年11月23日生效、11月25日刊于《联邦公报》（91 FR 76148–76150；2026-23999）。涉及列单实体、受EAR管辖物项的出口、再出口或境内转移须依规则申请许可，审查原则为推定拒绝。 T1仅指行政列单及许可规则。该规则不证明个人情报身份、知情程度或刑事有罪；具体交易适用及过渡条款以原文为准。",
+      "implemented_records": [
+        {
+          "fact_id": "F-118",
+          "page_anchor": "index.html#fact-118",
+          "grade": "T1",
+          "title": "BIS将Megaspeed等七家实体列入实体清单，11-23生效",
+          "text": "BIS最终规则将Megaspeed International Pte. Ltd.等七家实体列入实体清单。规则于2026年11月23日生效、11月25日刊于《联邦公报》（91 FR 76148–76150；2026-23999）。涉及列单实体、受EAR管辖物项的出口、再出口或境内转移须依规则申请许可，审查原则为推定拒绝。",
+          "boundary": "T1仅指行政列单及许可规则。该规则不证明个人情报身份、知情程度或刑事有罪；具体交易适用及过渡条款以原文为准。",
+          "links": [
+            {
+              "title": "BIS 最终规则：Additions to the Entity List",
+              "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-25/html/2026-23999.htm"
+            },
+            {
+              "title": "BIS 最终规则 PDF",
+              "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-25/pdf/2026-23999.pdf"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R02",
+      "title": "11-09调查停止报道",
+      "reason": "旧URL路径错误，检索/RSS不替代文章；“调查停止”遗漏了机构、阶段与后续进展。",
+      "affected_original_facts": [
+        "F-011"
+      ],
+      "source_ids": [
+        "S05",
+        "S06",
+        "S04"
+      ],
+      "replacement": "NYT报道商务部调查阶段受到干预；干预指控待核 《纽约时报》11月9日报道，Nvidia介入后商务部对Megaspeed的调查受到影响。该原发链接已由国会信函脚注定位，本轮未读到NYT全文；相关干预过程仍按匿名报道处理。后续DOJ/Commerce联合声明另确认由司法部牵头刑事调查、BIS协作。 NYT原发身份由国会信函脚注确认，全文本轮访问受限。商务部某阶段调查与后续司法部调查应分别记录；后续继续调查也不排除此前干预的可能。",
+      "implemented_records": [
+        {
+          "fact_id": "F-011",
+          "page_anchor": "index.html#fact-011",
+          "grade": "T3",
+          "title": "NYT报道商务部调查阶段受到干预；干预指控待核",
+          "text": "《纽约时报》11月9日报道，Nvidia介入后商务部对Megaspeed的调查受到影响。该原发链接已由国会信函脚注定位，本轮未读到NYT全文；相关干预过程仍按匿名报道处理。后续DOJ/Commerce联合声明另确认由司法部牵头刑事调查、BIS协作。",
+          "boundary": "NYT原发身份由国会信函脚注确认，全文本轮访问受限。商务部某阶段调查与后续司法部调查应分别记录；后续继续调查也不排除此前干预的可能。",
+          "links": [
+            {
+              "title": "NYT：Commerce Dept. Chip Inquiry Was Halted After Nvidia Intervention",
+              "url": "https://www.nytimes.com/2026/11/09/business/economy/nvidia-megaspeed-investigation-huang.html"
+            },
+            {
+              "title": "参院 Warren/Coons 11-11 正式信函",
+              "url": "https://www.banking.senate.gov/imo/media/doc/20261111_warren_coons_letter_to_wh_commerce_state_re_nvidia_record_retentionpdf.pdf"
+            },
+            {
+              "title": "DOJ/Commerce 联合声明原始PDF",
+              "url": "https://www.justice.gov/opa/media/1472536/dl?inline="
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R03",
+      "title": "调查程序官方补证",
+      "reason": "补齐既有待核官方文件；删除把疑似转运与官方程序合并成已证违法的写法。",
+      "affected_original_facts": [
+        "F-094"
+      ],
+      "source_ids": [
+        "S03",
+        "S04"
+      ],
+      "replacement": "DOJ与商务部公开Megaspeed调查程序 联合声明称：商务部于2024年启动潜在出口管制违规调查，2025年5月向Nvidia索取销售记录，同年6月进行现场最终用途核查；此后司法部牵头刑事调查，BIS继续协作。声明还称Nvidia于2025年6月将Megaspeed列入公司禁售名单。 文件署日11-16；官方网页11-17发布、11-18更新。T1指政府公开陈述的程序状态，违法是否成立仍待证据及司法程序。",
+      "implemented_records": [
+        {
+          "fact_id": "F-094",
+          "page_anchor": "index.html#fact-094",
+          "grade": "T1",
+          "title": "DOJ与商务部公开Megaspeed调查程序",
+          "text": "联合声明称：商务部于2024年启动潜在出口管制违规调查，2025年5月向Nvidia索取销售记录，同年6月进行现场最终用途核查；此后司法部牵头刑事调查，BIS继续协作。声明还称Nvidia于2025年6月将Megaspeed列入公司禁售名单。",
+          "boundary": "文件署日11-16；官方网页11-17发布、11-18更新。T1指政府公开陈述的程序状态，违法是否成立仍待证据及司法程序。",
+          "links": [
+            {
+              "title": "DOJ/Commerce 联合声明",
+              "url": "https://www.justice.gov/opa/pr/joint-statement-department-commerce-and-department-justice-megaspeed-investigation"
+            },
+            {
+              "title": "DOJ/Commerce 联合声明原始PDF",
+              "url": "https://www.justice.gov/opa/media/1472536/dl?inline="
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R04",
+      "title": "2.7亿美元融资记录",
+      "reason": "现有摘要越过原文明示的证据边界；时间线T3与信源表T2也不一致。",
+      "affected_original_facts": [
+        "F-135"
+      ],
+      "source_ids": [
+        "S08"
+      ],
+      "replacement": "Reuters：关联企业融资登记涉及约2.7亿美元AI设备 Reuters查阅登记记录后报道，黄乐关联企业的融资安排涉及约2.7亿美元AI设备资产。金额不等于新增或互不重复的采购；记录不能证明设备含禁止向中国出口的芯片，也未说明设备入境时间或方式。 单一媒体的文件调查；本轮未独立取得底层融资登记。资产金额及法律性质均依原报道限定，不能与芯片供应金额直接相加。",
+      "implemented_records": [
+        {
+          "fact_id": "F-135",
+          "page_anchor": "index.html#fact-135",
+          "grade": "T3",
+          "title": "Reuters：关联企业融资登记涉及约2.7亿美元AI设备",
+          "text": "Reuters查阅登记记录后报道，黄乐关联企业的融资安排涉及约2.7亿美元AI设备资产。金额不等于新增或互不重复的采购；记录不能证明设备含禁止向中国出口的芯片，也未说明设备入境时间或方式。",
+          "boundary": "单一媒体的文件调查；本轮未独立取得底层融资登记。资产金额及法律性质均依原报道限定，不能与芯片供应金额直接相加。",
+          "links": [
+            {
+              "title": "Reuters：黄乐关联企业融资登记涉及AI服务器",
+              "url": "https://www.reuters.com/business/finance/alice-huang-linked-firms-listed-270-million-ai-servers-china-records-show-2026-11-25/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R05",
+      "title": "早期情报指控降级",
+      "reason": "页面注释已承认匿名情报来源，却给T2，违反页脚“匿名与单源按T3”的自定规则。",
+      "affected_original_facts": [
+        "F-003"
+      ],
+      "source_ids": [
+        "S09",
+        "S06",
+        "S15"
+      ],
+      "replacement": "NYT援引匿名来源称，美方曾评估黄乐为中国情报资产 NYT 10月29日的报道描述了美方对黄乐的情报评估。该实质指控来自匿名消息人士，公开原始情报或解密评估尚未提供；报道存在与情报身份成立应分别表述。 匿名情报来源，未见公开原始情报。早期评估与后续不同报道并列记录；媒体报道及国会转引不构成官方公开确认。",
+      "implemented_records": [
+        {
+          "fact_id": "F-003",
+          "page_anchor": "index.html#fact-003",
+          "grade": "T3",
+          "title": "NYT援引匿名来源称，美方曾评估黄乐为中国情报资产",
+          "text": "NYT 10月29日的报道描述了美方对黄乐的情报评估。该实质指控来自匿名消息人士，公开原始情报或解密评估尚未提供；报道存在与情报身份成立应分别表述。",
+          "boundary": "匿名情报来源，未见公开原始情报。早期评估与后续不同报道并列记录；媒体报道及国会转引不构成官方公开确认。",
+          "links": [
+            {
+              "title": "NYT 10-29 原报",
+              "url": "https://www.nytimes.com/2026/10/29/us/politics/nvidia-china-jensen-huang-trump.html"
+            },
+            {
+              "title": "参院 Warren/Coons 11-11 正式信函",
+              "url": "https://www.banking.senate.gov/imo/media/doc/20261111_warren_coons_letter_to_wh_commerce_state_re_nvidia_record_retentionpdf.pdf"
+            },
+            {
+              "title": "Reuters：US officials divided over Chinese spying allegations",
+              "url": "https://www.reuters.com/world/us/us-officials-divided-over-chinese-spying-allegations-following-jensen-huangs-2026-11-26/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R06",
+      "title": "FT首报链接错配",
+      "reason": "修复报道身份错配，并把匿名实质指控T2改T3。",
+      "affected_original_facts": [
+        "F-007"
+      ],
+      "source_ids": [
+        "S10",
+        "S11",
+        "S07"
+      ],
+      "replacement": "NYT/FT报道美方关于黄乐情报身份及关系的评估 11月6日，NYT与FT报道美方关于黄乐情报身份及其与黄仁勋关系的评估；相关情报指控仍以匿名消息为基础。 相关情报指控以匿名消息为基础。FT原发身份由正式信函脚注确认，正文访问受限；11-06为美国当地日期，索引时间为11-07 UTC。",
+      "implemented_records": [
+        {
+          "fact_id": "F-007",
+          "page_anchor": "index.html#fact-007",
+          "grade": "T3",
+          "title": "NYT/FT报道美方关于黄乐情报身份及关系的评估",
+          "text": "11月6日，NYT与FT报道美方关于黄乐情报身份及其与黄仁勋关系的评估；相关情报指控仍以匿名消息为基础。",
+          "boundary": "相关情报指控以匿名消息为基础。FT原发身份由正式信函脚注确认，正文访问受限；11-06为美国当地日期，索引时间为11-07 UTC。",
+          "links": [
+            {
+              "title": "NYT 11-06 原报",
+              "url": "https://www.nytimes.com/2026/11/06/us/politics/chinese-spy-agency-nvidia-jensen-huang.html"
+            },
+            {
+              "title": "FT：US believes Nvidia’s Huang had romantic relationship with alleged Chinese spy",
+              "url": "https://www.ft.com/content/a55a2a22-4479-4f93-a445-6147a5c6d790"
+            },
+            {
+              "title": "众院能源商务委员会11-18致商务部信函",
+              "url": "https://d1dth6e84htgma.cloudfront.net/11_18_2026_E_and_C_Letter_to_U_S_Dept_of_Commerce_2a997e166a.pdf"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R07",
+      "title": "后续情报简报",
+      "reason": "修复NYT/WSJ/CBS错误slug；F-138的T2应降T3。可合并F-133与F-138，避免同一次简报重复计数。",
+      "affected_original_facts": [
+        "F-133",
+        "F-138"
+      ],
+      "source_ids": [
+        "S12",
+        "S14",
+        "S15"
+      ],
+      "replacement": "媒体报道11-24闭门简报：未见中国策划关系的证据 WSJ转述11月24日闭门简报称，现有证据未显示中国情报机构指使黄乐与黄仁勋发展关系。Reuters 11月26日报道，美方官员对情报的解释仍有分歧。上述均未提供公开原始情报。 未见关系受指使的证据、情报身份、出口违法及个人是否被调查是不同命题。报道未提供公开原始情报，不能据此全面排除或确认。",
+      "implemented_records": [
+        {
+          "fact_id": "F-133",
+          "page_anchor": "index.html#fact-133",
+          "grade": "T3",
+          "title": "媒体报道11-24闭门简报：未见中国策划关系的证据",
+          "text": "WSJ转述11月24日闭门简报称，现有证据未显示中国情报机构指使黄乐与黄仁勋发展关系。Reuters 11月26日报道，美方官员对情报的解释仍有分歧。上述均未提供公开原始情报。",
+          "boundary": "闭门简报发生于美国当地11-24；WSJ报道11-25，Reuters后续稿页头为11-26 UTC。原始情报未公开；是否受指使、情报身份、出口违法与个人调查是不同命题。",
+          "links": [
+            {
+              "title": "WSJ：No Evidence China Orchestrated Jensen Huang’s Affair, Officials Brief Congress",
+              "url": "https://www.wsj.com/politics/national-security/no-evidence-china-orchestrated-jensen-huangs-affair-officials-brief-congress-00228bb7"
+            },
+            {
+              "title": "NYT：闭门情报简报首报",
+              "url": "https://www.nytimes.com/2026/11/24/us/politics/intelligence-nvidia-affair-congressional-briefing.html"
+            },
+            {
+              "title": "Reuters：US officials divided over Chinese spying allegations",
+              "url": "https://www.reuters.com/world/us/us-officials-divided-over-chinese-spying-allegations-following-jensen-huangs-2026-11-26/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R08",
+      "title": "董事会撒谎与管理风格混合",
+      "reason": "F-106真正上游为WIRED而非India Today独立调查；F-117把董事会动因与NYT管理文化调查合并，关系未被证明。",
+      "affected_original_facts": [
+        "F-106",
+        "F-117"
+      ],
+      "source_ids": [
+        "S16",
+        "S17"
+      ],
+      "replacement": "WIRED：匿名来源称缺乏坦诚是董事会接受辞任的重要动因 WIRED 11月20日援引两名了解董事会讨论的人士，称缺乏坦诚是董事会接受辞任的重要动因；这一解释仍来自匿名来源。公开的管理文化报道不能单独证明董事会作出了相应正式认定。 内部决策动因来自匿名消息人士；记者审阅的内部讲话应按材料内容另行归属，并非公开调查结论。",
+      "implemented_records": [
+        {
+          "fact_id": "F-106",
+          "page_anchor": "index.html#fact-106",
+          "grade": "T3",
+          "title": "WIRED：匿名来源称缺乏坦诚是董事会接受辞任的重要动因",
+          "text": "WIRED 11月20日援引两名了解董事会讨论的人士，称缺乏坦诚是董事会接受辞任的重要动因；这一解释仍来自匿名来源。公开的管理文化报道不能单独证明董事会作出了相应正式认定。",
+          "boundary": "内部决策动因来自匿名消息人士；记者审阅的内部讲话应按材料内容另行归属，并非公开调查结论。",
+          "links": [
+            {
+              "title": "WIRED：Jensen Huang’s ‘Lying’ Alarmed Nvidia Board",
+              "url": "https://www.wired.com/story/jensen-huangs-lying-alarmed-nvidia-board-ahead-of-his-resignation/"
+            },
+            {
+              "title": "NYT：Nvidia 管理文化调查",
+              "url": "https://www.nytimes.com/2026/11/20/technology/jensen-huang-nvidia-culture.html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R09",
+      "title": "国家安全委员会重复且评级冲突",
+      "reason": "F-093称未见公告且成员未披露、F-097已列成员并标T1，页面自相矛盾；合并为一条官方事实。",
+      "affected_original_facts": [
+        "F-093",
+        "F-097"
+      ],
+      "source_ids": [
+        "S18"
+      ],
+      "replacement": "NVIDIA正式成立国家安全与出口管制监督委员会 NVIDIA 11月17日公告设立常设监督委员会，由Suzanne Nora Johnson任主席，Stephen C. Neal与John O. Dabiri任委员，至少每季度开会一次；公司国家安全与全球贸易合规团队向委员会及当时临时CEO汇报。 官方公告确认制度、成员和职责，不表示独立调查已完成或历史违规已排除。",
+      "implemented_records": [
+        {
+          "fact_id": "F-093",
+          "page_anchor": "index.html#fact-093",
+          "grade": "T1",
+          "title": "NVIDIA正式成立国家安全与出口管制监督委员会",
+          "text": "NVIDIA 11月17日公告设立常设监督委员会，由Suzanne Nora Johnson任主席，Stephen C. Neal与John O. Dabiri任委员，至少每季度开会一次；公司国家安全与全球贸易合规团队向委员会及当时临时CEO汇报。",
+          "boundary": "官方公告确认常设委员会的制度、成员和职责。它与针对具体事件的独立调查委员会分别运作，不表示调查已完成。",
+          "links": [
+            {
+              "title": "NVIDIA：成立国家安全与出口管制监督委员会",
+              "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Board-of-Directors-Establishes-National-Security-and-Export-Control-Oversight-Committee/default.aspx"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R10",
+      "title": "国会要求Kress简报",
+      "reason": "官方原文明确委员会、收件人和期限，可删除“具体委员会与日期待核”。",
+      "affected_original_facts": [
+        "F-105"
+      ],
+      "source_ids": [
+        "S19"
+      ],
+      "replacement": "众院能源商务委员会要求Nvidia与商务部最迟12-02提供简报 众院能源商务委员会主席Brett Guthrie于11月18日致函时任Nvidia临时CEO Colette Kress，以及商务部长Lutnick与副部长Kessler，要求最迟12月2日提供简报。 官方函件确认的是简报要求与期限，不能据此确认简报已经举行；与12-03参院公开听证分别记录。",
+      "implemented_records": [
+        {
+          "fact_id": "F-105",
+          "page_anchor": "index.html#fact-105",
+          "grade": "T1",
+          "title": "众院能源商务委员会要求Nvidia与商务部最迟12-02提供简报",
+          "text": "众院能源商务委员会主席Brett Guthrie于11月18日致函时任Nvidia临时CEO Colette Kress，以及商务部长Lutnick与副部长Kessler，要求最迟12月2日提供简报。",
+          "boundary": "官方函件确认的是简报要求与期限，不能据此确认简报已经举行；与12-03参院公开听证分别记录。",
+          "links": [
+            {
+              "title": "众院能源商务委员会：要求Nvidia及商务部提供简报",
+              "url": "https://energycommerce.house.gov/posts/chairman-guthrie-requests-briefings-from-nvidia-and-department-of-commerce-over-megaspeed-and-national-security-concerns"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R11",
+      "title": "四委员会民主党信函",
+      "reason": "现有Politico 00000000等路径无法担当来源；官方原文把11-25媒体日期校正为11-24发信日。",
+      "affected_original_facts": [
+        "F-132"
+      ],
+      "source_ids": [
+        "S20",
+        "S21"
+      ],
+      "replacement": "众院四委员会民主党资深成员11-24致信特朗普 Gregory Meeks、Frank Pallone Jr.、Jamie Raskin与Robert Garcia于11月24日联名向特朗普索取资料，问询其知悉相关风险及参与黄复职的经过，并要求提供11月12日至23日与Nvidia董事会的相关通讯。 发信人当时为各委员会民主党资深成员（Ranking Members）。信件发布可直接确认，其中的质疑和指控仍需另行证明。",
+      "implemented_records": [
+        {
+          "fact_id": "F-132",
+          "page_anchor": "index.html#fact-132",
+          "grade": "T1",
+          "title": "众院四委员会民主党资深成员11-24致信特朗普",
+          "text": "Gregory Meeks、Frank Pallone Jr.、Jamie Raskin与Robert Garcia于11月24日联名向特朗普索取资料，问询其知悉相关风险及参与黄复职的经过，并要求提供11月12日至23日与Nvidia董事会的相关通讯。",
+          "boundary": "发信人当时为各委员会民主党资深成员（Ranking Members）。信件发布可直接确认，其中的质疑和指控仍需另行证明。",
+          "links": [
+            {
+              "title": "众院四委员会民主党资深成员致特朗普信",
+              "url": "https://democrats-foreignaffairs.house.gov/2026/11/house-democrats-demand-answers-from-trump-on-nvidia/"
+            },
+            {
+              "title": "四委员会联名信PDF",
+              "url": "https://democrats-energycommerce.house.gov/sites/evo-subsites/democrats-energycommerce.house.gov/files/evo-media-document/2026.11.24-multi-committee-letter-to-president-trump-re-jensen-huang.pdf"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R12",
+      "title": "安全许可RSS串链",
+      "reason": "同一RSS被标成不同媒体、支持不同命题；修复来源身份，不上调实质指控等级。",
+      "affected_original_facts": [
+        "F-130"
+      ],
+      "source_ids": [
+        "S22",
+        "S23"
+      ],
+      "replacement": "CBS援引匿名来源称黄仍持有美国安全许可 CBS援引匿名来源称黄仍持有美国安全许可；尚无公开官方确认。 该许可状态来自匿名来源。Forbes转引CBS，不构成第二个独立确认。",
+      "implemented_records": [
+        {
+          "fact_id": "F-130",
+          "page_anchor": "index.html#fact-130",
+          "grade": "T3",
+          "title": "CBS援引匿名来源称黄仍持有美国安全许可",
+          "text": "CBS援引匿名来源称黄仍持有美国安全许可；尚无公开官方确认。",
+          "boundary": "该许可状态来自匿名来源。Forbes转引CBS，不构成第二个独立确认。",
+          "links": [
+            {
+              "title": "CBS：Nvidia’s Jensen Huang still has security clearance, sources say",
+              "url": "https://www.cbsnews.com/news/nvidia-jensen-huang-security-clearance-todd-blanche/"
+            },
+            {
+              "title": "Forbes：安全许可/特朗普赦免报道",
+              "url": "https://tollbit.forbes.com/sites/siladityaray/2026/11/25/trump-says-hes-open-to-pardoning-nvidia-ceo-jensen-huang-who-reportedly-still-holds-security-clearance"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R13",
+      "title": "战时法律报道",
+      "reason": "原信源表T2不足以反映匿名和直接否认；用原发替代RSS。",
+      "affected_original_facts": [],
+      "source_ids": [
+        "S24"
+      ],
+      "replacement": "WaPo：匿名来源称曾讨论DPA施压复职；五角大楼否认 WaPo：匿名来源称曾讨论DPA施压复职；五角大楼否认。 仅为匿名来源描述的讨论，报道同时记载否认；未有已执行命令的证据。",
+      "implemented_records": []
+    },
+    {
+      "id": "R14",
+      "title": "S&P负面观察",
+      "reason": "修正Reuters路径，区分评级行动与评级机构观点；不把定位官方URL当作已读官方全文。",
+      "affected_original_facts": [
+        "F-137"
+      ],
+      "source_ids": [
+        "S25",
+        "S26",
+        "S27"
+      ],
+      "replacement": "Reuters：S&P将Nvidia评级列入负面观察 Reuters 11月25日报道，S&P Global Ratings因管理与治理风险上升，将Nvidia信用评级列入CreditWatch Negative（负面评级观察）。列入观察不等于已经下调信用等级。 官方公告地址已定位，但本轮未取得正文；当前依据可读的Reuters授权报道。负面观察与实际降级是不同评级动作。",
+      "implemented_records": [
+        {
+          "fact_id": "F-137",
+          "page_anchor": "index.html#fact-137",
+          "grade": "T2",
+          "title": "Reuters：S&P将Nvidia评级列入负面观察",
+          "text": "Reuters 11月25日报道，S&P Global Ratings因管理与治理风险上升，将Nvidia信用评级列入CreditWatch Negative（负面评级观察）。列入观察不等于已经下调信用等级。",
+          "boundary": "官方公告地址已定位，但本轮未取得正文；当前依据可读的Reuters授权报道。负面观察与实际降级是不同评级动作。",
+          "links": [
+            {
+              "title": "Reuters：S&P将Nvidia列负面评级观察",
+              "url": "https://www.reuters.com/business/sp-global-places-nvidia-rating-creditwatch-negative-rising-management-governance-2026-11-25/"
+            },
+            {
+              "title": "Reuters / Investing.com：S&P报道授权全文",
+              "url": "https://www.investing.com/news/stock-market-news/sp-global-places-nvidia-rating-on-creditwatch-negative-on-rising-management-and-governance-risks-5051352"
+            },
+            {
+              "title": "S&P官方评级更新，ID3667831",
+              "url": "https://www.spglobal.com/ratings/en/regulatory/article/-/view/type/HTML/id/3667831"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R15",
+      "title": "台湾指数涨幅与日内叙事",
+      "reason": "原搜索入口可用官方收盘表替代；盘中逾9%与收盘8.99%不是同一口径。",
+      "affected_original_facts": [
+        "F-127"
+      ],
+      "source_ids": [
+        "S28",
+        "S29"
+      ],
+      "replacement": "11-24台湾加权指数收涨8.99% 台湾证交所数据显示，11月24日加权指数收40,122.35点，较前收36,811.89点上升3,310.46点（8.99%）。中央社将当日反弹与复职消息联系起来。 收盘数据T1；媒体对上涨背景的解释T2。台湾记录不能直接证明日韩市场表现，单一事件的因果贡献未经识别。",
+      "implemented_records": [
+        {
+          "fact_id": "F-127",
+          "page_anchor": "index.html#fact-127",
+          "grade": "T2",
+          "title": "11-24台湾加权指数收涨8.99%",
+          "text": "台湾证交所数据显示，11月24日加权指数收40,122.35点，较前收36,811.89点上升3,310.46点（8.99%）。中央社将当日反弹与复职消息联系起来。",
+          "boundary": "收盘数据T1；媒体对上涨背景的解释T2。台湾记录不能直接证明日韩市场表现，单一事件的因果贡献未经识别。",
+          "links": [
+            {
+              "title": "台湾证交所：115年11月市场成交资讯",
+              "url": "https://www.twse.com.tw/exchangeReport/FMTQIK?date=20261124&response=html"
+            },
+            {
+              "title": "中央社11-24台股收盘原报",
+              "url": "https://www.cna.com.tw/news/afe/202611240129.aspx"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R16",
+      "title": "财富估算混源",
+      "reason": "找到原作者文章后确认旧句将两篇不同基准的数字串在一起。",
+      "affected_original_facts": [
+        "F-083"
+      ],
+      "source_ids": [
+        "S31",
+        "S30"
+      ],
+      "replacement": "Forbes财富估算需与24/7口径分开 Forbes 11月13日报道，以11月12日估值对比10月6日峰值，估算黄净资产减少620亿美元、另六位现任或前任高管及董事合计减少56亿美元。24/7于11月16日报道的270亿美元属于另一口径。 Forbes估值截至11-12、报道发布于11-13；24/7报道发布于11-16，270亿美元的比较基准不明确。两组估算不能合并，也不代表已实现亏损。",
+      "implemented_records": [
+        {
+          "fact_id": "F-083",
+          "page_anchor": "index.html#fact-083",
+          "grade": "T3",
+          "title": "Forbes财富估算需与24/7口径分开",
+          "text": "Forbes 11月13日报道，以11月12日估值对比10月6日峰值，估算黄净资产减少620亿美元、另六位现任或前任高管及董事合计减少56亿美元。24/7于11月16日报道的270亿美元属于另一口径。",
+          "boundary": "Forbes估值截至11-12、报道发布于11-13；24/7报道发布于11-16，270亿美元的比较基准不明确。两组估算不能合并，也不代表已实现亏损。",
+          "links": [
+            {
+              "title": "Forbes署名原报（澳洲官方版本）：七名富豪财富估算",
+              "url": "https://www.forbes.com.au/news/innovation/nvidia-billionaires-lose-a-third-of-their-wealth-amid-jensen-huang-affairs-scandal/"
+            },
+            {
+              "title": "24/7 Wall St.：Jensen Huang’s Net Worth Plunges $27 Billion",
+              "url": "https://247wallst.com/investing/2026/11/16/jensen-huangs-net-worth-plunges-27-billion/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R17",
+      "title": "历史分钟与盘前快照",
+      "reason": "区分旧快照无法复核与价格已证伪；固定日期入口仍不等于原始分钟快照。",
+      "affected_original_facts": [
+        "F-081",
+        "F-099",
+        "F-136",
+        "F-088"
+      ],
+      "source_ids": [
+        "S37",
+        "S36",
+        "S34"
+      ],
+      "replacement": "11-16两次盘中记录合并为F-081；F-099、F-136的历史盘前快照同样缺少当时带时间戳的原始响应，均列T4。日线另采用本轮完整核读的Stock Analysis表：11-16常规交易收盘156.14美元，较前收162.85美元下跌4.12%。日线数据为T2，不能验证精确分钟价格。Yahoo筛选表保留为历史参考，其访问状态为搜索索引，未冒充本轮全文读取。",
+      "implemented_records": [
+        {
+          "fact_id": "F-081",
+          "page_anchor": "index.html#fact-081",
+          "grade": "T4",
+          "title": "11-16盘中快照缺少可复核原始响应",
+          "text": "11月16日两次盘中记录缺少当时原始响应，价格、高低价和累计成交量暂不可复核。可另核实常规交易收盘156.14美元，较11月13日162.85美元下跌4.12%。",
+          "boundary": "合并原F-081与F-088两次历史盘中快照；未取得带时间戳原始响应，分钟值列T4。另列的11-16日线收盘156.14美元、较前收下跌4.12%，来自可读日线表（T2），不能反证分钟快照。",
+          "links": [
+            {
+              "title": "Stock Analysis NVDA历史日线",
+              "url": "https://stockanalysis.com/stocks/nvda/history/?period=daily"
+            },
+            {
+              "title": "Yahoo NVDA固定日期筛选历史表",
+              "url": "https://finance.yahoo.com/quote/NVDA/history/?period1=1794787200&period2=1795046400"
+            }
+          ]
+        },
+        {
+          "fact_id": "F-099",
+          "page_anchor": "index.html#fact-099",
+          "grade": "T4",
+          "title": "11-18 美股盘前（13:42 UTC）：NVDA 报约 $160.40 ，较 11-17 收盘 $155.46 …",
+          "text": "11-18 美股盘前（13:42 UTC）：NVDA 报约 $160.40 ，较 11-17 收盘 $155.46 涨约 3.18% ；常规交易尚未开盘。",
+          "boundary": "历史盘前快照：未随仓库提供当时带时间戳的原始响应，现有历史日线链接不能复核该分钟值。保留为待核记录，不据此解释盘中走势。",
+          "links": [
+            {
+              "title": "Yahoo Finance chart API",
+              "url": "https://finance.yahoo.com/quote/NVDA/history/"
+            }
+          ]
+        },
+        {
+          "fact_id": "F-136",
+          "page_anchor": "index.html#fact-136",
+          "grade": "T4",
+          "title": "11-25 美股盘前（12:41 UTC）：NVDA 报约 $147.21 ，较 11-24 收盘 $155.38 …",
+          "text": "11-25 美股盘前（12:41 UTC）：NVDA 报约 $147.21 ，较 11-24 收盘 $155.38 跌约 5.26% ；常规交易尚未开盘。此前 11-24 盘后跌约 2.21%。",
+          "boundary": "历史盘前快照：未随仓库提供当时带时间戳的原始响应，现有历史日线链接不能复核该分钟值。保留为待核记录，不据此解释盘中走势。",
+          "links": [
+            {
+              "title": "Yahoo Finance chart API",
+              "url": "https://finance.yahoo.com/quote/NVDA/history/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R18",
+      "title": "首页-44%不对应所列日期价格",
+      "reason": "首页把不同端点的约-44%移到最新价格之后；即便仅换链接仍会误导区间。",
+      "affected_original_facts": [
+        "F-116",
+        "F-143",
+        "F-029",
+        "F-051",
+        "F-091",
+        "F-126",
+        "F-140"
+      ],
+      "source_ids": [
+        "S34",
+        "S35",
+        "S37"
+      ],
+      "replacement": "统一采用常规交易收盘口径 NVDA 11月23日收165.05美元，较11月20日125.53美元上涨31.48%；11月24日、25日分别下跌5.86%与3.91%，25日收149.30美元。相对10月6日收239.24美元，11月20日跌47.53%，11月25日跌37.59%。 涨跌幅统一以常规交易Close计算，公式为终值/起值−1。10-06盘中高243.37美元未作收盘基准；11-23至25累计回落9.54%。",
+      "implemented_records": [
+        {
+          "fact_id": "F-116",
+          "page_anchor": "index.html#fact-116",
+          "grade": "T2",
+          "title": "截至11-20，NVDA较10-06收盘价下跌47.53%",
+          "text": "按同一常规交易收盘口径，NVDA从10月6日239.24美元跌至11月20日125.53美元，累计下跌47.53%。旧稿的约44%没有对应相同端点，予以更正。",
+          "boundary": "记录日11-23回顾此前交易；比较端点为10-06与11-20，不使用盘中最高价。股价跌幅不直接等同于相同口径的市值损失。",
+          "links": [
+            {
+              "title": "Stock Analysis NVDA历史日线",
+              "url": "https://stockanalysis.com/stocks/nvda/history/?period=daily"
+            },
+            {
+              "title": "Yahoo NVDA 10-06日线所在历史表",
+              "url": "https://finance.yahoo.com/quote/NVDA/history/?fr=yhssrp_catchall&period1=917015400&period2=1794497116"
+            }
+          ]
+        },
+        {
+          "fact_id": "F-143",
+          "page_anchor": "index.html#fact-143",
+          "grade": "T2",
+          "title": "11-23复职日：NVDA收涨31.48%",
+          "text": "11月23日NVDA收165.05美元，较前一交易日11月20日125.53美元上涨31.48%。",
+          "boundary": "常规交易Close口径；随后11-24、25两日累计回落9.54%，25日收149.30美元。时间相邻不识别单一消息的因果贡献。",
+          "links": [
+            {
+              "title": "Stock Analysis NVDA历史日线",
+              "url": "https://stockanalysis.com/stocks/nvda/history/?period=daily"
+            }
+          ]
+        },
+        {
+          "fact_id": "F-029",
+          "page_anchor": "index.html#fact-029",
+          "grade": "T2",
+          "title": "11-12常规交易收盘：$166.19（-4.34%）",
+          "text": "NVDA在2026-11-12常规交易收166.19美元，较前一交易日收盘173.73美元变动-4.34%。当日开盘151.01、最高167.14、最低148.80美元。",
+          "boundary": "统一采用Stock Analysis所载日线Close；读取于2026-11-27。价格与成交量均不用于验证历史分钟快照，亦不单独识别消息的市场影响。",
+          "links": [
+            {
+              "title": "Stock Analysis · 日线表",
+              "url": "https://stockanalysis.com/stocks/nvda/history/?period=daily"
+            }
+          ]
+        },
+        {
+          "fact_id": "F-051",
+          "page_anchor": "index.html#fact-051",
+          "grade": "T2",
+          "title": "11-13常规交易收盘：$162.85（-2.01%）",
+          "text": "NVDA在2026-11-13常规交易收162.85美元，较前一交易日收盘166.19美元变动-2.01%。当日开盘169.91、最高170.00、最低158.39美元。",
+          "boundary": "统一采用Stock Analysis所载日线Close；读取于2026-11-27。价格与成交量均不用于验证历史分钟快照，亦不单独识别消息的市场影响。",
+          "links": [
+            {
+              "title": "Stock Analysis · 日线表",
+              "url": "https://stockanalysis.com/stocks/nvda/history/?period=daily"
+            }
+          ]
+        },
+        {
+          "fact_id": "F-091",
+          "page_anchor": "index.html#fact-091",
+          "grade": "T2",
+          "title": "11-17常规交易收盘：$155.46（-0.44%）",
+          "text": "NVDA在2026-11-17常规交易收155.46美元，较前一交易日收盘156.14美元变动-0.44%。当日开盘156.90、最高158.19、最低150.33美元。",
+          "boundary": "统一采用Stock Analysis所载日线Close；读取于2026-11-27。价格与成交量均不用于验证历史分钟快照，亦不单独识别消息的市场影响。",
+          "links": [
+            {
+              "title": "Stock Analysis · 日线表",
+              "url": "https://stockanalysis.com/stocks/nvda/history/?period=daily"
+            }
+          ]
+        },
+        {
+          "fact_id": "F-126",
+          "page_anchor": "index.html#fact-126",
+          "grade": "T2",
+          "title": "11-24常规交易收盘：$155.38（-5.86%）",
+          "text": "NVDA在2026-11-24常规交易收155.38美元，较前一交易日收盘165.05美元变动-5.86%。当日开盘159.10、最高159.92、最低150.50美元。",
+          "boundary": "统一采用Stock Analysis所载日线Close；读取于2026-11-27。价格与成交量均不用于验证历史分钟快照，亦不单独识别消息的市场影响。",
+          "links": [
+            {
+              "title": "Stock Analysis · 日线表",
+              "url": "https://stockanalysis.com/stocks/nvda/history/?period=daily"
+            }
+          ]
+        },
+        {
+          "fact_id": "F-140",
+          "page_anchor": "index.html#fact-140",
+          "grade": "T2",
+          "title": "11-25常规交易收盘：$149.30（-3.91%）",
+          "text": "NVDA在2026-11-25常规交易收149.30美元，较前一交易日收盘155.38美元变动-3.91%。当日开盘144.06、最高150.37、最低141.17美元。",
+          "boundary": "统一采用Stock Analysis所载日线Close；读取于2026-11-27。价格与成交量均不用于验证历史分钟快照，亦不单独识别消息的市场影响。",
+          "links": [
+            {
+              "title": "Stock Analysis · 日线表",
+              "url": "https://stockanalysis.com/stocks/nvda/history/?period=daily"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R19",
+      "title": "分钟图与日线冲突",
+      "reason": "采编包未随两文件仓库提供，市场章节缺数据外链；“已存证”本身不使曲线可复核。",
+      "affected_original_facts": [],
+      "source_ids": [
+        "S34",
+        "S37"
+      ],
+      "replacement": "撤下原分时曲线、未复核盘前图及同业因果归因图，保留旧版链接与冲突说明。原图11-20、11-23、11-25开盘值145.90、135.65、152.36美元，与日线143.52、167.04、144.06美元不一致。本版改用Stock Analysis同一张表的37个交易日Close，随仓库提供OHLCV CSV、来源与口径；只连接每日收盘点，不补造分钟走势，亦不识别单一消息的因果贡献。",
+      "implemented_records": []
+    },
+    {
+      "id": "R20",
+      "title": "返岗欢迎原报恢复",
+      "reason": "找到可读原通讯社报道，替换BBC/华尔街见闻泛检索入口。",
+      "affected_original_facts": [
+        "F-120"
+      ],
+      "source_ids": [
+        "S32",
+        "S33"
+      ],
+      "replacement": "11-23美国当地返岗；Reuters 11-24更新现场报道 Reuters报道黄仁勋于11月23日返回圣克拉拉总部并获现场员工欢迎，他表示第二次任职会做得更好。 Reuters正文更新于11-24，URL保留早期日期。返岗发生于11-23美国当地；现场欢迎不代表全体员工支持率或公开信签署情况。",
+      "implemented_records": [
+        {
+          "fact_id": "F-120",
+          "page_anchor": "index.html#fact-120",
+          "grade": "T2",
+          "title": "11-23美国当地返岗；Reuters 11-24更新现场报道",
+          "text": "Reuters报道黄仁勋于11月23日返回圣克拉拉总部并获现场员工欢迎，他表示第二次任职会做得更好。",
+          "boundary": "Reuters正文更新于11-24，URL保留早期日期。返岗发生于11-23美国当地；现场欢迎不代表全体员工支持率或公开信签署情况。",
+          "links": [
+            {
+              "title": "Reuters：Jensen Huang returns to Nvidia, vows to be a better CEO",
+              "url": "https://www.reuters.com/business/jensen-huang-steps-down-hands-on-kingmaker-behind-ai-boom-2026-11-12/"
+            },
+            {
+              "title": "Reuters / Investing.com：返岗现场报道",
+              "url": "https://www.investing.com/news/stock-market-news/jensen-huangs-comeback-to-nvidia-underscores-his-outsized-grip-on-ai-5046711"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R21",
+      "title": "观察点与既有官方事实同步",
+      "reason": "复用已有充分官方核验，删除“确切日期/是否公开尚未确定”等过时待核项；不再次重做事件核查。",
+      "affected_original_facts": [
+        "F-128",
+        "F-129"
+      ],
+      "source_ids": [
+        "S38",
+        "S39"
+      ],
+      "replacement": "已公布的访谈和听证日程，改为跟踪是否如期举行 参院银行委员会已排定12月3日10:00公开听证，地点Dirksen106，当前证人名单为黄仁勋。众院三委员会确认黄与Tim Teter将按12月1日、2日的安排接受逐字记录访谈；该联合声明未逐一对应两人的日期。 T1对应已发布的排期，实际举行、出席及材料公开仍待后续确认。Lutnick不在当前参院该页证人名单。",
+      "implemented_records": [
+        {
+          "fact_id": "F-128",
+          "page_anchor": "index.html#fact-128",
+          "grade": "T1",
+          "title": "参院银行委员会排定12-03公开听证",
+          "text": "参院银行委员会已排定2026年12月3日10:00在Dirksen 106举行公开听证；当前官方证人名单仅列黄仁勋。",
+          "boundary": "这是已发布的排期，不等于已经举行；Lutnick不在此页当前证人名单。时间为华盛顿当地时间。",
+          "links": [
+            {
+              "title": "参院银行委员会公开听证日程",
+              "url": "https://www.banking.senate.gov/hearings/protecting-americas-ai-advantage-oversight-of-us-export-controls"
+            }
+          ]
+        },
+        {
+          "fact_id": "F-129",
+          "page_anchor": "index.html#fact-129",
+          "grade": "T1",
+          "title": "众院三委员会确认12-01/02逐字记录访谈安排",
+          "text": "众院三委员会11月23日联合声明确认黄仁勋与Tim Teter将按12月1日、2日安排接受逐字记录访谈。",
+          "boundary": "该联合声明未逐一对应两人的具体日期；安排、出席与证词公开分别跟踪。不是12-03参院公开听证。",
+          "links": [
+            {
+              "title": "众院三委员会复职后联合声明",
+              "url": "https://chinaselectcommittee.house.gov/media/press-releases/statement-on-jensen-huang-s-reinstatement-at-nvidia"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R22",
+      "title": "方法声明与可复核性",
+      "reason": "原页面公开承诺超出可提供证据；采集条目数和转载数量不等于独立证据数。",
+      "affected_original_facts": [
+        "F-031",
+        "F-089",
+        "F-032",
+        "F-044",
+        "F-045",
+        "F-053",
+        "F-077",
+        "F-080",
+        "F-085",
+        "F-095"
+      ],
+      "source_ids": [],
+      "replacement": "来源说明、访问状态与证据等级分别记录：搜索页及RSS跳转只作发现线索，不计作独立证据；具名媒体对官方表态的转述采用T2。复用页面已有的Trump与黄仁勋本人原帖，F-031、F-089保留T1；F-032/044/045/053/077/080/085/095因仅有媒体转述改为T2。匿名指控、内部动因和未公开底层材料保持限定。分级目录由最终时间线生成，避免不同章节互相矛盾。",
+      "implemented_records": [
+        {
+          "fact_id": "F-031",
+          "page_anchor": "index.html#fact-031",
+          "grade": "T1",
+          "title": "特朗普：库克是接替黄的「唯一人选」",
+          "text": "特朗普11月12日在Truth Social发帖，称库克是接替黄仁勋的人选，并表示已与库克通话。此处确认的是其公开建议，不构成Nvidia董事会任命。",
+          "boundary": "直接引语逐字核对；「唯一人选」为政治表态，不构成董事会决定。",
+          "links": [
+            {
+              "title": "Trump · Truth Social原帖",
+              "url": "https://truthsocial.com/@realDonaldTrump/117604177898784579"
+            },
+            {
+              "title": "Straits Times/AFP 2026-11-13",
+              "url": "https://www.straitstimes.com/world/united-states/trump-calls-for-apples-tim-cook-to-replace-jensen-huang-at-nvidia"
+            }
+          ]
+        },
+        {
+          "fact_id": "F-089",
+          "page_anchor": "index.html#fact-089",
+          "grade": "T1",
+          "title": "黄仁勋11-17发布辞任后首次公开声明",
+          "text": "黄仁勋 11-17 首次公开发声（X 声明）：承认个人生活「serious mistakes」、向董事会道歉；称「If the Board of Directors decides that my return is in the best interest of our shareholders, our employees, the company, and America, I would be honored to answer these calls and return as CEO.」",
+          "boundary": "本人声明全文经多家媒体转载；「愿回归」以董事会邀请为前提。",
+          "links": [
+            {
+              "title": "黄仁勋 · X原帖",
+              "url": "https://x.com/JensenHuang/status/2122726005219737649"
+            },
+            {
+              "title": "USA Today 2026-11-17",
+              "url": "https://www.usatoday.com/story/tech/2026/11/17/former-nvidia-ceo-jensen-huang-speaks-out-after-resignation/92826990007/"
+            },
+            {
+              "title": "Anadolu Agency 2026-11-17",
+              "url": "https://f.aa.com.tr/en/world/jensen-huang-says-he-would-be-honored-to-return-as-nvidia-ceo-if-board-asks/4128188"
+            }
+          ]
+        },
+        {
+          "fact_id": "F-032",
+          "page_anchor": "index.html#fact-032",
+          "grade": "T2",
+          "title": "黄仁勋同意本月赴国会作证",
+          "text": "黄仁勋已同意本月赴国会作证。众院外委会主席 Brian Mast 称，作证「likely going to be an under oath transcribed video recorded between several committees」，安排在感恩节休会前；形式为闭门、录像并逐字记录，当时具体日期与是否公开未定。",
+          "boundary": "议员直接表态；日期未定，故不作「11-18 作证」的等同表述。 本条依据媒体对公开表态或声明的转述，统一列T2；表态内容本身不等于指控已获证实。 后续众院安排 · 后续参院安排",
+          "links": [
+            {
+              "title": "MS NOW 2026-11-12",
+              "url": "https://www.ms.now/news/nvidia-jensen-huang-resigns-affair-china-spying"
+            },
+            {
+              "title": "TechCrunch 2026-11-12",
+              "url": "https://techcrunch.com/2026/11/12/jensen-huang-agrees-to-testify-before-congress/"
+            }
+          ]
+        },
+        {
+          "fact_id": "F-044",
+          "page_anchor": "index.html#fact-044",
+          "grade": "T2",
+          "title": "参院银行委员会定 12-03 公开听证",
+          "text": "美国参议院银行委员会主席 Tim Scott 已致函黄仁勋，要求其于 12 月 3 日 出席参院银行委员会公开听证会作证，并警告可能发出传票；商务部长 Lutnick 也被要求 12 月出席，其发言人称为「自愿」同意。众院情报、外交、中国特设三委员会另要求黄仁勋于 12 月 1 日 进行闭门访谈。",
+          "boundary": "议员信函内容经 BBC/CNA 转述；日期为 12-03（参院公开听证）与 12-01（众院闭门访谈），与此前「11-18」口径不同，旧口径保留并标注更新。 本条依据媒体对公开表态或声明的转述，统一列T2；表态内容本身不等于指控已获证实。",
+          "links": [
+            {
+              "title": "CNA/BBC 2026-11-13",
+              "url": "https://www.cna.com.tw/news/aopl/202611130220.aspx"
+            },
+            {
+              "title": "CNA 2026-11-13（Lutnick 同意作证）",
+              "url": "https://www.cna.com.tw/news/aopl/202611130157.aspx"
+            }
+          ]
+        },
+        {
+          "fact_id": "F-045",
+          "page_anchor": "index.html#fact-045",
+          "grade": "T2",
+          "title": "马来西亚 MITI：从未认定 Megaspeed 无违规",
+          "text": "马来西亚投资、贸易及工业部（MITI）2026-11-13 声明：从未认定 Megaspeed 及其马来西亚关联公司 Speedmatrix 没有违规；正与马来西亚皇家关税局合作，查明运入马来西亚的芯片是否再出口至其他国家；Speedmatrix 是马来西亚数据中心租户，将自有服务器与 AI 芯片运入马来西亚供运营使用（进口无需许可），但自 2025-07 起从马来西亚出口/再出口美国高性能 AI 芯片须依《2010 年战略贸易法》取得许可；马来西亚正与新加坡、美国主管机关合作。",
+          "boundary": "MITI 官方声明经中央社转述；马来西亚不执行他国单边出口管制，但要求企业遵守马来西亚法律。 本条依据媒体对公开表态或声明的转述，统一列T2；表态内容本身不等于指控已获证实。",
+          "links": [
+            {
+              "title": "CNA 2026-11-13",
+              "url": "https://www.cna.com.tw/news/aopl/202611130129.aspx"
+            }
+          ]
+        },
+        {
+          "fact_id": "F-053",
+          "page_anchor": "index.html#fact-053",
+          "grade": "T2",
+          "title": "Nvidia 董事会：尚未选定猎头、未正式接触候选人",
+          "text": "Nvidia董事会11-13对CNBC表示，当时尚未选定用于遴选永久CEO的猎头公司，并称尚未正式接触接班候选人。此表态与FT报道的接触情况存在口径差异，正式接触与其他接触不能直接等同。",
+          "boundary": "媒体转述董事会当时的公开回应，按T2；“未正式接触候选人”与其他报道称曾有接触，可能涉及不同程序和口径，不能仅据此断言直接矛盾。",
+          "links": [
+            {
+              "title": "CNBC 2026-11-13",
+              "url": "https://www.cnbc.com/2026/11/13/nvidia-huang-ceo-replacement-search.html"
+            }
+          ]
+        },
+        {
+          "fact_id": "F-077",
+          "page_anchor": "index.html#fact-077",
+          "grade": "T2",
+          "title": "Megaspeed 11-15 声明：黄乐（Alice Huang）已于…",
+          "text": "Megaspeed 11-15 声明：黄乐（Alice Huang）已于 2025-08-30 离开公司、目前不担任任何职务；公司不就其私人事务置评，并已就相关指控启动独立调查；Megaspeed 否认不当行为。",
+          "boundary": "公司声明经多家通讯社转述；离职日期为 2025-08-30。 本条依据媒体对公开表态或声明的转述，统一列T2；表态内容本身不等于指控已获证实。",
+          "links": [
+            {
+              "title": "EFE/Infobae 2026-11-15",
+              "url": "https://www.infobae.com/america/agencias/2026/11/15/megaspeed-dice-que-alice-huang-dejo-la-empresa-en-agosto-de-2025/"
+            },
+            {
+              "title": "ANI 2026-11-15",
+              "url": "https://newsable.asianetnews.com/world/megaspeed-confirms-departure-of-alice-huang-amid-nvidia-chip-probe-articleshow-5imyq4l"
+            }
+          ]
+        },
+        {
+          "fact_id": "F-080",
+          "page_anchor": "index.html#fact-080",
+          "grade": "T2",
+          "title": "美众议院中国问题特设委员会主席 Moolenaar 在 CBS「Face…",
+          "text": "美众议院中国问题特设委员会主席 Moolenaar 在 CBS「Face the Nation」表示：黄仁勋已同意就与黄乐关系向三个众院委员会 闭门作证 ，当时日期尚未确定；因其自愿配合，委员会不会发出传票。",
+          "boundary": "保留11-14报道当时的未定状态；后续12-01/02安排已由11-23联合声明确认，见F-129。媒体转述公开表态记T2，不是已取得官方逐字稿。 后续众院安排 · 后续参院安排",
+          "links": [
+            {
+              "title": "Bloomberg（San Luis Obispo Tribune 联播）2026-11-14",
+              "url": "https://www.sanluisobispo.com/news/nation-world/national/article318092075.html"
+            }
+          ]
+        },
+        {
+          "fact_id": "F-085",
+          "page_anchor": "index.html#fact-085",
+          "grade": "T2",
+          "title": "美国总统特朗普 11-16 对记者表示，若黄仁勋重返 Nvidia CE…",
+          "text": "美国总统特朗普 11-16 对记者表示，若黄仁勋重返 Nvidia CEO，他「would certainly not mind」（完全不介意），并称黄「learned a big lesson」；他还称「A lot of people are asking Jensen... That certainly isn't a bad idea」，并对其与黄乐关系是否涉及间谍表示不确定。",
+          "boundary": "AFP/RTL 原文引语；CNBC 误挂董事会文章，已移除错误来源。 本条依据媒体对公开表态或声明的转述，统一列T2；表态内容本身不等于指控已获证实。",
+          "links": [
+            {
+              "title": "AFP/RTL 2026-11-16",
+              "url": "https://today.rtl.lu/news/world/trump-says-would-not-mind-huang-being-reinstated-at-nvidia-786835918"
+            }
+          ]
+        },
+        {
+          "fact_id": "F-095",
+          "page_anchor": "index.html#fact-095",
+          "grade": "T2",
+          "title": "Nvidia 董事长 Harvey Jones 在 Q3 财报电话会开场…",
+          "text": "Nvidia 董事长 Harvey Jones 在 Q3 财报电话会开场表示：董事会 一致接受 黄的辞任，且 不打算让黄复职 （\"does not intend to reinstate Jensen as CEO\"）；电话会不回答黄辞职情况及调查问题。",
+          "boundary": "AP等媒体转述财报电话会上的公开表态，按T2；董事会当时不打算复职与黄表示愿获邀回归可以同时成立。后续11-23已复职，见F-142。",
+          "links": [
+            {
+              "title": "AP News 2026-11-17",
+              "url": "https://apnews.com/article/nvidia-jensen-huang-china-national-security-chips-3026bcbe04ab57b844884382e583422a"
+            },
+            {
+              "title": "Anadolu Agency 2026-11-18",
+              "url": "https://mobil.aa.com.tr/en/science-technology/nvidia-board-rules-out-reinstating-jensen-huang-as-ceo/4128463"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R23",
+      "title": "75亿美元原链与边界",
+      "reason": "该项既有分级基本合理，避免重复推翻已核工作；原发正文付费受限应透明披露。",
+      "affected_original_facts": [
+        "F-013"
+      ],
+      "source_ids": [
+        "S42",
+        "S43"
+      ],
+      "replacement": "The Information调查：金额与关系因果仍属报道口径 The Information援引匿名来源，将相关芯片供应与黄乐关系相联系，并估算至少75亿美元、约24万块；Reuters转述且明确未独立核实。 The Information付费全文本轮未取得；Reuters为转述且未独立核实，仍属T3。这一供应估算不能与融资资产价值相加，也不直接证明黄知情。",
+      "implemented_records": [
+        {
+          "fact_id": "F-013",
+          "page_anchor": "index.html#fact-013",
+          "grade": "T3",
+          "title": "The Information调查：金额与关系因果仍属报道口径",
+          "text": "The Information援引匿名来源，将相关芯片供应与黄乐关系相联系，并估算至少75亿美元、约24万块；Reuters转述且明确未独立核实。",
+          "boundary": "The Information付费全文本轮未取得；Reuters为转述且未独立核实，仍属T3。这一供应估算不能与融资资产价值相加，也不直接证明黄知情。",
+          "links": [
+            {
+              "title": "The Information 11-10原始调查",
+              "url": "https://www.theinformation.com/articles/jensen-huangs-yearslong-ties-alice-huang-enabled-nvidia-chip-sales-china"
+            },
+            {
+              "title": "Reuters转述The Information",
+              "url": "https://www.reuters.com/world/china/nvidia-ceos-affair-aided-75-billion-chip-shipments-china-information-reports-2026-11-10/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R24",
+      "title": "SEC调查原链",
+      "reason": "用准确WSJ原文替换搜索入口，不因找回链接自动升级。",
+      "affected_original_facts": [
+        "F-092"
+      ],
+      "source_ids": [
+        "S44"
+      ],
+      "replacement": "WSJ匿名报道SEC调查Nvidia WSJ 11月17日援引知情人士报道SEC正在调查Nvidia，涉及公司披露是否误导投资者；本轮未取得SEC公开立案文件。 匿名来源调查报道（T3），并非SEC公开立案文件或违法认定。Reuters转述与WSJ原报属于同一报道链。",
+      "implemented_records": [
+        {
+          "fact_id": "F-092",
+          "page_anchor": "index.html#fact-092",
+          "grade": "T3",
+          "title": "WSJ匿名报道SEC调查Nvidia",
+          "text": "WSJ 11月17日援引知情人士报道SEC正在调查Nvidia，涉及公司披露是否误导投资者；本轮未取得SEC公开立案文件。",
+          "boundary": "匿名来源调查报道（T3），并非SEC公开立案文件或违法认定。Reuters转述与WSJ原报属于同一报道链。",
+          "links": [
+            {
+              "title": "WSJ：SEC Is Probing Nvidia Amid Departure of CEO Jensen Huang",
+              "url": "https://www.wsj.com/business/sec-is-probing-nvidia-amid-departure-of-ceo-jensen-huang-ee7643f8"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R25",
+      "title": "假身份与机器人混称",
+      "reason": "来源正文与当前“虚假/机器人”措辞有差别；仅作必要术语勘误。",
+      "affected_original_facts": [
+        "F-026"
+      ],
+      "source_ids": [
+        "S45"
+      ],
+      "replacement": "WaPo报道部分支持者使用虚假身份账号 WaPo报道部分支持者使用虚假身份账号；这不等同于自动化机器人。 账号身份问题与自动化行为是不同问题；公开证据不足以推定幕后委托者。",
+      "implemented_records": [
+        {
+          "fact_id": "F-026",
+          "page_anchor": "index.html#fact-026",
+          "grade": "T3",
+          "title": "WaPo报道部分支持者使用虚假身份账号",
+          "text": "WaPo报道部分支持者使用虚假身份账号；这不等同于自动化机器人。",
+          "boundary": "账号身份问题与自动化行为是不同问题；公开证据不足以推定幕后委托者。",
+          "links": [
+            {
+              "title": "WaPo：Key voices rushed to defend Jensen Huang online",
+              "url": "https://www.washingtonpost.com/technology/2026/11/12/elon-musk-bill-ackman-online-bots-defend-jensen-huang-online/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R26",
+      "title": "Bloomberg北京报道补链",
+      "reason": "搜索入口改具体原发，访问状态与事实级别分列。",
+      "affected_original_facts": [
+        "F-024"
+      ],
+      "source_ids": [
+        "S46"
+      ],
+      "replacement": "Bloomberg关于黄乐身在北京的报道 Bloomberg 11月12日报道黄乐身在北京；该记录仍为单一媒体、匿名来源。 本轮取得原站索引和摘要，未读到付费全文。报道保持单一匿名来源的T3，不据此增加位置细节。",
+      "implemented_records": [
+        {
+          "fact_id": "F-024",
+          "page_anchor": "index.html#fact-024",
+          "grade": "T3",
+          "title": "Bloomberg关于黄乐身在北京的报道",
+          "text": "Bloomberg 11月12日报道黄乐身在北京；该记录仍为单一媒体、匿名来源。",
+          "boundary": "本轮取得原站索引和摘要，未读到付费全文。报道保持单一匿名来源的T3，不据此增加位置细节。",
+          "links": [
+            {
+              "title": "Bloomberg：Alleged Chinese spy at center of Nvidia firestorm is in Beijing",
+              "url": "https://bloomberg.com/news/articles/2026-11-12/alleged-chinese-spy-at-center-of-nvidia-firestorm-is-in-beijing"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R27",
+      "title": "WSJ介绍者报道补链",
+      "reason": "仅补具体原发，不把部分正文当完整独立核验。",
+      "affected_original_facts": [
+        "F-025"
+      ],
+      "source_ids": [
+        "S47"
+      ],
+      "replacement": "WSJ关于介绍者身份的报道 WSJ 11月12日报道介绍两人认识的商人与黄乐为夫妻关系。 本轮取得原站题名及开头正文，未作完整全文核验；保留媒体归因与T3。",
+      "implemented_records": [
+        {
+          "fact_id": "F-025",
+          "page_anchor": "index.html#fact-025",
+          "grade": "T3",
+          "title": "WSJ关于介绍者身份的报道",
+          "text": "WSJ 11月12日报道介绍两人认识的商人与黄乐为夫妻关系。",
+          "boundary": "本轮取得原站题名及开头正文，未作完整全文核验；保留媒体归因与T3。",
+          "links": [
+            {
+              "title": "WSJ：A Mystery Businessman Introduced Jensen Huang to His Paramour",
+              "url": "https://www.wsj.com/tech/ai/a-mystery-businessman-introduced-jensen-huang-to-his-paramourher-husband-1ec3b581"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R28",
+      "title": "市盈率报道补链",
+      "reason": "原报已读，补具体链接即可，不扩大已有分析。",
+      "affected_original_facts": [
+        "F-037"
+      ],
+      "source_ids": [
+        "S48"
+      ],
+      "replacement": "Reuters：预期市盈率降至14年低位 Reuters 11月12日报道Nvidia预期市盈率降至14年低位，同时讨论CEO离职与AI市场担忧。 报道采用forward/expected PE，即预期市盈率；这是11-12当时的市场估值指标。",
+      "implemented_records": [
+        {
+          "fact_id": "F-037",
+          "page_anchor": "index.html#fact-037",
+          "grade": "T2",
+          "title": "Reuters：预期市盈率降至14年低位",
+          "text": "Reuters 11月12日报道Nvidia预期市盈率降至14年低位，同时讨论CEO离职与AI市场担忧。",
+          "boundary": "报道采用forward/expected PE，即预期市盈率；这是11-12当时的市场估值指标。",
+          "links": [
+            {
+              "title": "Reuters：Nvidia PE falls to 14-year low",
+              "url": "https://www.reuters.com/business/nvidia-pe-falls-14-year-low-ceo-exit-ai-worries-cloud-bargain-2026-11-12/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R29",
+      "title": "Bessent访谈原入口",
+      "reason": "当前T1只挂TASS及搜索入口，链接身份和直接核验程度不足以支撑T1。",
+      "affected_original_facts": [
+        "F-078"
+      ],
+      "source_ids": [
+        "S49",
+        "S50"
+      ],
+      "replacement": "Bessent关于外部CEO与治理调整的电视访谈 TASS等媒体报道称，Bessent在11月15日Fox节目中主张Nvidia考虑外部CEO并调整治理；此为其公开观点，不是董事会决定。 Fox官方访谈及完整节目页已定位，但本轮未核对视频或官方逐字稿；目前按媒体转述T2记录。",
+      "implemented_records": [
+        {
+          "fact_id": "F-078",
+          "page_anchor": "index.html#fact-078",
+          "grade": "T2",
+          "title": "Bessent关于外部CEO与治理调整的电视访谈",
+          "text": "TASS等媒体报道称，Bessent在11月15日Fox节目中主张Nvidia考虑外部CEO并调整治理；此为其公开观点，不是董事会决定。",
+          "boundary": "Fox官方访谈及完整节目页已定位，但本轮未核对视频或官方逐字稿；目前按媒体转述T2记录。",
+          "links": [
+            {
+              "title": "TASS 2026-11-15",
+              "url": "https://tass.com/world/2218371"
+            },
+            {
+              "title": "Fox Bessent官方访谈片段",
+              "url": "https://www.foxnews.com/video/6408419605112"
+            },
+            {
+              "title": "Fox 当期完整节目",
+              "url": "https://www.foxnews.com/video/6408420602112"
+            },
+            {
+              "title": "TASS 2026-11-15",
+              "url": "https://tass.com/world/2218371"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R30",
+      "title": "内部员工信补链",
+      "reason": "用原文替换泛搜索入口；其他已核链接可保留，不重复抄录整封信。",
+      "affected_original_facts": [
+        "F-035"
+      ],
+      "source_ids": [
+        "S51"
+      ],
+      "replacement": "媒体刊载新管理层内部员工信 The Verge 11月12日刊载Nvidia新管理层内部员工信，涉及交接与全员会安排。 材料由媒体刊载；本轮可读原站索引内容，直接页面访问受限。内部材料与公司公开公告分别记录。",
+      "implemented_records": [
+        {
+          "fact_id": "F-035",
+          "page_anchor": "index.html#fact-035",
+          "grade": "T2",
+          "title": "媒体刊载新管理层内部员工信",
+          "text": "The Verge 11月12日刊载Nvidia新管理层内部员工信，涉及交接与全员会安排。",
+          "boundary": "材料由媒体刊载；本轮可读原站索引内容，直接页面访问受限。内部材料与公司公开公告分别记录。",
+          "links": [
+            {
+              "title": "The Verge：Read Nvidia’s internal emails",
+              "url": "https://www.theverge.com/ai-artificial-intelligence/1032028/read-nvidias-internal-emails-jensen-huang"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R31",
+      "title": "未受调查与已洗清区分",
+      "reason": "修复现有CBS及Reuters错误路径，避免“没有调查”写成“经过调查已排除”。",
+      "affected_original_facts": [
+        "F-139",
+        "F-141"
+      ],
+      "source_ids": [
+        "S52",
+        "S53",
+        "S54"
+      ],
+      "replacement": "Vance称被告知黄未受调查；不能推为调查后获清白 Vance 11月25日公开表示，被告知黄未受调查，因此认为不需要赦免。Reuters另以匿名官员叙述复职前未对黄开展正式调查的决策过程。 公开表态经记者报道记T2；未受调查不能推导为经调查获免责。Reuters关于内部决策过程的匿名叙述记T3。",
+      "implemented_records": [
+        {
+          "fact_id": "F-139",
+          "page_anchor": "index.html#fact-139",
+          "grade": "T2",
+          "title": "Vance称被告知黄未受调查，因此认为不需赦免",
+          "text": "Vance 11月25日公开表示，他被告知黄仁勋未受调查，因此认为不需要赦免。",
+          "boundary": "可靠媒体对公开表态的报道（T2）；这不等于经过调查后获得免责，也不代替司法机关结论。",
+          "links": [
+            {
+              "title": "CBS：Vance says Jensen Huang doesn’t need pardon",
+              "url": "https://www.cbsnews.com/news/vance-says-jensen-huang-doesnt-need-pardon/"
+            },
+            {
+              "title": "AP：Vance says Jensen Huang won’t need a pardon",
+              "url": "https://apnews.com/article/a8d3d781f182317cbff28863d56add5d"
+            }
+          ]
+        },
+        {
+          "fact_id": "F-141",
+          "page_anchor": "index.html#fact-141",
+          "grade": "T3",
+          "title": "Reuters：匿名官员描述复职前的内部评估过程",
+          "text": "Reuters依据匿名官员消息，描述复职前政府内部评估及未对黄仁勋展开正式调查的过程。",
+          "boundary": "匿名过程叙述仍为T3。未受正式调查、政治人物的安全判断与已被调查洗清须分别表述。",
+          "links": [
+            {
+              "title": "Reuters：How Trump administration determined Huang is not a security threat",
+              "url": "https://www.reuters.com/business/us-justice-department-did-not-open-probe-into-jensen-huang-before-reinstatement-2026-11-25/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R32",
+      "title": "财报原始出处",
+      "reason": "F-090已标T1却只挂Yahoo二手稿；补官方原文，关闭“11-17财报结果待核”的过时事项。",
+      "affected_original_facts": [
+        "F-090",
+        "F-096"
+      ],
+      "source_ids": [
+        "S41"
+      ],
+      "replacement": "NVIDIA FY2027 Q3财报与Q4指引 NVIDIA 11月17日披露截至10月25日第三财季营收1158亿美元、净利润653亿美元，GAAP/非GAAP摊薄EPS分别2.70/2.68美元；第四财季营收指引1300亿美元±3%，未计入来自中国的数据中心计算收入。 实际财务数据与公司指引来自官方披露；分析师预期另有来源。该公告不能单独证明全部Hopper型号均已停止出货。",
+      "implemented_records": [
+        {
+          "fact_id": "F-090",
+          "page_anchor": "index.html#fact-090",
+          "grade": "T1",
+          "title": "NVIDIA FY2027 Q3财报与Q4指引",
+          "text": "NVIDIA 11月17日披露截至10月25日第三财季营收1158亿美元、净利润653亿美元，GAAP/非GAAP摊薄EPS分别2.70/2.68美元；第四财季营收指引1300亿美元±3%，未计入来自中国的数据中心计算收入。",
+          "boundary": "实际财务数据与公司指引来自官方披露；分析师预期另有来源。该公告不能单独证明全部Hopper型号均已停止出货。",
+          "links": [
+            {
+              "title": "NVIDIA FY2027 Q3业绩公告",
+              "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Third-Quarter-Fiscal-2027/default.aspx"
+            }
+          ]
+        },
+        {
+          "fact_id": "F-096",
+          "page_anchor": "index.html#fact-096",
+          "grade": "T2",
+          "title": "Nvidia 临时 CEO Kress 在财报电话会表示：公司已 停止向中国出货 此前获许可的 Hopper 数据中…",
+          "text": "Nvidia 临时 CEO Kress 在财报电话会表示：公司已 停止向中国出货 此前获许可的 Hopper 数据中心芯片，Q4 业绩指引 未纳入 相关产品收入；上一季度中国相关收入约 $24 亿 。公司未说明停止出货的具体原因。",
+          "boundary": "媒体对电话会的转述（T2）；具体暂停出货型号待核。官方财报仅直接确认Q4指引未计中国数据中心计算收入（F-090，T1），不能据此扩大为全部Hopper型号停供。",
+          "links": [
+            {
+              "title": "ORF 2026-11-17",
+              "url": "https://orf.at/stories/3448560/"
+            },
+            {
+              "title": "星岛头条 2026-11-18",
+              "url": "https://www.stheadline.com/realtime-world/3638241/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R33",
+      "title": "复职主事实复用官方链接",
+      "reason": "不重复核查基础官宣；用网页已有官方链接替换只挂WSJ RSS/X的主证位置，并修正过时继任观察点。",
+      "affected_original_facts": [
+        "F-142"
+      ],
+      "source_ids": [
+        "S40"
+      ],
+      "replacement": "复职决定已确认，独立调查仍继续 11月23日董事会恢复黄仁勋的总裁、CEO及董事职务。官方公告同时表示独立调查将继续至完成。 复职决定T1；独立调查仍继续。董事会判断不能代替执法或司法机关的结论。",
+      "implemented_records": [
+        {
+          "fact_id": "F-142",
+          "page_anchor": "index.html#fact-142",
+          "grade": "T1",
+          "title": "复职决定已确认，独立调查仍继续",
+          "text": "11月23日董事会恢复黄仁勋的总裁、CEO及董事职务。官方公告同时表示独立调查将继续至完成。",
+          "boundary": "复职决定T1；独立调查仍继续。董事会判断不能代替执法或司法机关的结论。",
+          "links": [
+            {
+              "title": "NVIDIA复职公告",
+              "url": "https://nvidianews.nvidia.com/news/nvidia-board-reinstates-jensen-huang-as-president-ceo-and-board-director"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R34",
+      "title": "匿名过程混用T2",
+      "reason": "统一匿名过程分级，保留各事件原有正文和官方程序证据。",
+      "affected_original_facts": [
+        "F-015",
+        "F-052",
+        "F-055",
+        "F-059",
+        "F-086",
+        "F-103"
+      ],
+      "source_ids": [],
+      "replacement": "按具体命题拆分来源与等级，不以通用文字覆盖不同事件。",
+      "implemented_records": [
+        {
+          "fact_id": "F-015",
+          "page_anchor": "index.html#fact-015",
+          "grade": "T3",
+          "title": "WSJ：董事会着手罢免，最快 11-12 开会",
+          "text": "WSJ 报道英伟达董事会正着手罢免黄仁勋、最快 11-12 开会；Reuters 援引一名知情人士证实董事会周三（11-11）连夜开会；Bloomberg称董事会已聘外部机构物色继任者并考虑临时 CEO。",
+          "boundary": "内部罢免准备、会议与猎头安排来自匿名消息，均按T3。后来的辞任公告只确认结果，不能反向证实全部内部过程。",
+          "links": [
+            {
+              "title": "WSJ 2026-11-11",
+              "url": "https://www.wsj.com/risk-compliance-journal/the-morning-risk-report-nvidia-is-preparing-to-oust-ceo-jensen-huang-324bfbd1"
+            },
+            {
+              "title": "Reuters/AOL 2026-11-11",
+              "url": "https://www.aol.com/articles/instant-view-nvidia-preparing-oust-231904000.html"
+            },
+            {
+              "title": "Bloomberg 2026-11-11",
+              "url": "https://www.bloomberg.com/news/articles/2026-11-11/nvidia-working-with-outside-firm-to-identify-ceo-candidates"
+            }
+          ]
+        },
+        {
+          "fact_id": "F-052",
+          "page_anchor": "index.html#fact-052",
+          "grade": "T3",
+          "title": "Reuters：黄向总法律顾问等隐瞒与黄乐关系性质",
+          "text": "Reuters 独家（两名知情人士 + 审阅内部通讯）：黄在 2025 年秋及 2026 年 10 月向公司总法律顾问 Teter、首席营销官 Wagonfeld 等多名高管 隐瞒/误导 其与黄乐关系的性质；黄与黄乐同姓但无亲属关系。Nvidia 与黄的代表拒评，Teter/Wagonfeld 未回应。",
+          "boundary": "匿名消息与记者审阅的内部通讯支持报道归因，尚非公开调查结论；涉及隐瞒、动因的实质指控按T3。",
+          "links": [
+            {
+              "title": "Reuters（Yahoo 联播）2026-11-13",
+              "url": "https://finance.yahoo.com/markets/stocks/articles/exclusive-ex-nvidia-ceo-misled-002638424.html"
+            }
+          ]
+        },
+        {
+          "fact_id": "F-055",
+          "page_anchor": "index.html#fact-055",
+          "grade": "T3",
+          "title": "CBS：新加坡扣黄乐护照约 8 个月，美方协助有限",
+          "text": "CBS 独家（消息源）：新加坡当局 2025-06 扣押黄乐护照约 8 个月，期间试图请求美国政府协助调查 Nvidia 芯片可能经新加坡流向中国，但「未得到华盛顿有意义的帮助」；新加坡政府本周声明证实曾向美国司法部与 FBI 请求协助。",
+          "boundary": "CBS关于美方协助程度的匿名叙述为T3；扣押和归还护照的程序事实另见新加坡内政部声明（F-023，T1），两种证据不合并升级。",
+          "links": [
+            {
+              "title": "CBS News 2026-11-13",
+              "url": "https://www.cbsnews.com/news/jensen-huang-nvidia-alice-huang-singapore-investigation-china-chips/"
+            }
+          ]
+        },
+        {
+          "fact_id": "F-059",
+          "page_anchor": "index.html#fact-059",
+          "grade": "T3",
+          "title": "白宫/FT：特朗普下周深圳会晤不主动提 Nvidia 间谍指控",
+          "text": "白宫/FT：特朗普下周赴深圳与习近平会晤时， 不会 主动提出 Nvidia 间谍指控；官员称 Nvidia 风波不影响特朗普中国行，美中俄领袖峰会定于 11-19 举行。",
+          "boundary": "有关不主动提及议题的内部安排来自官员转述，按T3。保留当时报导时点，不将匿名安排当作正式行程文件。",
+          "links": [
+            {
+              "title": "中央社 2026-11-14",
+              "url": "https://www.cna.com.tw/news/aopl/202611140034.aspx"
+            },
+            {
+              "title": "FT 2026-11-14（Google News 检索） [检索入口 · 非证据]",
+              "url": "https://news.google.com/rss/search?q=Trump+will+not+raise+Nvidia+spy+issue+with+Xi+summit"
+            }
+          ]
+        },
+        {
+          "fact_id": "F-086",
+          "page_anchor": "index.html#fact-086",
+          "grade": "T3",
+          "title": "CNBC 11-16援引知情人士称，当时董事会并未讨论让黄仁勋回归CEO，重点仍是独立调查",
+          "text": "CNBC 11-16援引知情人士称，当时董事会并未讨论让黄仁勋回归CEO，重点仍是独立调查。该报道描述的是当时内部状态，未获公开会议记录确认。",
+          "boundary": "董事会内部讨论状态来自匿名知情者，按T3；政府人士希望回归与董事会当时的讨论状态并不必然矛盾。历史报道不代表复职后的现状。",
+          "links": [
+            {
+              "title": "CNBC 2026-11-16",
+              "url": "https://www.cnbc.com/2026/11/16/nvidia-ceo-jensen-huang.html"
+            }
+          ]
+        },
+        {
+          "fact_id": "F-103",
+          "page_anchor": "index.html#fact-103",
+          "grade": "T3",
+          "title": "Bloomberg 11-18 报道：Nvidia 董事会聘请的猎头已接…",
+          "text": "Bloomberg 11-18 报道：Nvidia 董事会聘请的猎头已接触 Arm CEO Rene Haas，作为下一任 CEO 潜在候选人；Arm 与 Nvidia 未正式确认。",
+          "boundary": "猎头接触及候选人意向来自匿名报道，Arm与Nvidia未正式确认，按T3。此为11-18历史记录。",
+          "links": [
+            {
+              "title": "Bloomberg 2026-11-18 [RSS跳转 · 未核原链]",
+              "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNSkdMM3B6VU5DaTBZaEZfWnQwQ2RIRjg0WkRUVkxLM2JmcUxxMHpCUHBjRzNmTHFFMXRzM1R4Z2kzZ0ZIOFdmeVFZdGMwSFpQMGQydWZHWVR2V3Ytczd2b3YtVkM5Y3lGRl9KN2VBWllFSXpKdDRmVGl6NGdJTzgyemZyeldNbE9fdGgwTEtfclhzTjZGT0YycW41S2NMVGYzOFJqX1dTcTAyVFZReVZQaXFqUnU?oc=5"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
