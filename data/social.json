@@ -1,0 +1,639 @@
+{
+  "schema_version": 1,
+  "updated": "2026-11-27",
+  "provenance": {
+    "kind": "restored_existing_archive",
+    "description": "从11月26日旧版保留内容与11月27日已审校数据重建展示，不是新一轮社媒采集。",
+    "content_source": "data/content.json: reactions_html / gossip_html",
+    "metric_status": "T4：旧版互动与覆盖快照，采集明细未随公开仓库提供，未独立复算。",
+    "legacy_total": 15450,
+    "legacy_old_count": 15182,
+    "legacy_new_count": 268,
+    "legacy_platform_time": "2026-11-26 12:54 UTC",
+    "legacy_top_posts_time": "11-16 19:31 UTC",
+    "legacy_account_coverage": 136
+  },
+  "inventory": {
+    "public_responses": 15,
+    "x_posts": 16,
+    "hacker_news": 8,
+    "youtube": 6
+  },
+  "limitations": [
+    {
+      "title": "时间标签不一致",
+      "text": "旧平台表标注2026-11-26 12:54 UTC，X热帖榜却标注11-16 19:31 UTC，且收录了11-23复职帖。互动数字无法归入一个一致的采集时点。"
+    },
+    {
+      "title": "缺少可复算明细",
+      "text": "旧页提及top_posts_refreshed.csv及15,450条语料，但公开仓库未附对应采集明细。互动量、136个账号的覆盖声明及去重方法均待核实。"
+    },
+    {
+      "title": "刷新与汇总口径不同",
+      "text": "旧表声称X刷新396/400成功，其他平台沿用旧快照。Musk账号汇总记为1帖、152,826赞，X榜却收录两帖、分别200,970和152,621赞，不能合并为同一时点的总量。"
+    },
+    {
+      "title": "不能推导整体舆论",
+      "text": "收录数量反映旧版采样范围；支持发言不等于本人签署，个人公开表态不代表全体员工或股东。帖子与视频的标题是原索引内容，不是本页对其中指控的确认。"
+    }
+  ],
+  "platforms": [
+    {
+      "name": "X",
+      "count": 14338,
+      "legacy_status": "X：396/400 刷新成功",
+      "status": "unverified_archived_snapshot"
+    },
+    {
+      "name": "Bluesky",
+      "count": 778,
+      "legacy_status": "Bluesky：旧快照 778 条（本轮未刷新）",
+      "status": "unverified_archived_snapshot"
+    },
+    {
+      "name": "YouTube",
+      "count": 169,
+      "legacy_status": "旧快照保留（本轮未刷新）",
+      "status": "unverified_archived_snapshot"
+    },
+    {
+      "name": "Hacker News",
+      "count": 125,
+      "legacy_status": "旧快照保留（本轮未刷新）",
+      "status": "unverified_archived_snapshot"
+    },
+    {
+      "name": "Bilibili",
+      "count": 39,
+      "legacy_status": "旧快照保留（本轮未刷新）",
+      "status": "unverified_archived_snapshot"
+    },
+    {
+      "name": "Truth Social",
+      "count": 1,
+      "legacy_status": "旧快照保留（本轮未刷新）",
+      "status": "unverified_archived_snapshot"
+    }
+  ],
+  "posts": [
+    {
+      "rank": 1,
+      "account_label": "Jensen Huang",
+      "excerpt": "Over the past week, I’ve been overwhelmed by the love and support of friends, in",
+      "url": "https://x.com/JensenHuang/status/2122726005219737649",
+      "likes": 1186598,
+      "views": 61855704,
+      "metric_status": "unverified_archived_snapshot"
+    },
+    {
+      "rank": 2,
+      "account_label": "NVIDIA Newsroom",
+      "excerpt": "NVIDIA Board reinstates Jensen Huang as President, CEO and Board Director. Read",
+      "url": "https://x.com/nvidianewsroom/status/2124865060397019480",
+      "likes": 368518,
+      "views": 36111854,
+      "metric_status": "unverified_archived_snapshot"
+    },
+    {
+      "rank": 3,
+      "account_label": "President-Elect Toguro",
+      "excerpt": "His wife, his spy and his mistress all look different. He was canceled for lovin",
+      "url": "https://x.com/PresidentToguro/status/2120920124202836076",
+      "likes": 233381,
+      "views": 2924638,
+      "metric_status": "unverified_archived_snapshot"
+    },
+    {
+      "rank": 4,
+      "account_label": "vids that go hard",
+      "excerpt": "Had sex with 2 of his employees and a Chinese spy Still got his job back🐐",
+      "url": "https://x.com/vidsthatgohard/status/2124885398966972457",
+      "likes": 222382,
+      "views": 7299769,
+      "metric_status": "unverified_archived_snapshot"
+    },
+    {
+      "rank": 5,
+      "account_label": "Elon Musk",
+      "excerpt": "Everyone I know at Nvidia wanted Jensen back and it shows",
+      "url": "https://x.com/elonmusk/status/2124942828274925651",
+      "likes": 200970,
+      "views": 6784476,
+      "metric_status": "unverified_archived_snapshot"
+    },
+    {
+      "rank": 6,
+      "account_label": "Danny Manus",
+      "excerpt": "You're tellin me in 24 hrs, the NVidia CEO steps down in a spy scandal, all of M",
+      "url": "https://x.com/DannyManus/status/2121353561749741657",
+      "likes": 196650,
+      "views": 7041022,
+      "metric_status": "unverified_archived_snapshot"
+    },
+    {
+      "rank": 7,
+      "account_label": "evan loves worf",
+      "excerpt": "Fuck it make him NVIDIA ceo too",
+      "url": "https://x.com/esjesjesj/status/2122370370447544710",
+      "likes": 196087,
+      "views": 2078729,
+      "metric_status": "unverified_archived_snapshot"
+    },
+    {
+      "rank": 8,
+      "account_label": "Trung Phan",
+      "excerpt": "BREAKING: Robert Pattison has been selected by Nvidia’s board as the new CEO, ef",
+      "url": "https://x.com/TrungTPhan/status/2122392039363080444",
+      "likes": 181787,
+      "views": 3188420,
+      "metric_status": "unverified_archived_snapshot"
+    },
+    {
+      "rank": 9,
+      "account_label": "Elon Musk",
+      "excerpt": "Jensen",
+      "url": "https://x.com/elonmusk/status/2121118775210868871",
+      "likes": 152621,
+      "views": 13137816,
+      "metric_status": "unverified_archived_snapshot"
+    },
+    {
+      "rank": 10,
+      "account_label": "Darrell Dai",
+      "excerpt": "I’ve decided to leave NVIDIA. There are a few things I want to say. As a roboti",
+      "url": "https://x.com/darrell_dai/status/2121804561996448005",
+      "likes": 134115,
+      "views": 7304933,
+      "metric_status": "unverified_archived_snapshot"
+    },
+    {
+      "rank": 11,
+      "account_label": "Sagar",
+      "excerpt": "Nvidia stock fell 12% because of election and another 10% because of erection",
+      "url": "https://x.com/sagarcasm/status/2119810356700975314",
+      "likes": 131787,
+      "views": 7006236,
+      "metric_status": "unverified_archived_snapshot"
+    },
+    {
+      "rank": 12,
+      "account_label": "🪦💰💀CIA Thug Isolation Analyst with 8 Kids💀💰🪦",
+      "excerpt": "Jensen pulled the oldest chinese trick in the book which is faking your death/de",
+      "url": "https://x.com/CiaKids/status/2124926378110001553",
+      "likes": 103759,
+      "views": 1491610,
+      "metric_status": "unverified_archived_snapshot"
+    },
+    {
+      "rank": 13,
+      "account_label": "zhopamine",
+      "excerpt": "nvidia ceo:",
+      "url": "https://x.com/zedchrmsm/status/2119852386709876757",
+      "likes": 94362,
+      "views": 923798,
+      "metric_status": "unverified_archived_snapshot"
+    },
+    {
+      "rank": 14,
+      "account_label": "Bull Theory",
+      "excerpt": "BREAKING: Over 1,600 Nvidia employees urge the board to reinstate Jensen Huang a",
+      "url": "https://x.com/BullTheoryio/status/2121095893290230090",
+      "likes": 93605,
+      "views": 2402482,
+      "metric_status": "unverified_archived_snapshot"
+    },
+    {
+      "rank": 15,
+      "account_label": "Sam Altman",
+      "excerpt": "Jensen!",
+      "url": "https://x.com/sama/status/2124887162206495228",
+      "likes": 93446,
+      "views": 3821591,
+      "metric_status": "unverified_archived_snapshot"
+    },
+    {
+      "rank": 16,
+      "account_label": "CZ 🔶 BNB",
+      "excerpt": "It's a mistake for Nvidia to let Jensen resign.",
+      "url": "https://x.com/cz_binance/status/2120888881717612576",
+      "likes": 93221,
+      "views": 4159215,
+      "metric_status": "unverified_archived_snapshot"
+    }
+  ],
+  "accounts": [
+    {
+      "name": "Jensen Huang",
+      "handle": "JensenHuang",
+      "category": "当事方",
+      "posts": "1",
+      "likes": "1186598"
+    },
+    {
+      "name": "Watcher.Guru",
+      "handle": "WatcherGuru",
+      "category": "媒体聚合",
+      "posts": "40",
+      "likes": "515235"
+    },
+    {
+      "name": "The Kobeissi Letter",
+      "handle": "KobeissiLetter",
+      "category": "媒体聚合",
+      "posts": "51",
+      "likes": "424967"
+    },
+    {
+      "name": "Polymarket",
+      "handle": "Polymarket",
+      "category": "预测市场",
+      "posts": "52",
+      "likes": "291528"
+    },
+    {
+      "name": "Kalshi",
+      "handle": "Kalshi",
+      "category": "预测市场",
+      "posts": "85",
+      "likes": "287303"
+    },
+    {
+      "name": "Globe Eye News",
+      "handle": "GlobeEyeNews",
+      "category": "KOL",
+      "posts": "17",
+      "likes": "279971"
+    },
+    {
+      "name": "unusual_whales",
+      "handle": "unusual_whales",
+      "category": "媒体聚合",
+      "posts": "61",
+      "likes": "205287"
+    },
+    {
+      "name": "Trung Phan",
+      "handle": "TrungTPhan",
+      "category": "KOL",
+      "posts": "6",
+      "likes": "197713"
+    },
+    {
+      "name": "Sagar",
+      "handle": "sagarcasm",
+      "category": "KOL",
+      "posts": "4",
+      "likes": "181745"
+    },
+    {
+      "name": "Bull Theory",
+      "handle": "BullTheoryio",
+      "category": "KOL",
+      "posts": "37",
+      "likes": "171426"
+    },
+    {
+      "name": "Elon Musk",
+      "handle": "elonmusk",
+      "category": "商界领袖",
+      "posts": "1",
+      "likes": "152826"
+    },
+    {
+      "name": "Mario Nawfal",
+      "handle": "MarioNawfal",
+      "category": "KOL",
+      "posts": "102",
+      "likes": "112464"
+    }
+  ],
+  "hacker_news": [
+    {
+      "title": "Jensen Huang resigns",
+      "url": "https://news.ycombinator.com/item?id=50467087",
+      "score": 3798,
+      "submission_date": "2026-11-12",
+      "metric_status": "unverified_archived_snapshot"
+    },
+    {
+      "title": "Nvidia is preparing to oust Jensen Huang",
+      "url": "https://news.ycombinator.com/item?id=50459703",
+      "score": 1220,
+      "submission_date": "2026-11-11",
+      "metric_status": "unverified_archived_snapshot"
+    },
+    {
+      "title": "Nvidia CEO Jensen Huang's letter to staff about affair",
+      "url": "https://news.ycombinator.com/item?id=50418016",
+      "score": 987,
+      "submission_date": "2026-11-08",
+      "metric_status": "unverified_archived_snapshot"
+    },
+    {
+      "title": "Nvidia employees petition to bring back Jensen Huang",
+      "url": "https://news.ycombinator.com/item?id=50477231",
+      "score": 728,
+      "submission_date": "2026-11-13",
+      "metric_status": "unverified_archived_snapshot"
+    },
+    {
+      "title": "Statement from Nvidia board of directors",
+      "url": "https://news.ycombinator.com/item?id=50416801",
+      "score": 493,
+      "submission_date": "2026-11-08",
+      "metric_status": "unverified_archived_snapshot"
+    },
+    {
+      "title": "Jensen Huang said to have had relationship with executive who reports to him",
+      "url": "https://news.ycombinator.com/item?id=50459321",
+      "score": 410,
+      "submission_date": "2026-11-11",
+      "metric_status": "unverified_archived_snapshot"
+    },
+    {
+      "title": "Jensen Huang resigns as Nvidia CEO immediately",
+      "url": "https://news.ycombinator.com/item?id=50467132",
+      "score": 375,
+      "submission_date": "2026-11-12",
+      "metric_status": "unverified_archived_snapshot"
+    },
+    {
+      "title": "Former Nvidia CEO Huang had a relationship with a second employee, sources s",
+      "url": "https://news.ycombinator.com/item?id=50473190",
+      "score": 372,
+      "submission_date": "2026-11-12",
+      "metric_status": "unverified_archived_snapshot"
+    }
+  ],
+  "youtube": [
+    {
+      "title": "Jensen Huang Quits As Nvidia CEO | Price Of Sleeping With A Chin",
+      "url": "https://www.youtube.com/watch?v=06Wjimg1rEE",
+      "channel": "The Deshbhakt",
+      "views": 4123592,
+      "metric_status": "unverified_archived_snapshot"
+    },
+    {
+      "title": "The Rise and Reckoning of Jensen Huang | The Circuit with Emily",
+      "url": "https://www.youtube.com/watch?v=JW5s9Md4U2U",
+      "channel": "Bloomberg Originals",
+      "views": 3570252,
+      "metric_status": "unverified_archived_snapshot"
+    },
+    {
+      "title": "nvidia ceo destroyed by chinese model",
+      "url": "https://www.youtube.com/watch?v=_6UIbNGhGAU",
+      "channel": "voidzilla",
+      "views": 3036891,
+      "metric_status": "unverified_archived_snapshot"
+    },
+    {
+      "title": "Nvidia CEO Jensen Huang and Chinese Spy? This is why Elon Musk s",
+      "url": "https://www.youtube.com/watch?v=31e0a0g_NzM",
+      "channel": "The Megawatts",
+      "views": 2288123,
+      "metric_status": "unverified_archived_snapshot"
+    },
+    {
+      "title": "How a Chinese Spy Got Inside Nvidia",
+      "url": "https://www.youtube.com/watch?v=_MG4v3foET8",
+      "channel": "Paper Billions",
+      "views": 2176290,
+      "metric_status": "unverified_archived_snapshot"
+    },
+    {
+      "title": "Nvidia CEO Jensen Huang resigns, Nvidia stock plunges",
+      "url": "https://www.youtube.com/watch?v=gCwpCPZeIGQ",
+      "channel": "CNN",
+      "views": 1694012,
+      "metric_status": "unverified_archived_snapshot"
+    }
+  ],
+  "public_responses": [
+    {
+      "label": "黄仁勋 本人（11-08 公开信 · 官方原文）",
+      "text": "「我欠我的家人和你们所有人一个道歉。我对妻子不忠。我的行为伤害了她和我们的孩子。我所做的没有任何借口。我深感抱歉。……至于新闻报道中提出的国家安全关切，Nvidia 董事会已启动独立调查。我支持这项调查并将全力配合。」",
+      "links": [
+        {
+          "url": "https://nvidianews.nvidia.com/news/a-message-to-our-company",
+          "label": "NVIDIA 新闻室《A Message to Our Company》"
+        }
+      ]
+    },
+    {
+      "label": "Nvidia 董事会（11-08 官方声明）",
+      "text": "「董事会正在启动一项独立调查，原因是近期有报道指出创始人兼 CEO 黄仁勋 已成为外国情报行动的目标。……虽然董事会没有理由认为国家安全或 Nvidia 机密已受损害，但调查将审查所有可获得的信息。」",
+      "links": [
+        {
+          "url": "https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors",
+          "label": "NVIDIA 董事会声明"
+        }
+      ]
+    },
+    {
+      "label": "特朗普（11-12 Truth Social）",
+      "text": "「Now that Nvidia CEO 黄仁勋, who has done a fantastic job, has resigned, there is only one man to take his place — TIM COOK of Apple. A Legend replaces a Legend!」",
+      "links": [
+        {
+          "url": "https://truthsocial.com/@realDonaldTrump/117604177898784579",
+          "label": "Truth Social 原帖"
+        }
+      ]
+    },
+    {
+      "label": "中国外交部（10-30 / 11-12）",
+      "text": "10-30：「有关报道捕风捉影，纯属对华污蔑抹黑。」11-12：「对于所谓『中国间谍』论调，我们已经阐明了立场……美方应当停止编造所谓的『间谍叙事』。」",
+      "links": [
+        {
+          "url": "https://www.fmprc.gov.cn/fyrbt_673021/202610/t20261030_12050300.shtml",
+          "label": "中国外交部实录"
+        }
+      ]
+    },
+    {
+      "label": "新加坡内政部（10-31 / 11-12）",
+      "text": "10-31：否认 WSJ 所称新加坡政府曾就黄乐与黄仁勋关系表达关切或调查黄乐与中国情报机构关系。11-12：黄乐未被以间谍问题调查；2026-02 就虚假申报相关罪名认定证据不足，但认定其向警方提供不实信息，发严厉警告并禁止再入境。",
+      "links": [
+        {
+          "url": "https://www.mha.gov.sg/media-room/newsroom/singapore-investigations-into-alice-huang-huang-le-and-megaspeed-international-pte-ltd",
+          "label": "新加坡内政部声明"
+        }
+      ]
+    },
+    {
+      "label": "Megaspeed（11-12 官方声明）",
+      "text": "「重视美国出口管制合规，已配合美国商务部工业与安全局（BIS）检查，并随时准备配合其他美国政府机构；已聘美国律所对 GPU 流向进行独立审计。」",
+      "links": [
+        {
+          "url": "https://megaspeed.ai/",
+          "label": "Megaspeed 声明"
+        }
+      ]
+    },
+    {
+      "label": "临时 CEO Kress / 董事长 Jones（11-12 员工信）",
+      "text": "Kress 称当前是「extraordinarily difficult period」，感谢员工「resilience」；Jones 称对 Kress「full confidence」；11-18 09:00 PT 召开全体员工大会（CNBC 从消息源获得）。",
+      "links": [
+        {
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1032028/read-nvidias-internal-emails-jensen-huang",
+          "label": "The Verge刊载内部员工信"
+        }
+      ]
+    },
+    {
+      "label": "美国国会（11-12 / 11-13）",
+      "text": "参院银行委员会已排定12月3日10:00公开听证，当前证人名单为黄仁勋；众院三委员会确认黄与Tim Teter按12月1日、2日的安排接受逐字记录访谈。T1限于排期，实际举行与出席仍待后续确认。",
+      "links": [
+        {
+          "url": "https://www.banking.senate.gov/hearings/protecting-americas-ai-advantage-oversight-of-us-export-controls",
+          "label": "参院公开日程"
+        },
+        {
+          "url": "https://chinaselectcommittee.house.gov/media/press-releases/statement-on-jensen-huang-s-reinstatement-at-nvidia",
+          "label": "众院11-23联合声明"
+        }
+      ]
+    },
+    {
+      "label": "美国财政部长 Bessent（11-13）",
+      "text": "Bessent在CNBC公开采访中称，财政部等部门数月来支持把Megaspeed列入实体清单，落实列单属于商务部职责。多家媒体转述同一采访；这支持其作出该公开陈述，不能独立确认内部决策经过或失职。",
+      "links": [
+        {
+          "url": "https://www.axios.com/2026/11/13/bessent-lutnick-megaspeed-nvidia",
+          "label": "Axios 2026-11-13"
+        }
+      ]
+    },
+    {
+      "label": "Nvidia 董事长（11-17 财报电话会）",
+      "text": "「董事会一致接受黄的辞任，不打算让黄复职。」（AP 引述）",
+      "links": [
+        {
+          "url": "https://apnews.com/article/nvidia-jensen-huang-china-national-security-chips-3026bcbe04ab57b844884382e583422a",
+          "label": "AP News 2026-11-17"
+        }
+      ]
+    },
+    {
+      "label": "临时 CEO Kress（11-17 财报电话会）",
+      "text": "公司11月17日财报公告的第四财季收入指引未计入来自中国的数据中心计算收入。该公告不单独证明全部Hopper型号均已停止出货。",
+      "links": [
+        {
+          "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Third-Quarter-Fiscal-2027/default.aspx",
+          "label": "NVIDIA官方财报公告"
+        }
+      ]
+    },
+    {
+      "label": "贝佐斯（11-17 Semafor 活动）",
+      "text": "「若黄不回归，Nvidia 应优先内部提拔 CEO，外部聘任只是最后选项。」",
+      "links": [
+        {
+          "url": "https://www.digitaltoday.co.kr/en/view/127502/jeff-bezos-urges-nvidia-board-to-prioritise-insider-for-next-ceo",
+          "label": "Business Insider / DigitalToday 2026-11-18"
+        }
+      ]
+    },
+    {
+      "label": "NVIDIA Newsroom（11-23 官方公告）",
+      "text": "董事会于11月23日一致决定恢复黄仁勋的总裁、CEO及董事职务，立即生效；独立调查仍将继续。",
+      "links": [
+        {
+          "url": "https://nvidianews.nvidia.com/news/nvidia-board-reinstates-jensen-huang-as-president-ceo-and-board-director",
+          "label": "NVIDIA官方复职公告"
+        }
+      ]
+    },
+    {
+      "label": "黄仁勋（11-23 回到 Nvidia 总部）",
+      "text": "Reuters报道黄于11月23日返回总部并获现场员工欢迎，他表示第二次任职会做得更好。现场欢迎不代表全体员工支持率或签署情况（T2）。",
+      "links": [
+        {
+          "url": "https://www.investing.com/news/stock-market-news/jensen-huangs-comeback-to-nvidia-underscores-his-outsized-grip-on-ai-5046711",
+          "label": "Reuters授权全文"
+        }
+      ]
+    },
+    {
+      "label": "美国副总统 Vance（11-25）",
+      "text": "Vance于11月25日表示，被告知黄未受调查，因此认为不需要赦免。此为经记者报道的公开表态（T2）；未受调查不能推导为经过调查获免责。",
+      "links": [
+        {
+          "url": "https://www.cbsnews.com/news/vance-says-jensen-huang-doesnt-need-pardon/",
+          "label": "CBS原发报道"
+        }
+      ]
+    }
+  ],
+  "coverage_limits": [
+    "Reddit：旧轮未采集",
+    "微博／知乎／抖音：旧轮无法直取",
+    "TikTok／Instagram／Threads：旧轮遇登录墙",
+    "预测市场数据：旧轮未采集；收录部分相关账号帖文不等于已采集市场数据"
+  ],
+  "featured": [
+    {
+      "event_id": "edit142",
+      "title": "官方宣布复职",
+      "kind": "公司公告",
+      "date": "2026-11-23",
+      "grade": "T1",
+      "body": "NVIDIA于11月23日宣布恢复黄仁勋的总裁、CEO及董事职务，独立调查继续。社媒同步发布与公司原文可对照阅读。",
+      "boundary": "T1确认的是公告中的复职决定及继续调查安排；X点赞、浏览量仍是待核的旧快照。",
+      "links": [
+        {
+          "label": "NVIDIA复职公告",
+          "url": "https://nvidianews.nvidia.com/news/nvidia-board-reinstates-jensen-huang-as-president-ceo-and-board-director",
+          "access": "沿用已核官方公告；IR官方对应稿已检索读到"
+        },
+        {
+          "label": "NVIDIA Newsroom / X 2026-11-23",
+          "url": "https://x.com/nvidianewsroom/status/2124865060397019480",
+          "access": "既有社媒原帖；本轮未重复核读"
+        }
+      ]
+    },
+    {
+      "event_id": "F-057",
+      "title": "Musk公开支持回归",
+      "kind": "支持表态",
+      "date": "2026-11-14",
+      "grade": "T2",
+      "body": "Benzinga等媒体记录Musk公开表示支持黄仁勋回归，并称正在签署请愿。",
+      "boundary": "T2覆盖已报道的公开表态；具体请愿归属、网站名单身份以及内部评论所代表的人数未独立核实。",
+      "links": [
+        {
+          "label": "Yahoo Finance（转载 Stocktwits） 2026-11-13",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/elon-musk-tom-lee-shopify-042453542.html",
+          "access": "Yahoo索引正文已读；直接页429。另一同站报道提醒未找到Lütke名列签名，宜保守处理。"
+        },
+        {
+          "label": "Benzinga 2026-11-13",
+          "url": "https://www.benzinga.com/markets/tech/26/11/63273186/elon-musk-jensen-huang-nvidia",
+          "access": "Benzinga原站正文已读；去除?nid追踪参数。"
+        }
+      ]
+    },
+    {
+      "event_id": "F-075",
+      "title": "Darrell Dai自述离职",
+      "kind": "个人自述",
+      "date": "2026-11-16",
+      "grade": "T3",
+      "body": "India Today报道Darrell Dai公开表示将离开NVIDIA，并称缺乏解释、意见未被倾听令他失望。",
+      "boundary": "T3保留于实际离职与原因；T2只覆盖该自述获媒体报道。个人自述不能代表全体员工，也不等于公司确认。",
+      "links": [
+        {
+          "label": "India Today 2026-11-16",
+          "url": "https://www.indiatoday.in/amp/technology/news/story/nvidia-engineer-quits-after-jensen-huang-controversy-says-lack-of-being-heard-was-more-painful-3039831-2026-11-16",
+          "access": "India Today 原站 AMP 正文可读。"
+        },
+        {
+          "label": "Darrell Dai原帖索引",
+          "url": "https://x.com/darrell_dai/status/2121804561996448005",
+          "access": "沿用旧版原帖链接，本轮未重复核读。"
+        }
+      ]
+    }
+  ]
+}
