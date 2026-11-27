@@ -9,7 +9,7 @@
 
 ## 更新内容
 
-`data/content.json` 保存时间线、来源、官方文件和保留的历史回应。`data/summary.json` 保存两版共用的摘要、关键进展与观察点。市场模块为 `templates/market.html` 和 `assets/market.*`。
+`data/content.json` 保存时间线、来源、官方文件和保留的历史回应。`data/summary.json` 保存两版共用的摘要与观察点。`data/visuals.json` 保存三轨事件图，`data/relationships.json` 保存人物、机构、关系证据和图形布局。`scripts/visuals.py` 生成两版共用的可视化；市场模块为 `templates/market.html` 和 `assets/market.*`。
 
 修改内容后运行（只需 Python 3 标准库）：
 
@@ -29,6 +29,10 @@ python3 scripts/build.py
 - 历史传播统计没有可复算明细的部分保持待核，不用于推断总体舆论。
 
 2026-11-27 修订：补充 Megaspeed 最终列单规则、DOJ 调查声明及其他官方文件，修正匿名指控等级、融资金额边界、链接错配与市场口径。基础官宣和既有本人原帖沿用。
+
+同日追加：替换页面全部 Google News 搜索／RSS 入口，恢复按证据分层的人物关系图，增加三轨事件图与有许可的资料照片。Cotton 调查请求凭官方信函升为 T1；四条旧精确行情快照保留 T4，并提供可复算的历史分钟对照。链接找回与正文核验分开记录；重新编目的条目不声称恢复了原RSS跳转链。
+
+本轮逐链接映射、正文修订和访问限制见 `data/link-audit-2026-11-27.json`；五条待核记录的补核见 `data/t4-followup-2026-11-27.json`。分钟价格对照与来源分别为 `data/nvda-minute-audit-comparison.csv`、`data/nvda-minute-audit-provenance.json`。旧 Google URL 仅在可追溯的审计数据中保存，不作为当前页面的可点击信源。
 
 ## 审计快照与当前页面
 
