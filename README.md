@@ -9,7 +9,7 @@
 
 ## 更新内容
 
-`data/content.json` 保存时间线、来源、官方文件和保留的历史回应。`data/summary.json` 保存两版共用的摘要与观察点。`data/visuals.json` 保存三轨事件图，`data/relationships.json` 保存人物、机构、关系证据和图形布局。`scripts/visuals.py` 生成两版共用的可视化；市场模块为 `templates/market.html` 和 `assets/market.*`。
+`data/content.json` 保存时间线、来源、官方文件和保留的历史回应。`data/summary.json` 保存两版共用的摘要与观察点。`data/visuals.json` 保存三轨事件图，`data/relationships.json` 保存人物、机构、关系端点与证据。`scripts/visuals.py` 生成两版共用的可视化；市场模块为 `templates/market.html` 和 `assets/market.*`。
 
 修改内容后运行（只需 Python 3 标准库）：
 
@@ -37,3 +37,9 @@ python3 scripts/build.py
 ## 审计快照与当前页面
 
 `AUDIT-2026-11-27.md` 与 `data/source-audit-2026-11-27.json` 保留较早的139条审计快照；最终页面的145条记录与主等级以 `data/content.json` 为准。两版保留57处审计记录链接使用的历史锚点。37条日线及其来源元数据保留在 `data/nvda-daily-2026-10-06_to_2026-11-25.csv` 和 `data/nvda-daily-provenance.json`。
+
+## 关系浏览与社交档案恢复
+
+2026-11-27 后续修订：两版改为按人物或机构查看直接关系的卡片浏览器，保留14条关系、来源及永久链接。`assets/visuals.js` 控制筛选，禁用脚本时显示全部关系。
+
+社交档案由 `data/social.json` 与 `scripts/social.py` 生成，两版均有可见章节和导航入口。完整保留15条回应、16条X原帖、8个HN讨论、6个视频及原账号/平台表。旧互动与覆盖统计标为T4，收录条数与传播指标分别说明。六平台旧数字合计15,450只是原表算术汇总，未新增采集，也未把不同快照混为同一时点。时间线F-050的421条采样及话题转向因缺少明细改为T4；当前主等级为T1 33、T2 59、T3 48、T4 5。
